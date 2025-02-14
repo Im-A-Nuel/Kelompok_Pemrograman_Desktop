@@ -33,7 +33,7 @@ Partial Class Form1
         pbPlay.BackgroundImage = CType(resources.GetObject("pbPlay.BackgroundImage"), Image)
         pbPlay.BackgroundImageLayout = ImageLayout.Stretch
         pbPlay.Location = New Point(4, -5)
-        pbPlay.Margin = New Padding(2, 2, 2, 2)
+        pbPlay.Margin = New Padding(2)
         pbPlay.Name = "pbPlay"
         pbPlay.Size = New Size(546, 674)
         pbPlay.TabIndex = 0
@@ -48,8 +48,10 @@ Partial Class Form1
         ClientSize = New Size(558, 662)
         Controls.Add(pbPlay)
         DoubleBuffered = True
-        Margin = New Padding(2, 2, 2, 2)
+        Margin = New Padding(2)
+        MaximizeBox = False
         Name = "Form1"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Wack a Mole!"
         CType(pbPlay, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
