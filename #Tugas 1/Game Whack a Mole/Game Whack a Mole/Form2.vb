@@ -8,7 +8,6 @@
     Private moleTimer As System.Timers.Timer
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        MsgBox("Welcome to Whack a Mole!")
         InitializeGame()
     End Sub
 
@@ -21,7 +20,7 @@
         AddHandler timer.Elapsed, AddressOf OnGameTimerEvent
         timer.Start()
 
-        moleTimer = New Timers.Timer(random.Next(1000))
+        moleTimer = New Timers.Timer(1000)
         AddHandler moleTimer.Elapsed, AddressOf OnMoleTimerEvent
         moleTimer.Start()
     End Sub
@@ -43,14 +42,21 @@
         Else
             timer.Stop()
             moleTimer.Stop()
+            MessageBox.Show("Time UP!")
 
-            If score > highScore Then
+            'If score > highScore Then
+            '    highScore = score
+            '    lblHighScore.Invoke(Sub() lblHighScore.Text = highScore.ToString())
+            'End If
+
+            'Dim tmpHighscore As Integer = score
+            MessageBox.Show("score akhir adalah: " & CStr(score))
+            If (score > highScore) Then
                 highScore = score
-                lblHighScore.Invoke(Sub() lblHighScore.Text = highScore.ToString())
+                MessageBox.Show("Highscore baru ditembus, highscore terbaru adalah " & highScore)
+                lblHighScore.Text = CStr(highScore)
             End If
-
-            MessageBox.Show("Waktu telah habis!")
-            Dim result As DialogResult = MessageBox.Show("Apakah Anda ingin memulai permainan kembali?", "Permainan Selesai", MessageBoxButtons.YesNo)
+            Dim result As DialogResult = MessageBox.Show("Ingin main lagi?", "Permainan Selesai", MessageBoxButtons.YesNo)
             If result = DialogResult.Yes Then
                 ResetGame()
             Else
@@ -64,9 +70,9 @@
 
 
 
-    Private Sub Form2_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        MsgBox("Terimakasih telah mencoba Whack a Mole!")
-    End Sub
+    'Private Sub Form2_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+    '    MsgBox("Terimakasih telah mencoba Whack a Mole!")
+    'End Sub
 
 
     Private Sub pbRefresh_Click(sender As Object, e As EventArgs) Handles pbRefresh.Click
@@ -74,7 +80,52 @@
     End Sub
 
     Private Sub ResetGame()
-
+        score = 0
+        lblScore.Text = CStr(score)
+        time = 30
+        lblTime.Text = CStr(time)
+        InitializeGame()
     End Sub
 
+    Private Sub pbMole1_Click(sender As Object, e As EventArgs) Handles pbMole1.Click
+        score += 1
+        lblScore.Text = CStr(score)
+        pbMole1.Visible = False
+    End Sub
+
+    Private Sub pbMole2_Click(sender As Object, e As EventArgs) Handles pbMole2.Click
+        score += 1
+        lblScore.Text = CStr(score)
+        pbMole2.Visible = False
+    End Sub
+
+    Private Sub pbMole3_Click(sender As Object, e As EventArgs) Handles pbMole3.Click
+        score += 1
+        lblScore.Text = CStr(score)
+        pbMole3.Visible = False
+    End Sub
+
+    Private Sub pbMole4_Click(sender As Object, e As EventArgs) Handles pbMole4.Click
+        score += 1
+        lblScore.Text = CStr(score)
+        pbMole4.Visible = False
+    End Sub
+
+    Private Sub pbMole5_Click(sender As Object, e As EventArgs) Handles pbMole5.Click
+        score += 1
+        lblScore.Text = CStr(score)
+        pbMole5.Visible = False
+    End Sub
+
+    Private Sub pbMole6_Click(sender As Object, e As EventArgs) Handles pbMole6.Click
+        score += 1
+        lblScore.Text = CStr(score)
+        pbMole6.Visible = False
+    End Sub
+
+    Private Sub pbMole7_Click(sender As Object, e As EventArgs) Handles pbMole7.Click
+        score += 1
+        lblScore.Text = CStr(score)
+        pbMole7.Visible = False
+    End Sub
 End Class
