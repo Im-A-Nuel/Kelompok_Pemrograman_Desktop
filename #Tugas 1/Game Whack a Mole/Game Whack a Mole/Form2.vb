@@ -56,16 +56,16 @@ Public Class Form2
             visibleFalse()
             timer.Stop()
             moleTimer.Stop()
-            MessageBox.Show("Time UP!")
+            MessageBox.Show(Me, "Time UP!")
 
             playSound("Clear")
-            MessageBox.Show("score akhir adalah: " & CStr(score))
+            MessageBox.Show(Me, "score akhir adalah: " & CStr(score))
             If (score > highScore) Then
                 highScore = score
-                MessageBox.Show("Highscore baru ditembus, highscore terbaru adalah " & highScore)
+                MessageBox.Show(Me, "Highscore baru ditembus, highscore terbaru adalah " & highScore)
                 lblHighScore.Text = CStr(highScore)
             End If
-            Dim result As DialogResult = MessageBox.Show("Ingin main lagi?", "Permainan Selesai", MessageBoxButtons.YesNo)
+            Dim result As DialogResult = MessageBox.Show(Me, "Ingin main lagi?", "Permainan Selesai", MessageBoxButtons.YesNo)
             If result = DialogResult.Yes Then
                 ResetGame()
             Else
@@ -101,9 +101,6 @@ Public Class Form2
         Dim playerSound As New SoundPlayer(soundFilePathDone)
         playerSound.Play()
     End Sub
-
-
-
 
     Private Sub pbMole1_Click(sender As Object, e As EventArgs) Handles pbMole1.Click
         score += 1
