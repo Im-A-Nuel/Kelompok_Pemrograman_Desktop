@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 1\\Game Whack a Mole\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{94CBDAA3-5CE3-4C85-8BA9-E0F4E44D26B8}|Game Whack a Mole\\Game Whack a Mole.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\#tugas 1\\game whack a mole\\game whack a mole\\form2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{94CBDAA3-5CE3-4C85-8BA9-E0F4E44D26B8}|Game Whack a Mole\\Game Whack a Mole.vbproj|solutionrelative:game whack a mole\\form2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94CBDAA3-5CE3-4C85-8BA9-E0F4E44D26B8}|Game Whack a Mole\\Game Whack a Mole.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\#tugas 1\\game whack a mole\\game whack a mole\\form2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{94CBDAA3-5CE3-4C85-8BA9-E0F4E44D26B8}|Game Whack a Mole\\Game Whack a Mole.vbproj|solutionrelative:game whack a mole\\form2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{94CBDAA3-5CE3-4C85-8BA9-E0F4E44D26B8}|Game Whack a Mole\\Game Whack a Mole.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\#tugas 1\\game whack a mole\\game whack a mole\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{94CBDAA3-5CE3-4C85-8BA9-E0F4E44D26B8}|Game Whack a Mole\\Game Whack a Mole.vbproj|solutionrelative:game whack a mole\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
@@ -18,32 +26,40 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.vb",
-              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 1\\Game Whack a Mole\\Game Whack a Mole\\Form1.vb",
-              "RelativeDocumentMoniker": "Game Whack a Mole\\Form1.vb",
-              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 1\\Game Whack a Mole\\Game Whack a Mole\\Form1.vb",
-              "RelativeToolTip": "Game Whack a Mole\\Form1.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Form2.vb",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 1\\Game Whack a Mole\\Game Whack a Mole\\Form2.vb",
+              "RelativeDocumentMoniker": "Game Whack a Mole\\Form2.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 1\\Game Whack a Mole\\Game Whack a Mole\\Form2.vb",
+              "RelativeToolTip": "Game Whack a Mole\\Form2.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-02-14T05:49:15.501Z",
+              "WhenOpened": "2025-02-14T06:38:31.384Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "Form2.vb [Design]",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 1\\Game Whack a Mole\\Game Whack a Mole\\Form2.vb",
+              "RelativeDocumentMoniker": "Game Whack a Mole\\Form2.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 1\\Game Whack a Mole\\Game Whack a Mole\\Form2.vb [Design]",
+              "RelativeToolTip": "Game Whack a Mole\\Form2.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-02-14T06:24:55.432Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Form1.vb [Design]",
               "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 1\\Game Whack a Mole\\Game Whack a Mole\\Form1.vb",
               "RelativeDocumentMoniker": "Game Whack a Mole\\Form1.vb",
@@ -52,6 +68,18 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-02-14T02:01:31.326Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.vb",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 1\\Game Whack a Mole\\Game Whack a Mole\\Form1.vb",
+              "RelativeDocumentMoniker": "Game Whack a Mole\\Form1.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 1\\Game Whack a Mole\\Game Whack a Mole\\Form1.vb",
+              "RelativeToolTip": "Game Whack a Mole\\Form1.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-02-14T05:49:15.501Z"
             }
           ]
         }

@@ -32,21 +32,23 @@ Partial Class Form1
         pbPlay.BackColor = Color.Transparent
         pbPlay.BackgroundImage = CType(resources.GetObject("pbPlay.BackgroundImage"), Image)
         pbPlay.BackgroundImageLayout = ImageLayout.Stretch
-        pbPlay.Location = New Point(5, -6)
+        pbPlay.Location = New Point(4, -5)
+        pbPlay.Margin = New Padding(2, 2, 2, 2)
         pbPlay.Name = "pbPlay"
-        pbPlay.Size = New Size(682, 842)
+        pbPlay.Size = New Size(546, 674)
         pbPlay.TabIndex = 0
         pbPlay.TabStop = False
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(698, 828)
+        ClientSize = New Size(558, 662)
         Controls.Add(pbPlay)
         DoubleBuffered = True
+        Margin = New Padding(2, 2, 2, 2)
         Name = "Form1"
         Text = "Wack a Mole!"
         CType(pbPlay, ComponentModel.ISupportInitialize).EndInit()

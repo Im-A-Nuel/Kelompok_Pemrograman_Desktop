@@ -54,7 +54,7 @@ Partial Class Form2
         pbRefresh.Location = New Point(22, 32)
         pbRefresh.Margin = New Padding(3, 4, 3, 4)
         pbRefresh.Name = "pbRefresh"
-        pbRefresh.Size = New Size(74, 83)
+        pbRefresh.Size = New Size(74, 71)
         pbRefresh.TabIndex = 0
         pbRefresh.TabStop = False
         ' 
