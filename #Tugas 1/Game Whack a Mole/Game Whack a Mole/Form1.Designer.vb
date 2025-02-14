@@ -23,17 +23,36 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        pbPlay = New PictureBox()
+        CType(pbPlay, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
+        ' 
+        ' pbPlay
+        ' 
+        pbPlay.BackColor = Color.Transparent
+        pbPlay.BackgroundImage = CType(resources.GetObject("pbPlay.BackgroundImage"), Image)
+        pbPlay.BackgroundImageLayout = ImageLayout.Stretch
+        pbPlay.Location = New Point(5, -6)
+        pbPlay.Name = "pbPlay"
+        pbPlay.Size = New Size(682, 842)
+        pbPlay.TabIndex = 0
+        pbPlay.TabStop = False
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
-        ClientSize = New Size(677, 649)
+        BackgroundImageLayout = ImageLayout.Stretch
+        ClientSize = New Size(698, 828)
+        Controls.Add(pbPlay)
+        DoubleBuffered = True
         Name = "Form1"
         Text = "Wack a Mole!"
+        CType(pbPlay, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
+
+    Friend WithEvents pbPlay As PictureBox
 
 End Class
