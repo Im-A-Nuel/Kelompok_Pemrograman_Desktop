@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("Game Whack a Mole"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ef3c2622582c06fe10af58a90c33b7e8f81c20b4"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c74bc6e593bec08ee8d2e89655ec602ba42c60d8"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("Game Whack a Mole"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("Game Whack a Mole"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _
