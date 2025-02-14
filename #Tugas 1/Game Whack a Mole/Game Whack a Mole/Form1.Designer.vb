@@ -22,10 +22,39 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container()
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Text = "Form1"
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        pbPlay = New PictureBox()
+        CType(pbPlay, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' pbPlay
+        ' 
+        pbPlay.BackColor = Color.Transparent
+        pbPlay.BackgroundImage = CType(resources.GetObject("pbPlay.BackgroundImage"), Image)
+        pbPlay.BackgroundImageLayout = ImageLayout.Stretch
+        pbPlay.Location = New Point(4, -5)
+        pbPlay.Margin = New Padding(2, 2, 2, 2)
+        pbPlay.Name = "pbPlay"
+        pbPlay.Size = New Size(546, 674)
+        pbPlay.TabIndex = 0
+        pbPlay.TabStop = False
+        ' 
+        ' Form1
+        ' 
+        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleMode = AutoScaleMode.Font
+        BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
+        BackgroundImageLayout = ImageLayout.Stretch
+        ClientSize = New Size(558, 662)
+        Controls.Add(pbPlay)
+        DoubleBuffered = True
+        Margin = New Padding(2, 2, 2, 2)
+        Name = "Form1"
+        Text = "Wack a Mole!"
+        CType(pbPlay, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
     End Sub
+
+    Friend WithEvents pbPlay As PictureBox
 
 End Class

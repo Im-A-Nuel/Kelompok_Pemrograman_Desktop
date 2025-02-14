@@ -1,0 +1,19 @@
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 1\Game Whack a Mole\Game Whack a Mole\bin\Debug\net8.0-windows\Game Whack a Mole.exe
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 1\Game Whack a Mole\Game Whack a Mole\bin\Debug\net8.0-windows\Game Whack a Mole.dll
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 1\Game Whack a Mole\Game Whack a Mole\obj\Debug\net8.0-windows\Game_Whack_a_Mole.Form1.resources
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 1\Game Whack a Mole\Game Whack a Mole\obj\Debug\net8.0-windows\Game_Whack_a_Mole.Form2.resources
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 1\Game Whack a Mole\Game Whack a Mole\obj\Debug\net8.0-windows\Game_Whack_a_Mole.Resources.resources
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 1\Game Whack a Mole\Game Whack a Mole\obj\Debug\net8.0-windows\Game Whack a Mole.vbproj.GenerateResource.cache
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 1\Game Whack a Mole\Game Whack a Mole\obj\Debug\net8.0-windows\Game Whack a Mole.GeneratedMSBuildEditorConfig.editorconfig
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 1\Game Whack a Mole\Game Whack a Mole\obj\Debug\net8.0-windows\Game Whack a Mole.AssemblyInfoInputs.cache
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 1\Game Whack a Mole\Game Whack a Mole\obj\Debug\net8.0-windows\Game Whack a Mole.AssemblyInfo.vb
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 1\Game Whack a Mole\Game Whack a Mole\obj\Debug\net8.0-windows\Game Whack a Mole.vbproj.CoreCompileInputs.cache
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 1\Game Whack a Mole\Game Whack a Mole\obj\Debug\net8.0-windows\Game Whack a Mole.sourcelink.json
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 1\Game Whack a Mole\Game Whack a Mole\obj\Debug\net8.0-windows\Game Whack a Mole.dll
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 1\Game Whack a Mole\Game Whack a Mole\obj\Debug\net8.0-windows\refint\Game Whack a Mole.dll
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 1\Game Whack a Mole\Game Whack a Mole\obj\Debug\net8.0-windows\Game Whack a Mole.pdb
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 1\Game Whack a Mole\Game Whack a Mole\bin\Debug\net8.0-windows\Game Whack a Mole.deps.json
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 1\Game Whack a Mole\Game Whack a Mole\bin\Debug\net8.0-windows\Game Whack a Mole.runtimeconfig.json
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 1\Game Whack a Mole\Game Whack a Mole\bin\Debug\net8.0-windows\Game Whack a Mole.pdb
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 1\Game Whack a Mole\Game Whack a Mole\obj\Debug\net8.0-windows\Game Whack a Mole.genruntimeconfig.cache
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 1\Game Whack a Mole\Game Whack a Mole\obj\Debug\net8.0-windows\ref\Game Whack a Mole.dll
