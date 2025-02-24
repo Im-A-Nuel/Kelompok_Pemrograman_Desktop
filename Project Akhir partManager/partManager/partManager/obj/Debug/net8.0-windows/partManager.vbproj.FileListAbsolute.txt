@@ -1,0 +1,17 @@
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\bin\Debug\net8.0-windows\partManager.exe
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\bin\Debug\net8.0-windows\partManager.deps.json
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\bin\Debug\net8.0-windows\partManager.runtimeconfig.json
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\bin\Debug\net8.0-windows\partManager.dll
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\bin\Debug\net8.0-windows\partManager.pdb
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.Form1.resources
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.vbproj.GenerateResource.cache
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.GeneratedMSBuildEditorConfig.editorconfig
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.AssemblyInfoInputs.cache
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.AssemblyInfo.vb
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.vbproj.CoreCompileInputs.cache
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.sourcelink.json
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.dll
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\refint\partManager.dll
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.pdb
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.genruntimeconfig.cache
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\ref\partManager.dll
