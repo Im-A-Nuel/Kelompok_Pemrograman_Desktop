@@ -1,0 +1,60 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1D521336-B948-4F05-B013-6BB00B2403D3}|partManager\\partManager.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\project akhir partmanager\\partmanager\\partmanager\\form6.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{1D521336-B948-4F05-B013-6BB00B2403D3}|partManager\\partManager.vbproj|solutionrelative:partmanager\\form6.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D521336-B948-4F05-B013-6BB00B2403D3}|partManager\\partManager.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\project akhir partmanager\\partmanager\\partmanager\\form4.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{1D521336-B948-4F05-B013-6BB00B2403D3}|partManager\\partManager.vbproj|solutionrelative:partmanager\\form4.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form4.vb [Design]",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\Form4.vb",
+              "RelativeDocumentMoniker": "partManager\\Form4.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\Form4.vb [Design]",
+              "RelativeToolTip": "partManager\\Form4.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-02-24T15:18:15.449Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form6.vb [Design]",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\Form6.vb",
+              "RelativeDocumentMoniker": "partManager\\Form6.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\Form6.vb [Design]",
+              "RelativeToolTip": "partManager\\Form6.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-02-24T15:08:28.285Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

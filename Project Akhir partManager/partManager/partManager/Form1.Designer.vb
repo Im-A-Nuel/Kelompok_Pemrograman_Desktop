@@ -33,50 +33,50 @@ Partial Class Form1
         Label1.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         Label1.Font = New Font("Calibri", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.FromArgb(CByte(66), CByte(87), CByte(145))
-        Label1.Location = New Point(258, 55)
+        Label1.Location = New Point(295, 93)
         Label1.Name = "Label1"
-        Label1.Size = New Size(268, 57)
+        Label1.Size = New Size(404, 76)
         Label1.TabIndex = 0
         Label1.Text = "LOGIN"
         Label1.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' TextBox1
         ' 
-        TextBox1.Location = New Point(270, 141)
+        TextBox1.Location = New Point(356, 210)
         TextBox1.Margin = New Padding(3, 2, 3, 2)
         TextBox1.Name = "TextBox1"
         TextBox1.PlaceholderText = "Username"
-        TextBox1.Size = New Size(245, 23)
+        TextBox1.Size = New Size(279, 27)
         TextBox1.TabIndex = 1
         ' 
         ' TextBox2
         ' 
-        TextBox2.Location = New Point(270, 187)
+        TextBox2.Location = New Point(356, 272)
         TextBox2.Margin = New Padding(3, 2, 3, 2)
         TextBox2.Name = "TextBox2"
         TextBox2.PlaceholderText = "Password"
-        TextBox2.Size = New Size(245, 23)
+        TextBox2.Size = New Size(279, 27)
         TextBox2.TabIndex = 2
         TextBox2.UseSystemPasswordChar = True
         ' 
         ' Button1
         ' 
         Button1.AutoSize = True
-        Button1.Location = New Point(348, 241)
+        Button1.Location = New Point(445, 344)
         Button1.Margin = New Padding(3, 2, 3, 2)
         Button1.Name = "Button1"
-        Button1.Size = New Size(82, 25)
+        Button1.Size = New Size(94, 34)
         Button1.TabIndex = 3
         Button1.Text = "Masuk"
         Button1.UseVisualStyleBackColor = True
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         AutoSize = True
         BackColor = Color.FromArgb(CByte(215), CByte(230), CByte(244))
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(1012, 639)
         Controls.Add(Button1)
         Controls.Add(TextBox2)
         Controls.Add(TextBox1)
@@ -85,7 +85,7 @@ Partial Class Form1
         MaximizeBox = False
         Name = "Form1"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "Form1"
+        Text = "partManager"
         ResumeLayout(False)
         PerformLayout()
     End Sub

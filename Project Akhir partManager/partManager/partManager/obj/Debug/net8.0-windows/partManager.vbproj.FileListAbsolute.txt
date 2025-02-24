@@ -35,3 +35,24 @@ D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir part
 D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\ref\partManager.dll
 D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.Form3.resources
 D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.Form4.resources
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\bin\Debug\net8.0-windows\partManager.exe
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\bin\Debug\net8.0-windows\partManager.deps.json
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\bin\Debug\net8.0-windows\partManager.runtimeconfig.json
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\bin\Debug\net8.0-windows\partManager.dll
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\bin\Debug\net8.0-windows\partManager.pdb
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.Form1.resources
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.Form2.resources
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.Form3.resources
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.Form4.resources
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.vbproj.GenerateResource.cache
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.GeneratedMSBuildEditorConfig.editorconfig
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.AssemblyInfoInputs.cache
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.AssemblyInfo.vb
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.vbproj.CoreCompileInputs.cache
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.sourcelink.json
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.dll
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\refint\partManager.dll
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.pdb
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.genruntimeconfig.cache
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\ref\partManager.dll
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.Form5.resources
