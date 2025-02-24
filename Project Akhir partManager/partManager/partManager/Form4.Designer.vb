@@ -23,6 +23,7 @@ Partial Class Form4
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel1 = New Panel()
+        Label13 = New Label()
         Button6 = New Button()
         Label12 = New Label()
         Label11 = New Label()
@@ -64,7 +65,6 @@ Partial Class Form4
         Button4 = New Button()
         Button5 = New Button()
         Button1 = New Button()
-        Label13 = New Label()
         Panel1.SuspendLayout()
         CType(PictureBox7, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
@@ -82,18 +82,27 @@ Partial Class Form4
         Panel1.Controls.Add(Label9)
         Panel1.Controls.Add(Label8)
         Panel1.Controls.Add(PictureBox7)
-        Panel1.Location = New Point(0, 0)
-        Panel1.Margin = New Padding(3, 4, 3, 4)
+        Panel1.Location = New Point(2, 0)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(241, 640)
+        Panel1.Size = New Size(211, 480)
         Panel1.TabIndex = 2
+        ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.Font = New Font("Segoe UI", 12F)
+        Label13.Location = New Point(12, 272)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(165, 21)
+        Label13.TabIndex = 10
+        Label13.Text = "Manajemen Pengguna"
         ' 
         ' Button6
         ' 
-        Button6.Location = New Point(62, 574)
+        Button6.Location = New Point(54, 430)
         Button6.Margin = New Padding(2)
         Button6.Name = "Button6"
-        Button6.Size = New Size(101, 37)
+        Button6.Size = New Size(88, 28)
         Button6.TabIndex = 8
         Button6.Text = "Keluar"
         Button6.UseVisualStyleBackColor = True
@@ -102,9 +111,9 @@ Partial Class Form4
         ' 
         Label12.AutoSize = True
         Label12.Font = New Font("Segoe UI", 12F)
-        Label12.Location = New Point(14, 316)
+        Label12.Location = New Point(12, 237)
         Label12.Name = "Label12"
-        Label12.Size = New Size(83, 28)
+        Label12.Size = New Size(67, 21)
         Label12.TabIndex = 5
         Label12.Text = "Laporan"
         ' 
@@ -112,9 +121,9 @@ Partial Class Form4
         ' 
         Label11.AutoSize = True
         Label11.Font = New Font("Segoe UI", 12F)
-        Label11.Location = New Point(14, 270)
+        Label11.Location = New Point(12, 202)
         Label11.Name = "Label11"
-        Label11.Size = New Size(95, 28)
+        Label11.Size = New Size(77, 21)
         Label11.TabIndex = 4
         Label11.Text = "Penjualan"
         ' 
@@ -122,9 +131,9 @@ Partial Class Form4
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Segoe UI", 12F)
-        Label10.Location = New Point(14, 222)
+        Label10.Location = New Point(12, 166)
         Label10.Name = "Label10"
-        Label10.Size = New Size(73, 28)
+        Label10.Size = New Size(59, 21)
         Label10.TabIndex = 3
         Label10.Text = "Barang"
         ' 
@@ -132,9 +141,9 @@ Partial Class Form4
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Segoe UI", 12F)
-        Label9.Location = New Point(13, 180)
+        Label9.Location = New Point(11, 135)
         Label9.Name = "Label9"
-        Label9.Size = New Size(108, 28)
+        Label9.Size = New Size(86, 21)
         Label9.TabIndex = 2
         Label9.Text = "Dashboard"
         ' 
@@ -142,18 +151,17 @@ Partial Class Form4
         ' 
         Label8.AutoSize = True
         Label8.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label8.Location = New Point(62, 84)
+        Label8.Location = New Point(54, 63)
         Label8.Name = "Label8"
-        Label8.Size = New Size(53, 20)
+        Label8.Size = New Size(41, 15)
         Label8.TabIndex = 1
         Label8.Text = "admin"
         ' 
         ' PictureBox7
         ' 
-        PictureBox7.Location = New Point(14, 66)
-        PictureBox7.Margin = New Padding(3, 4, 3, 4)
+        PictureBox7.Location = New Point(12, 50)
         PictureBox7.Name = "PictureBox7"
-        PictureBox7.Size = New Size(42, 50)
+        PictureBox7.Size = New Size(37, 38)
         PictureBox7.TabIndex = 0
         PictureBox7.TabStop = False
         ' 
@@ -161,35 +169,33 @@ Partial Class Form4
         ' 
         Panel2.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
         Panel2.Location = New Point(0, -2)
-        Panel2.Margin = New Padding(3, 4, 3, 4)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(1011, 58)
+        Panel2.Size = New Size(885, 44)
         Panel2.TabIndex = 3
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(782, 96)
+        Label2.Location = New Point(684, 72)
         Label2.Name = "Label2"
-        Label2.Size = New Size(54, 20)
+        Label2.Size = New Size(44, 15)
         Label2.TabIndex = 9
         Label2.Text = "search:"
         ' 
         ' TextBox1
         ' 
-        TextBox1.Location = New Point(839, 90)
-        TextBox1.Margin = New Padding(3, 4, 3, 4)
+        TextBox1.Location = New Point(734, 68)
         TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(144, 27)
+        TextBox1.Size = New Size(126, 23)
         TextBox1.TabIndex = 8
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(274, 84)
+        Label1.Location = New Point(240, 63)
         Label1.Name = "Label1"
-        Label1.Size = New Size(145, 41)
+        Label1.Size = New Size(117, 32)
         Label1.TabIndex = 7
         Label1.Text = "Penjualan"
         ' 
@@ -197,10 +203,9 @@ Partial Class Form4
         ' 
         Panel3.Controls.Add(TableLayoutPanel1)
         Panel3.Controls.Add(Button1)
-        Panel3.Location = New Point(262, 129)
-        Panel3.Margin = New Padding(3, 4, 3, 4)
+        Panel3.Location = New Point(229, 97)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(719, 482)
+        Panel3.Size = New Size(629, 362)
         Panel3.TabIndex = 10
         ' 
         ' TableLayoutPanel1
@@ -214,8 +219,8 @@ Partial Class Form4
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 16.5306129F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 16.1554184F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 59F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 72F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 52F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 66F))
         TableLayoutPanel1.Controls.Add(Label32, 8, 0)
         TableLayoutPanel1.Controls.Add(Button3, 7, 2)
         TableLayoutPanel1.Controls.Add(Label24, 0, 2)
@@ -243,31 +248,29 @@ Partial Class Form4
         TableLayoutPanel1.Controls.Add(Button2, 7, 1)
         TableLayoutPanel1.Controls.Add(Button4, 8, 1)
         TableLayoutPanel1.Controls.Add(Button5, 8, 2)
-        TableLayoutPanel1.Location = New Point(8, 56)
-        TableLayoutPanel1.Margin = New Padding(3, 4, 3, 4)
+        TableLayoutPanel1.Location = New Point(7, 42)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 3
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 28.5714283F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 71.42857F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 102F))
-        TableLayoutPanel1.Size = New Size(688, 262)
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 76F))
+        TableLayoutPanel1.Size = New Size(602, 196)
         TableLayoutPanel1.TabIndex = 1
         ' 
         ' Label32
         ' 
         Label32.AutoSize = True
-        Label32.Location = New Point(615, 0)
+        Label32.Location = New Point(534, 0)
         Label32.Name = "Label32"
-        Label32.Size = New Size(51, 20)
+        Label32.Size = New Size(41, 15)
         Label32.TabIndex = 26
         Label32.Text = "Hapus"
         ' 
         ' Button3
         ' 
-        Button3.Location = New Point(556, 163)
-        Button3.Margin = New Padding(3, 4, 3, 4)
+        Button3.Location = New Point(482, 122)
         Button3.Name = "Button3"
-        Button3.Size = New Size(53, 30)
+        Button3.Size = New Size(46, 22)
         Button3.TabIndex = 23
         Button3.Text = "Edit"
         Button3.UseVisualStyleBackColor = True
@@ -275,171 +278,171 @@ Partial Class Form4
         ' Label24
         ' 
         Label24.AutoSize = True
-        Label24.Location = New Point(3, 159)
+        Label24.Location = New Point(3, 119)
         Label24.Name = "Label24"
-        Label24.Size = New Size(17, 20)
+        Label24.Size = New Size(13, 15)
         Label24.TabIndex = 20
         Label24.Text = "2"
         ' 
         ' Label25
         ' 
         Label25.AutoSize = True
-        Label25.Location = New Point(38, 159)
+        Label25.Location = New Point(33, 119)
         Label25.Name = "Label25"
-        Label25.Size = New Size(30, 20)
+        Label25.Size = New Size(24, 15)
         Label25.TabIndex = 19
         Label25.Text = "LG "
         ' 
         ' Label26
         ' 
         Label26.AutoSize = True
-        Label26.Location = New Point(132, 159)
+        Label26.Location = New Point(114, 119)
         Label26.Name = "Label26"
-        Label26.Size = New Size(17, 20)
+        Label26.Size = New Size(13, 15)
         Label26.TabIndex = 18
         Label26.Text = "5"
         ' 
         ' Label27
         ' 
         Label27.AutoSize = True
-        Label27.Location = New Point(180, 159)
+        Label27.Location = New Point(156, 119)
         Label27.Name = "Label27"
-        Label27.Size = New Size(60, 20)
+        Label27.Size = New Size(46, 15)
         Label27.TabIndex = 17
         Label27.Text = "250.000"
         ' 
         ' Label28
         ' 
         Label28.AutoSize = True
-        Label28.Location = New Point(265, 159)
+        Label28.Location = New Point(229, 119)
         Label28.Name = "Label28"
-        Label28.Size = New Size(35, 20)
+        Label28.Size = New Size(29, 15)
         Label28.TabIndex = 16
         Label28.Text = "LCD"
         ' 
         ' Label29
         ' 
         Label29.AutoSize = True
-        Label29.Location = New Point(356, 159)
+        Label29.Location = New Point(308, 119)
         Label29.Name = "Label29"
-        Label29.Size = New Size(85, 20)
+        Label29.Size = New Size(65, 15)
         Label29.TabIndex = 15
         Label29.Text = "24/02/2025"
         ' 
         ' Label30
         ' 
         Label30.AutoSize = True
-        Label30.Location = New Point(467, 159)
+        Label30.Location = New Point(404, 119)
         Label30.Name = "Label30"
-        Label30.Size = New Size(59, 20)
+        Label30.Size = New Size(47, 15)
         Label30.TabIndex = 14
         Label30.Text = "Jogtron"
         ' 
         ' Label23
         ' 
         Label23.AutoSize = True
-        Label23.Location = New Point(467, 45)
+        Label23.Location = New Point(404, 34)
         Label23.Name = "Label23"
-        Label23.Size = New Size(73, 20)
+        Label23.Size = New Size(58, 15)
         Label23.TabIndex = 13
         Label23.Text = "Starcomp"
         ' 
         ' Label22
         ' 
         Label22.AutoSize = True
-        Label22.Location = New Point(356, 45)
+        Label22.Location = New Point(308, 34)
         Label22.Name = "Label22"
-        Label22.Size = New Size(85, 20)
+        Label22.Size = New Size(65, 15)
         Label22.TabIndex = 12
         Label22.Text = "24/02/2025"
         ' 
         ' Label21
         ' 
         Label21.AutoSize = True
-        Label21.Location = New Point(265, 45)
+        Label21.Location = New Point(229, 34)
         Label21.Name = "Label21"
-        Label21.Size = New Size(37, 20)
+        Label21.Size = New Size(30, 15)
         Label21.TabIndex = 11
         Label21.Text = "GPU"
         ' 
         ' Label20
         ' 
         Label20.AutoSize = True
-        Label20.Location = New Point(180, 45)
+        Label20.Location = New Point(156, 34)
         Label20.Name = "Label20"
-        Label20.Size = New Size(60, 20)
+        Label20.Size = New Size(46, 15)
         Label20.TabIndex = 10
         Label20.Text = "200.000"
         ' 
         ' Label19
         ' 
         Label19.AutoSize = True
-        Label19.Location = New Point(132, 45)
+        Label19.Location = New Point(114, 34)
         Label19.Name = "Label19"
-        Label19.Size = New Size(25, 20)
+        Label19.Size = New Size(19, 15)
         Label19.TabIndex = 9
         Label19.Text = "10"
         ' 
         ' Label18
         ' 
         Label18.AutoSize = True
-        Label18.Location = New Point(38, 45)
+        Label18.Location = New Point(33, 34)
         Label18.Name = "Label18"
-        Label18.Size = New Size(67, 40)
+        Label18.Size = New Size(53, 30)
         Label18.TabIndex = 8
         Label18.Text = "MSI RTX 3060"
         ' 
         ' Label17
         ' 
         Label17.AutoSize = True
-        Label17.Location = New Point(3, 45)
+        Label17.Location = New Point(3, 34)
         Label17.Name = "Label17"
-        Label17.Size = New Size(17, 20)
+        Label17.Size = New Size(13, 15)
         Label17.TabIndex = 7
         Label17.Text = "1"
         ' 
         ' Label16
         ' 
         Label16.AutoSize = True
-        Label16.Location = New Point(467, 0)
+        Label16.Location = New Point(404, 0)
         Label16.Name = "Label16"
-        Label16.Size = New Size(64, 20)
+        Label16.Size = New Size(50, 15)
         Label16.TabIndex = 6
         Label16.Text = "Supplier"
         ' 
         ' Label15
         ' 
         Label15.AutoSize = True
-        Label15.Location = New Point(265, 0)
+        Label15.Location = New Point(229, 0)
         Label15.Name = "Label15"
-        Label15.Size = New Size(66, 20)
+        Label15.Size = New Size(51, 15)
         Label15.TabIndex = 5
         Label15.Text = "Kategori"
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Location = New Point(180, 0)
+        Label6.Location = New Point(156, 0)
         Label6.Name = "Label6"
-        Label6.Size = New Size(50, 20)
+        Label6.Size = New Size(39, 15)
         Label6.TabIndex = 3
         Label6.Text = "Harga"
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Location = New Point(132, 0)
+        Label5.Location = New Point(114, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(38, 20)
+        Label5.Size = New Size(30, 15)
         Label5.TabIndex = 2
         Label5.Text = "Stok"
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(38, 0)
+        Label4.Location = New Point(33, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(56, 40)
+        Label4.Size = New Size(44, 30)
         Label4.TabIndex = 1
         Label4.Text = "Nama Barang"
         ' 
@@ -448,91 +451,76 @@ Partial Class Form4
         Label3.AutoSize = True
         Label3.Location = New Point(3, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(29, 20)
+        Label3.Size = New Size(23, 15)
         Label3.TabIndex = 0
         Label3.Text = "No"
         ' 
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Location = New Point(356, 0)
+        Label7.Location = New Point(308, 0)
         Label7.Name = "Label7"
-        Label7.Size = New Size(65, 40)
+        Label7.Size = New Size(87, 15)
         Label7.TabIndex = 4
         Label7.Text = "Tanggal Masuk"
         ' 
         ' Label31
         ' 
         Label31.AutoSize = True
-        Label31.Location = New Point(556, 0)
+        Label31.Location = New Point(482, 0)
         Label31.Name = "Label31"
-        Label31.Size = New Size(35, 20)
+        Label31.Size = New Size(27, 15)
         Label31.TabIndex = 21
         Label31.Text = "Edit"
         ' 
         ' Button2
         ' 
-        Button2.Location = New Point(556, 49)
-        Button2.Margin = New Padding(3, 4, 3, 4)
+        Button2.Location = New Point(482, 37)
         Button2.Name = "Button2"
-        Button2.Size = New Size(53, 30)
+        Button2.Size = New Size(46, 22)
         Button2.TabIndex = 22
         Button2.Text = "Edit"
         Button2.UseVisualStyleBackColor = True
         ' 
         ' Button4
         ' 
-        Button4.Location = New Point(615, 49)
-        Button4.Margin = New Padding(3, 4, 3, 4)
+        Button4.Location = New Point(534, 37)
         Button4.Name = "Button4"
-        Button4.Size = New Size(59, 30)
+        Button4.Size = New Size(52, 22)
         Button4.TabIndex = 24
         Button4.Text = "Hapus"
         Button4.UseVisualStyleBackColor = True
         ' 
         ' Button5
         ' 
-        Button5.Location = New Point(615, 163)
-        Button5.Margin = New Padding(3, 4, 3, 4)
+        Button5.Location = New Point(534, 122)
         Button5.Name = "Button5"
-        Button5.Size = New Size(62, 30)
+        Button5.Size = New Size(54, 22)
         Button5.TabIndex = 25
         Button5.Text = "Hapus"
         Button5.UseVisualStyleBackColor = True
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(556, 12)
-        Button1.Margin = New Padding(3, 4, 3, 4)
+        Button1.Location = New Point(486, 9)
         Button1.Name = "Button1"
-        Button1.Size = New Size(140, 30)
+        Button1.Size = New Size(122, 22)
         Button1.TabIndex = 0
         Button1.Text = "Tambah Penjualan"
         Button1.UseVisualStyleBackColor = True
         ' 
-        ' Label13
-        ' 
-        Label13.AutoSize = True
-        Label13.Font = New Font("Segoe UI", 12F)
-        Label13.Location = New Point(14, 362)
-        Label13.Name = "Label13"
-        Label13.Size = New Size(206, 28)
-        Label13.TabIndex = 10
-        Label13.Text = "Manajemen Pengguna"
-        ' 
         ' Form4
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(215), CByte(230), CByte(244))
-        ClientSize = New Size(1012, 639)
+        ClientSize = New Size(886, 479)
         Controls.Add(Panel3)
         Controls.Add(Label2)
         Controls.Add(TextBox1)
         Controls.Add(Label1)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
-        Margin = New Padding(3, 4, 3, 4)
         Name = "Form4"
         Text = "partManager"
         Panel1.ResumeLayout(False)

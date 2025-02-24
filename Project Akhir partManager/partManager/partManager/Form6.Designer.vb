@@ -34,33 +34,33 @@ Partial Class Form6
         Panel2 = New Panel()
         Label1 = New Label()
         Panel3 = New Panel()
-        DateTimePicker1 = New DateTimePicker()
-        DateTimePicker2 = New DateTimePicker()
-        Label2 = New Label()
-        Label3 = New Label()
         Button1 = New Button()
+        Label3 = New Label()
+        Label2 = New Label()
+        DateTimePicker2 = New DateTimePicker()
+        DateTimePicker1 = New DateTimePicker()
         TableLayoutPanel1 = New TableLayoutPanel()
-        Label14 = New Label()
-        Label13 = New Label()
-        Label7 = New Label()
-        Label5 = New Label()
-        Label6 = New Label()
-        Label15 = New Label()
-        Label16 = New Label()
-        Label4 = New Label()
-        Label18 = New Label()
-        Label19 = New Label()
-        Label20 = New Label()
-        Label21 = New Label()
-        Label22 = New Label()
-        Label23 = New Label()
-        Label30 = New Label()
-        Label29 = New Label()
-        Label28 = New Label()
-        Label27 = New Label()
-        Label26 = New Label()
-        Label25 = New Label()
         Label24 = New Label()
+        Label25 = New Label()
+        Label26 = New Label()
+        Label27 = New Label()
+        Label28 = New Label()
+        Label29 = New Label()
+        Label30 = New Label()
+        Label23 = New Label()
+        Label22 = New Label()
+        Label21 = New Label()
+        Label20 = New Label()
+        Label19 = New Label()
+        Label18 = New Label()
+        Label4 = New Label()
+        Label16 = New Label()
+        Label15 = New Label()
+        Label6 = New Label()
+        Label5 = New Label()
+        Label7 = New Label()
+        Label13 = New Label()
+        Label14 = New Label()
         Panel1.SuspendLayout()
         CType(PictureBox7, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
@@ -191,28 +191,14 @@ Partial Class Form6
         Panel3.Size = New Size(651, 187)
         Panel3.TabIndex = 9
         ' 
-        ' DateTimePicker1
+        ' Button1
         ' 
-        DateTimePicker1.Location = New Point(10, 35)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(200, 23)
-        DateTimePicker1.TabIndex = 0
-        ' 
-        ' DateTimePicker2
-        ' 
-        DateTimePicker2.Location = New Point(10, 93)
-        DateTimePicker2.Name = "DateTimePicker2"
-        DateTimePicker2.Size = New Size(200, 23)
-        DateTimePicker2.TabIndex = 1
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(13, 8)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(82, 15)
-        Label2.TabIndex = 3
-        Label2.Text = "Tanggal Mulai"
+        Button1.Location = New Point(10, 151)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(75, 23)
+        Button1.TabIndex = 5
+        Button1.Text = "Cari"
+        Button1.UseVisualStyleBackColor = True
         ' 
         ' Label3
         ' 
@@ -223,14 +209,28 @@ Partial Class Form6
         Label3.TabIndex = 4
         Label3.Text = "Tanggal Selesai"
         ' 
-        ' Button1
+        ' Label2
         ' 
-        Button1.Location = New Point(10, 151)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(75, 23)
-        Button1.TabIndex = 5
-        Button1.Text = "Cari"
-        Button1.UseVisualStyleBackColor = True
+        Label2.AutoSize = True
+        Label2.Location = New Point(13, 8)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(82, 15)
+        Label2.TabIndex = 3
+        Label2.Text = "Tanggal Mulai"
+        ' 
+        ' DateTimePicker2
+        ' 
+        DateTimePicker2.Location = New Point(10, 93)
+        DateTimePicker2.Name = "DateTimePicker2"
+        DateTimePicker2.Size = New Size(200, 23)
+        DateTimePicker2.TabIndex = 1
+        ' 
+        ' DateTimePicker1
+        ' 
+        DateTimePicker1.Location = New Point(10, 35)
+        DateTimePicker1.Name = "DateTimePicker1"
+        DateTimePicker1.Size = New Size(200, 23)
+        DateTimePicker1.TabIndex = 0
         ' 
         ' TableLayoutPanel1
         ' 
@@ -273,176 +273,14 @@ Partial Class Form6
         TableLayoutPanel1.Size = New Size(644, 162)
         TableLayoutPanel1.TabIndex = 7
         ' 
-        ' Label14
+        ' Label24
         ' 
-        Label14.AutoSize = True
-        Label14.Location = New Point(413, 0)
-        Label14.Name = "Label14"
-        Label14.Size = New Size(87, 15)
-        Label14.TabIndex = 4
-        Label14.Text = "Tanggal Masuk"
-        ' 
-        ' Label13
-        ' 
-        Label13.AutoSize = True
-        Label13.Location = New Point(3, 0)
-        Label13.Name = "Label13"
-        Label13.Size = New Size(23, 15)
-        Label13.TabIndex = 0
-        Label13.Text = "No"
-        ' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.Location = New Point(44, 0)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(79, 15)
-        Label7.TabIndex = 1
-        Label7.Text = "Nama Barang"
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Location = New Point(153, 0)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(30, 15)
-        Label5.TabIndex = 2
-        Label5.Text = "Stok"
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.Location = New Point(209, 0)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(39, 15)
-        Label6.TabIndex = 3
-        Label6.Text = "Harga"
-        ' 
-        ' Label15
-        ' 
-        Label15.AutoSize = True
-        Label15.Location = New Point(307, 0)
-        Label15.Name = "Label15"
-        Label15.Size = New Size(51, 15)
-        Label15.TabIndex = 5
-        Label15.Text = "Kategori"
-        ' 
-        ' Label16
-        ' 
-        Label16.AutoSize = True
-        Label16.Location = New Point(541, 0)
-        Label16.Name = "Label16"
-        Label16.Size = New Size(50, 15)
-        Label16.TabIndex = 6
-        Label16.Text = "Supplier"
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Location = New Point(3, 24)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(13, 15)
-        Label4.TabIndex = 7
-        Label4.Text = "1"
-        ' 
-        ' Label18
-        ' 
-        Label18.AutoSize = True
-        Label18.Location = New Point(44, 24)
-        Label18.Name = "Label18"
-        Label18.Size = New Size(77, 15)
-        Label18.TabIndex = 8
-        Label18.Text = "MSI RTX 3060"
-        ' 
-        ' Label19
-        ' 
-        Label19.AutoSize = True
-        Label19.Location = New Point(153, 24)
-        Label19.Name = "Label19"
-        Label19.Size = New Size(19, 15)
-        Label19.TabIndex = 9
-        Label19.Text = "10"
-        ' 
-        ' Label20
-        ' 
-        Label20.AutoSize = True
-        Label20.Location = New Point(209, 24)
-        Label20.Name = "Label20"
-        Label20.Size = New Size(46, 15)
-        Label20.TabIndex = 10
-        Label20.Text = "200.000"
-        ' 
-        ' Label21
-        ' 
-        Label21.AutoSize = True
-        Label21.Location = New Point(307, 24)
-        Label21.Name = "Label21"
-        Label21.Size = New Size(30, 15)
-        Label21.TabIndex = 11
-        Label21.Text = "GPU"
-        ' 
-        ' Label22
-        ' 
-        Label22.AutoSize = True
-        Label22.Location = New Point(413, 24)
-        Label22.Name = "Label22"
-        Label22.Size = New Size(65, 15)
-        Label22.TabIndex = 12
-        Label22.Text = "24/02/2025"
-        ' 
-        ' Label23
-        ' 
-        Label23.AutoSize = True
-        Label23.Location = New Point(541, 24)
-        Label23.Name = "Label23"
-        Label23.Size = New Size(58, 15)
-        Label23.TabIndex = 13
-        Label23.Text = "Starcomp"
-        ' 
-        ' Label30
-        ' 
-        Label30.AutoSize = True
-        Label30.Location = New Point(541, 85)
-        Label30.Name = "Label30"
-        Label30.Size = New Size(47, 15)
-        Label30.TabIndex = 14
-        Label30.Text = "Jogtron"
-        ' 
-        ' Label29
-        ' 
-        Label29.AutoSize = True
-        Label29.Location = New Point(413, 85)
-        Label29.Name = "Label29"
-        Label29.Size = New Size(65, 15)
-        Label29.TabIndex = 15
-        Label29.Text = "24/02/2025"
-        ' 
-        ' Label28
-        ' 
-        Label28.AutoSize = True
-        Label28.Location = New Point(307, 85)
-        Label28.Name = "Label28"
-        Label28.Size = New Size(29, 15)
-        Label28.TabIndex = 16
-        Label28.Text = "LCD"
-        ' 
-        ' Label27
-        ' 
-        Label27.AutoSize = True
-        Label27.Location = New Point(209, 85)
-        Label27.Name = "Label27"
-        Label27.Size = New Size(46, 15)
-        Label27.TabIndex = 17
-        Label27.Text = "250.000"
-        ' 
-        ' Label26
-        ' 
-        Label26.AutoSize = True
-        Label26.Location = New Point(153, 85)
-        Label26.Name = "Label26"
-        Label26.Size = New Size(13, 15)
-        Label26.TabIndex = 18
-        Label26.Text = "5"
+        Label24.AutoSize = True
+        Label24.Location = New Point(3, 85)
+        Label24.Name = "Label24"
+        Label24.Size = New Size(13, 15)
+        Label24.TabIndex = 20
+        Label24.Text = "2"
         ' 
         ' Label25
         ' 
@@ -453,19 +291,182 @@ Partial Class Form6
         Label25.TabIndex = 19
         Label25.Text = "LG "
         ' 
-        ' Label24
+        ' Label26
         ' 
-        Label24.AutoSize = True
-        Label24.Location = New Point(3, 85)
-        Label24.Name = "Label24"
-        Label24.Size = New Size(13, 15)
-        Label24.TabIndex = 20
-        Label24.Text = "2"
+        Label26.AutoSize = True
+        Label26.Location = New Point(153, 85)
+        Label26.Name = "Label26"
+        Label26.Size = New Size(13, 15)
+        Label26.TabIndex = 18
+        Label26.Text = "5"
+        ' 
+        ' Label27
+        ' 
+        Label27.AutoSize = True
+        Label27.Location = New Point(209, 85)
+        Label27.Name = "Label27"
+        Label27.Size = New Size(46, 15)
+        Label27.TabIndex = 17
+        Label27.Text = "250.000"
+        ' 
+        ' Label28
+        ' 
+        Label28.AutoSize = True
+        Label28.Location = New Point(307, 85)
+        Label28.Name = "Label28"
+        Label28.Size = New Size(29, 15)
+        Label28.TabIndex = 16
+        Label28.Text = "LCD"
+        ' 
+        ' Label29
+        ' 
+        Label29.AutoSize = True
+        Label29.Location = New Point(413, 85)
+        Label29.Name = "Label29"
+        Label29.Size = New Size(65, 15)
+        Label29.TabIndex = 15
+        Label29.Text = "24/02/2025"
+        ' 
+        ' Label30
+        ' 
+        Label30.AutoSize = True
+        Label30.Location = New Point(541, 85)
+        Label30.Name = "Label30"
+        Label30.Size = New Size(47, 15)
+        Label30.TabIndex = 14
+        Label30.Text = "Jogtron"
+        ' 
+        ' Label23
+        ' 
+        Label23.AutoSize = True
+        Label23.Location = New Point(541, 24)
+        Label23.Name = "Label23"
+        Label23.Size = New Size(58, 15)
+        Label23.TabIndex = 13
+        Label23.Text = "Starcomp"
+        ' 
+        ' Label22
+        ' 
+        Label22.AutoSize = True
+        Label22.Location = New Point(413, 24)
+        Label22.Name = "Label22"
+        Label22.Size = New Size(65, 15)
+        Label22.TabIndex = 12
+        Label22.Text = "24/02/2025"
+        ' 
+        ' Label21
+        ' 
+        Label21.AutoSize = True
+        Label21.Location = New Point(307, 24)
+        Label21.Name = "Label21"
+        Label21.Size = New Size(30, 15)
+        Label21.TabIndex = 11
+        Label21.Text = "GPU"
+        ' 
+        ' Label20
+        ' 
+        Label20.AutoSize = True
+        Label20.Location = New Point(209, 24)
+        Label20.Name = "Label20"
+        Label20.Size = New Size(46, 15)
+        Label20.TabIndex = 10
+        Label20.Text = "200.000"
+        ' 
+        ' Label19
+        ' 
+        Label19.AutoSize = True
+        Label19.Location = New Point(153, 24)
+        Label19.Name = "Label19"
+        Label19.Size = New Size(19, 15)
+        Label19.TabIndex = 9
+        Label19.Text = "10"
+        ' 
+        ' Label18
+        ' 
+        Label18.AutoSize = True
+        Label18.Location = New Point(44, 24)
+        Label18.Name = "Label18"
+        Label18.Size = New Size(77, 15)
+        Label18.TabIndex = 8
+        Label18.Text = "MSI RTX 3060"
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Location = New Point(3, 24)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(13, 15)
+        Label4.TabIndex = 7
+        Label4.Text = "1"
+        ' 
+        ' Label16
+        ' 
+        Label16.AutoSize = True
+        Label16.Location = New Point(541, 0)
+        Label16.Name = "Label16"
+        Label16.Size = New Size(50, 15)
+        Label16.TabIndex = 6
+        Label16.Text = "Supplier"
+        ' 
+        ' Label15
+        ' 
+        Label15.AutoSize = True
+        Label15.Location = New Point(307, 0)
+        Label15.Name = "Label15"
+        Label15.Size = New Size(51, 15)
+        Label15.TabIndex = 5
+        Label15.Text = "Kategori"
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Location = New Point(209, 0)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(39, 15)
+        Label6.TabIndex = 3
+        Label6.Text = "Harga"
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Location = New Point(153, 0)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(30, 15)
+        Label5.TabIndex = 2
+        Label5.Text = "Stok"
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Location = New Point(44, 0)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(79, 15)
+        Label7.TabIndex = 1
+        Label7.Text = "Nama Barang"
+        ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.Location = New Point(3, 0)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(23, 15)
+        Label13.TabIndex = 0
+        Label13.Text = "No"
+        ' 
+        ' Label14
+        ' 
+        Label14.AutoSize = True
+        Label14.Location = New Point(413, 0)
+        Label14.Name = "Label14"
+        Label14.Size = New Size(87, 15)
+        Label14.TabIndex = 4
+        Label14.Text = "Tanggal Masuk"
         ' 
         ' Form6
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.FromArgb(CByte(215), CByte(230), CByte(244))
         ClientSize = New Size(886, 479)
         Controls.Add(TableLayoutPanel1)
         Controls.Add(Panel3)
