@@ -15,3 +15,23 @@ F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partMana
 F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.pdb
 F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.genruntimeconfig.cache
 F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\ref\partManager.dll
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\bin\Debug\net8.0-windows\partManager.exe
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\bin\Debug\net8.0-windows\partManager.deps.json
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\bin\Debug\net8.0-windows\partManager.runtimeconfig.json
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\bin\Debug\net8.0-windows\partManager.dll
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\bin\Debug\net8.0-windows\partManager.pdb
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.Form1.resources
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.Form2.resources
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.vbproj.GenerateResource.cache
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.GeneratedMSBuildEditorConfig.editorconfig
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.AssemblyInfoInputs.cache
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.AssemblyInfo.vb
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.vbproj.CoreCompileInputs.cache
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.sourcelink.json
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.dll
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\refint\partManager.dll
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.pdb
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.genruntimeconfig.cache
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\ref\partManager.dll
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.Form3.resources
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.Form4.resources

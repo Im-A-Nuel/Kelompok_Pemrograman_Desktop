@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("partManager"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61b9f83da9bfb2f7bec67f8a93975f1a00752861"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9400f5c2c2a69104a73280566cc8d51e1c4364e6"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("partManager"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("partManager"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _
