@@ -33,3 +33,5 @@ D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir part
 D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.pdb
 D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.genruntimeconfig.cache
 D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\ref\partManager.dll
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.Form3.resources
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.Form4.resources
