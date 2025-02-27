@@ -1,22 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="Form1.vb">
+    <Compile Update="Login.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form2.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Form3.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Form4.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Form5.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Form6.vb">
+    <Compile Update="Main.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Form7.vb">
@@ -24,6 +12,24 @@
     </Compile>
     <Compile Update="Form8.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UC_BarangKeluar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UC_BarangMasuk.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UC_Dashboard.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UC_DataBarang.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UC_Laporan.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UC_ManajemenPengguna.vb">
+      <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
 </Project>
