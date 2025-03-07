@@ -36,34 +36,36 @@ Partial Class Form2
         ' 
         lblJam.AutoSize = True
         lblJam.ForeColor = Color.White
-        lblJam.Location = New Point(128, 94)
+        lblJam.Location = New Point(112, 70)
         lblJam.Name = "lblJam"
-        lblJam.Size = New Size(34, 20)
+        lblJam.Size = New Size(27, 15)
         lblJam.TabIndex = 4
         lblJam.Tag = ""
         lblJam.Text = "jam"
         ' 
         ' txtHour
         ' 
-        txtHour.Location = New Point(65, 89)
+        txtHour.Location = New Point(57, 67)
+        txtHour.Margin = New Padding(3, 2, 3, 2)
         txtHour.Name = "txtHour"
-        txtHour.Size = New Size(60, 27)
+        txtHour.Size = New Size(52, 23)
         txtHour.TabIndex = 5
         ' 
         ' txtMinute
         ' 
-        txtMinute.Location = New Point(192, 91)
+        txtMinute.Location = New Point(168, 68)
+        txtMinute.Margin = New Padding(3, 2, 3, 2)
         txtMinute.Name = "txtMinute"
-        txtMinute.Size = New Size(60, 27)
+        txtMinute.Size = New Size(52, 23)
         txtMinute.TabIndex = 6
         ' 
         ' lblMenit
         ' 
         lblMenit.AutoSize = True
         lblMenit.ForeColor = Color.White
-        lblMenit.Location = New Point(255, 95)
+        lblMenit.Location = New Point(223, 71)
         lblMenit.Name = "lblMenit"
-        lblMenit.Size = New Size(47, 20)
+        lblMenit.Size = New Size(38, 15)
         lblMenit.TabIndex = 7
         lblMenit.Tag = ""
         lblMenit.Text = "menit"
@@ -74,9 +76,10 @@ Partial Class Form2
         btnAplly.FlatStyle = FlatStyle.Flat
         btnAplly.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnAplly.ForeColor = Color.White
-        btnAplly.Location = New Point(343, 68)
+        btnAplly.Location = New Point(300, 51)
+        btnAplly.Margin = New Padding(3, 2, 3, 2)
         btnAplly.Name = "btnAplly"
-        btnAplly.Size = New Size(94, 29)
+        btnAplly.Size = New Size(82, 22)
         btnAplly.TabIndex = 8
         btnAplly.Text = "Apply"
         btnAplly.UseVisualStyleBackColor = False
@@ -87,25 +90,27 @@ Partial Class Form2
         btnReset.FlatStyle = FlatStyle.Flat
         btnReset.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnReset.ForeColor = Color.White
-        btnReset.Location = New Point(343, 118)
+        btnReset.Location = New Point(300, 88)
+        btnReset.Margin = New Padding(3, 2, 3, 2)
         btnReset.Name = "btnReset"
-        btnReset.Size = New Size(94, 29)
+        btnReset.Size = New Size(82, 22)
         btnReset.TabIndex = 9
         btnReset.Text = "Reset"
         btnReset.UseVisualStyleBackColor = False
         ' 
         ' Form2
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(52), CByte(63), CByte(81))
-        ClientSize = New Size(502, 212)
+        ClientSize = New Size(439, 159)
         Controls.Add(btnReset)
         Controls.Add(btnAplly)
         Controls.Add(lblMenit)
         Controls.Add(txtMinute)
         Controls.Add(txtHour)
         Controls.Add(lblJam)
+        Margin = New Padding(3, 2, 3, 2)
         Name = "Form2"
         Text = "Timer"
         CType(txtHour, ComponentModel.ISupportInitialize).EndInit()
