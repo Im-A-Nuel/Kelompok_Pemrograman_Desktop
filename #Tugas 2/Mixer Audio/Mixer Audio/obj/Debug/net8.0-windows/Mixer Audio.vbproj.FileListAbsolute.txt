@@ -1,0 +1,31 @@
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\bin\Debug\net8.0-windows\Mixer Audio.exe
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\bin\Debug\net8.0-windows\Mixer Audio.deps.json
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\bin\Debug\net8.0-windows\Mixer Audio.runtimeconfig.json
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\bin\Debug\net8.0-windows\Mixer Audio.dll
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\bin\Debug\net8.0-windows\Mixer Audio.pdb
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\bin\Debug\net8.0-windows\NAudio.dll
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\bin\Debug\net8.0-windows\NAudio.Asio.dll
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\bin\Debug\net8.0-windows\NAudio.Core.dll
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\bin\Debug\net8.0-windows\NAudio.Midi.dll
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\bin\Debug\net8.0-windows\NAudio.Wasapi.dll
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\bin\Debug\net8.0-windows\NAudio.WinForms.dll
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\bin\Debug\net8.0-windows\NAudio.WinMM.dll
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\bin\Debug\net8.0-windows\AxInterop.WMPLib.dll
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\bin\Debug\net8.0-windows\ID3.dll
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\bin\Debug\net8.0-windows\Interop.WMPLib.dll
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\obj\Debug\net8.0-windows\Mixer Audio.vbproj.AssemblyReference.cache
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\obj\Debug\net8.0-windows\Mixer_Audio.Form1.resources
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\obj\Debug\net8.0-windows\Mixer_Audio.Form2.resources
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\obj\Debug\net8.0-windows\Mixer_Audio.Resources.resources
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\obj\Debug\net8.0-windows\Mixer Audio.vbproj.GenerateResource.cache
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\obj\Debug\net8.0-windows\Mixer Audio.GeneratedMSBuildEditorConfig.editorconfig
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\obj\Debug\net8.0-windows\Mixer Audio.AssemblyInfoInputs.cache
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\obj\Debug\net8.0-windows\Mixer Audio.AssemblyInfo.vb
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\obj\Debug\net8.0-windows\Mixer Audio.vbproj.CoreCompileInputs.cache
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\obj\Debug\net8.0-windows\Mixer Audio.sourcelink.json
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\obj\Debug\net8.0-windows\Mixer Au.DAC8CA0A.Up2Date
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\obj\Debug\net8.0-windows\Mixer Audio.dll
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\obj\Debug\net8.0-windows\refint\Mixer Audio.dll
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\obj\Debug\net8.0-windows\Mixer Audio.pdb
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\obj\Debug\net8.0-windows\Mixer Audio.genruntimeconfig.cache
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\#Tugas 2\Mixer Audio\Mixer Audio\obj\Debug\net8.0-windows\ref\Mixer Audio.dll
