@@ -1,4 +1,5 @@
 ﻿Imports NAudio.CoreAudioApi
+Imports NAudio.CoreAudioApi.Interfaces
 
 Public Class Form1
     Dim enumerator As New MMDeviceEnumerator()
@@ -6,7 +7,8 @@ Public Class Form1
     Dim updateTimer As New Timer()
     Dim countdownTime As Integer
     Dim fadeThreshold As Integer = 10
-
+    Private appControls As New Dictionary(Of String, TrackBar)
+    Private appLabels As New Dictionary(Of String, Label)
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadOutputDevices()
         LoadInputDevices()
@@ -25,7 +27,113 @@ Public Class Form1
 
         AddHandler timerCountDown.Tick, AddressOf TimerCountDown_Tick
         timerCountDown.Interval = 1000
+
+        UpdateAudioApplications()
     End Sub
+
+    Private Sub RefreshIODevicesAndApps(sender As Object, e As EventArgs)
+        LoadOutputDevices()
+        LoadInputDevices()
+        UpdateAudioApplications()
+    End Sub
+
+    Private Sub UpdateAudioApplications()
+        Dim sessions = defaultDevice.AudioSessionManager.Sessions
+        Dim currentApps As New List(Of String)
+
+        For i As Integer = 0 To sessions.Count - 1
+            Dim session As AudioSessionControl = sessions(i)
+            If Not session.IsSystemSoundsSession AndAlso session.State = AudioSessionState.AudioSessionStateActive Then
+                Dim processId As UInteger = session.GetProcessID
+                Dim process As Process
+                Try
+                    process = Process.GetProcessById(CInt(processId))
+                    Dim appName As String = process.ProcessName
+
+                    currentApps.Add(appName)
+
+                    If Not appControls.ContainsKey(appName) Then
+                        AddApplicationControl(appName)
+                    End If
+
+                    Dim sessionVolume As Single = session.SimpleAudioVolume.Volume * 100
+                    If appControls.ContainsKey(appName) Then
+                        appControls(appName).Value = CInt(sessionVolume)
+                    End If
+                Catch ex As Exception
+                    Continue For
+                End Try
+            End If
+        Next
+
+        Dim appsToRemove As New List(Of String)
+        For Each app In appControls.Keys
+            If Not currentApps.Contains(app) Then
+                appsToRemove.Add(app)
+            End If
+        Next
+
+        For Each app In appsToRemove
+            RemoveApplicationControl(app)
+        Next
+    End Sub
+
+    Private Sub AddApplicationControl(appName As String)
+        Dim lbl As New Label()
+        lbl.Name = "lblApp_" & appName
+        lbl.Text = appName
+        lbl.AutoSize = True
+
+        Dim tb As New TrackBar()
+        tb.Name = "tbApp_" & appName
+        tb.Minimum = 0
+        tb.Maximum = 100
+        tb.Value = 100 ' Default to 100%
+        tb.Width = 200
+        AddHandler tb.Scroll, AddressOf AppTrackBar_Scroll
+
+        Dim yPos As Integer = appControls.Count * 40
+        lbl.Location = New Point(0, yPos + 5)
+        tb.Location = New Point(100, yPos)
+
+        pnlAppsContainer.Controls.Add(lbl)
+        pnlAppsContainer.Controls.Add(tb)
+        appControls.Add(appName, tb)
+        appLabels.Add(appName, lbl)
+    End Sub
+
+    Private Sub RemoveApplicationControl(appName As String)
+        If appControls.ContainsKey(appName) Then
+            pnlAppsContainer.Controls.Remove(appControls(appName))
+            pnlAppsContainer.Controls.Remove(appLabels(appName))
+            appControls.Remove(appName)
+            appLabels.Remove(appName)
+        End If
+    End Sub
+
+    Private Sub AppTrackBar_Scroll(sender As Object, e As EventArgs)
+        Dim tb As TrackBar = DirectCast(sender, TrackBar)
+        Dim appName As String = tb.Name.Replace("tbApp_", "")
+
+        Dim sessions = defaultDevice.AudioSessionManager.Sessions
+        For i As Integer = 0 To sessions.Count - 1
+            Dim session As AudioSessionControl = sessions(i)
+            If Not session.IsSystemSoundsSession Then
+                Dim processId As UInteger = session.GetProcessID
+                Dim process As Process
+                Try
+                    process = Process.GetProcessById(CInt(processId))
+                    If process.ProcessName = appName Then
+                        session.SimpleAudioVolume.Volume = tb.Value / 100.0F
+                        Exit For
+                    End If
+                Catch ex As Exception
+                    Continue For
+                End Try
+            End If
+        Next
+    End Sub
+
 
     Private Sub picTime_Click(sender As Object, e As EventArgs) Handles picTime.Click
         Form2.Show()

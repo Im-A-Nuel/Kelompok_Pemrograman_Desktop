@@ -13,10 +13,7 @@
           "NAudio.Core": "2.2.1",
           "NAudio.Midi": "2.2.1",
           "NAudio.Wasapi": "2.2.1",
-          "NAudio.WinMM": "2.2.1",
-          "AxInterop.WMPLib": "1.0.0.0",
-          "ID3": "1.1.0.0",
-          "Interop.WMPLib": "1.0.0.0"
+          "NAudio.WinMM": "2.2.1"
         },
         "runtime": {
           "Mixer Audio.dll": {}
@@ -116,31 +113,7 @@
           "System.Security.Principal.Windows": "4.7.0"
         }
       },
-      "System.Security.Principal.Windows/4.7.0": {},
-      "AxInterop.WMPLib/1.0.0.0": {
-        "runtime": {
-          "AxInterop.WMPLib.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "ID3/1.1.0.0": {
-        "runtime": {
-          "ID3.dll": {
-            "assemblyVersion": "1.1.0.0",
-            "fileVersion": "1.1.0.0"
-          }
-        }
-      },
-      "Interop.WMPLib/1.0.0.0": {
-        "runtime": {
-          "Interop.WMPLib.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      }
+      "System.Security.Principal.Windows/4.7.0": {}
     }
   },
   "libraries": {
@@ -225,21 +198,6 @@
       "sha512": "sha512-ojD0PX0XhneCsUbAZVKdb7h/70vyYMDYs85lwEI+LngEONe/17A0cFaRFqZU+sOEidcVswYWikYOQ9PPfjlbtQ==",
       "path": "system.security.principal.windows/4.7.0",
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
-    },
-    "AxInterop.WMPLib/1.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "ID3/1.1.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Interop.WMPLib/1.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }
