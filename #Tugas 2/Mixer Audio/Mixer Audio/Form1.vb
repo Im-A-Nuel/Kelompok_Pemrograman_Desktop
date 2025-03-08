@@ -42,32 +42,34 @@ Public Class Form1
 
     Private Sub LoadOutputDevices()
         cmbOutputDevice.Items.Clear()
+        Dim enumerator As New MMDeviceEnumerator()
         Dim outputDevices = enumerator.EnumerateAudioEndPoints(DataFlow.Render, DeviceState.Active)
 
         For Each device In outputDevices
             cmbOutputDevice.Items.Add(device.FriendlyName)
         Next
 
-        If cmbOutputDevice.Items.Count > 0 Then
-            cmbOutputDevice.SelectedIndex = 0
+        Dim defaultOutputDevice As MMDevice = enumerator.GetDefaultAudioEndpoint(DataFlow.Render, Role.Multimedia)
+        If defaultOutputDevice IsNot Nothing Then
+            Dim defaultDeviceName As String = defaultOutputDevice.FriendlyName
+            cmbOutputDevice.SelectedItem = defaultDeviceName
         End If
     End Sub
 
     Private Sub LoadInputDevices()
         cmbInputDevice.Items.Clear()
+        Dim enumerator As New MMDeviceEnumerator()
         Dim inputDevices = enumerator.EnumerateAudioEndPoints(DataFlow.Capture, DeviceState.Active)
 
         For Each device In inputDevices
             cmbInputDevice.Items.Add(device.FriendlyName)
         Next
 
-        If cmbInputDevice.Items.Count > 0 Then
-            cmbInputDevice.SelectedIndex = 0
+        Dim defaultInputDevice As MMDevice = enumerator.GetDefaultAudioEndpoint(DataFlow.Capture, Role.Multimedia)
+        If defaultInputDevice IsNot Nothing Then
+            Dim defaultDeviceName As String = defaultInputDevice.FriendlyName
+            cmbInputDevice.SelectedItem = defaultDeviceName
         End If
-    End Sub
-
-    Private Sub cmbOutputDevice_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbOutputDevice.SelectedIndexChanged
-
     End Sub
 
     Private Sub tbVolumeApp_Scroll(sender As Object, e As EventArgs)

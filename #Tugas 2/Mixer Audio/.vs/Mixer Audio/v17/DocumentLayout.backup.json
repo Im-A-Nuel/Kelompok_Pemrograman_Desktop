@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{29DF41DB-C30C-4D79-9F69-D6608413F2CD}|Mixer Audio\\Mixer Audio.vbproj|solutionrelative:mixer audio\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{29DF41DB-C30C-4D79-9F69-D6608413F2CD}|Mixer Audio\\Mixer Audio.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\#tugas 2\\mixer audio\\mixer audio\\form2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{29DF41DB-C30C-4D79-9F69-D6608413F2CD}|Mixer Audio\\Mixer Audio.vbproj|solutionrelative:mixer audio\\form2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{29DF41DB-C30C-4D79-9F69-D6608413F2CD}|Mixer Audio\\Mixer Audio.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\#tugas 2\\mixer audio\\mixer audio\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{29DF41DB-C30C-4D79-9F69-D6608413F2CD}|Mixer Audio\\Mixer Audio.vbproj|solutionrelative:mixer audio\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DF41DB-C30C-4D79-9F69-D6608413F2CD}|Mixer Audio\\Mixer Audio.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\#tugas 2\\mixer audio\\mixer audio\\form2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{29DF41DB-C30C-4D79-9F69-D6608413F2CD}|Mixer Audio\\Mixer Audio.vbproj|solutionrelative:mixer audio\\form2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -33,10 +33,6 @@
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.vb",
@@ -44,14 +40,14 @@
               "RelativeDocumentMoniker": "Mixer Audio\\Form1.vb",
               "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 2\\Mixer Audio\\Mixer Audio\\Form1.vb",
               "RelativeToolTip": "Mixer Audio\\Form1.vb",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAuwHsAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAL4AAAAAAAAAAAAgwMcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-03-08T12:06:53.903Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form2.vb [Design]",
               "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 2\\Mixer Audio\\Mixer Audio\\Form2.vb",
               "RelativeDocumentMoniker": "Mixer Audio\\Form2.vb",
@@ -63,7 +59,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Form1.vb [Design]",
               "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 2\\Mixer Audio\\Mixer Audio\\Form1.vb",
               "RelativeDocumentMoniker": "Mixer Audio\\Form1.vb",
@@ -72,6 +68,10 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-03-08T11:57:36.429Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             }
           ]
         }
