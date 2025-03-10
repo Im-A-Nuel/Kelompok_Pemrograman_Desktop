@@ -31,7 +31,6 @@ Public Class Form1
         tmrUpdate.Interval = 2000
         tmrUpdate.Start()
 
-        AddHandler timerCountDown.Tick, AddressOf TimerCountDown_Tick
         timerCountDown.Interval = 1000
 
     End Sub
@@ -143,11 +142,16 @@ Public Class Form1
 
 
 
+
     Public Sub SetCountdownTime(hours As Integer, minutes As Integer)
         countdownTime = (hours * 3600) + (minutes * 60)
         lblTimer.Text = "Timer : " & TimeSpan.FromSeconds(countdownTime).ToString("hh\:mm\:ss")
+        If timerCountDown.Enabled Then
+            timerCountDown.Stop()
+        End If
         timerCountDown.Start()
     End Sub
+
 
     Private Function GetCurrentSystemVolume() As Integer
         Dim enumerator As New MMDeviceEnumerator()
