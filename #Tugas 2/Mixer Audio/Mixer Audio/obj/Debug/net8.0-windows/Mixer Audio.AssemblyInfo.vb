@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("Mixer Audio"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16d4cb596b815b966d6ac56c91e73e57777fbe6e"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc07ea74e9f39c859dc22cb9dcf08cf7b1ddd5da"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("Mixer Audio"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("Mixer Audio"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _
