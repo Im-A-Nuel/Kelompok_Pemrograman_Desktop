@@ -73,13 +73,14 @@ Partial Class Form2
         ' btnAplly
         ' 
         btnAplly.BackColor = Color.FromArgb(CByte(41), CByte(49), CByte(68))
+        btnAplly.FlatAppearance.BorderSize = 0
         btnAplly.FlatStyle = FlatStyle.Flat
         btnAplly.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnAplly.ForeColor = Color.White
-        btnAplly.Location = New Point(300, 51)
+        btnAplly.Location = New Point(300, 48)
         btnAplly.Margin = New Padding(3, 2, 3, 2)
         btnAplly.Name = "btnAplly"
-        btnAplly.Size = New Size(82, 22)
+        btnAplly.Size = New Size(82, 24)
         btnAplly.TabIndex = 8
         btnAplly.Text = "Apply"
         btnAplly.UseVisualStyleBackColor = False
@@ -87,13 +88,14 @@ Partial Class Form2
         ' btnReset
         ' 
         btnReset.BackColor = Color.FromArgb(CByte(41), CByte(49), CByte(68))
+        btnReset.FlatAppearance.BorderSize = 0
         btnReset.FlatStyle = FlatStyle.Flat
         btnReset.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnReset.ForeColor = Color.White
-        btnReset.Location = New Point(300, 88)
+        btnReset.Location = New Point(300, 85)
         btnReset.Margin = New Padding(3, 2, 3, 2)
         btnReset.Name = "btnReset"
-        btnReset.Size = New Size(82, 22)
+        btnReset.Size = New Size(82, 24)
         btnReset.TabIndex = 9
         btnReset.Text = "Reset"
         btnReset.UseVisualStyleBackColor = False
