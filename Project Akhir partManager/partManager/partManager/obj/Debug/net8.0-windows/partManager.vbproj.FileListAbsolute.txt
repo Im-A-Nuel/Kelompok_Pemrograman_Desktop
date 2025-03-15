@@ -62,3 +62,7 @@ F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir pa
 F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.UC_Laporan.resources
 F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.UC_ManajemenPengguna.resources
 F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.Main.resources
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\bin\Debug\net8.0-windows\MySql.Data.dll
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\bin\Debug\net8.0-windows\MySql.Data.xml
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.vbproj.AssemblyReference.cache
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partMana.2E6C0DE0.Up2Date
