@@ -26,10 +26,9 @@
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-
         Dim loginForm As New Main()
         loginForm.Show()
-        Me.Close()
+        Application.Exit()
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
