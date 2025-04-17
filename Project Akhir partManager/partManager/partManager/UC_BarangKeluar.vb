@@ -1,3 +1,100 @@
-﻿Public Class UC_BarangKeluar
+﻿Imports MySql.Data.MySqlClient
 
+Public Class UC_BarangKeluar
+    Private Sub UC_BarangKeluar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        LoadDataBarangKeluar("")
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        LoadDataBarangKeluar(TextBox1.Text)
+    End Sub
+
+    Private Sub LoadDataBarangKeluar(keyword As String)
+        For i = TableLayoutPanel1.RowCount - 1 To 1 Step -1
+            For Each ctrl As Control In TableLayoutPanel1.Controls
+                If TableLayoutPanel1.GetRow(ctrl) = i Then
+                    TableLayoutPanel1.Controls.Remove(ctrl)
+                End If
+            Next
+            TableLayoutPanel1.RowStyles.RemoveAt(i)
+            TableLayoutPanel1.RowCount -= 1
+        Next
+
+        If conn.State = ConnectionState.Closed Then conn.Open()
+        Dim sql As String = "SELECT bk.id, b.nama_barang, bk.jumlah, b.harga, b.kategori, bk.tanggal, b.supplier 
+                             FROM barang_keluar bk 
+                             JOIN tblbarang b ON bk.id_barang = b.id 
+                             WHERE b.nama_barang LIKE @key OR b.kategori LIKE @key OR bk.tanggal LIKE @key"
+        Using cmd As New MySqlCommand(sql, conn)
+            cmd.Parameters.AddWithValue("@key", "%" & keyword & "%")
+            Using reader = cmd.ExecuteReader()
+                Dim rowIndex = 1
+                Dim no = 1
+                While reader.Read()
+                    TableLayoutPanel1.RowCount += 1
+                    TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 40))
+
+                    TableLayoutPanel1.Controls.Add(New Label With {.Text = no.ToString(), .AutoSize = True}, 0, rowIndex)
+
+                    TableLayoutPanel1.Controls.Add(New Label With {.Text = reader("nama_barang").ToString(), .AutoSize = True}, 1, rowIndex)
+
+                    TableLayoutPanel1.Controls.Add(New Label With {.Text = reader("jumlah").ToString(), .AutoSize = True}, 2, rowIndex)
+
+                    TableLayoutPanel1.Controls.Add(New Label With {.Text = reader("harga").ToString(), .AutoSize = True}, 3, rowIndex)
+
+                    TableLayoutPanel1.Controls.Add(New Label With {.Text = reader("kategori").ToString(), .AutoSize = True}, 4, rowIndex)
+
+                    TableLayoutPanel1.Controls.Add(New Label With {.Text = CDate(reader("tanggal")).ToString("dd-MM-yyyy"), .AutoSize = True}, 5, rowIndex)
+
+                    TableLayoutPanel1.Controls.Add(New Label With {.Text = reader("supplier").ToString(), .AutoSize = True}, 6, rowIndex)
+
+                    Dim btnEdit As New Button With {
+                        .Text = "Edit",
+                        .Tag = reader("id"),
+                        .Height = 30,
+                        .Width = 50
+                    }
+                    AddHandler btnEdit.Click, AddressOf BtnEdit_Click
+                    TableLayoutPanel1.Controls.Add(btnEdit, 7, rowIndex)
+
+                    ' Kolom 8: Hapus
+                    Dim btnHapus As New Button With {
+                        .Text = "Hapus",
+                        .Tag = reader("id"),
+                        .Height = 30,
+                        .Width = 60,
+                        .BackColor = Color.Red,
+                        .ForeColor = Color.White
+                    }
+                    AddHandler btnHapus.Click, AddressOf BtnHapus_Click
+                    TableLayoutPanel1.Controls.Add(btnHapus, 8, rowIndex)
+
+                    rowIndex += 1
+                    no += 1
+                End While
+            End Using
+        End Using
+    End Sub
+
+    Private Sub BtnEdit_Click(sender As Object, e As EventArgs)
+        Dim btn As Button = CType(sender, Button)
+        Dim idBarangKeluar As Integer = CInt(btn.Tag)
+        MessageBox.Show("Edit Barang Keluar ID: " & idBarangKeluar)
+        ' TODO: Tampilkan form edit barang keluar berdasarkan ID
+    End Sub
+
+    Private Sub BtnHapus_Click(sender As Object, e As EventArgs)
+        Dim btn As Button = CType(sender, Button)
+        Dim idBarangKeluar As Integer = CInt(btn.Tag)
+
+        If MessageBox.Show("Yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+            If conn.State = ConnectionState.Closed Then conn.Open()
+            Dim sql = "DELETE FROM barang_keluar WHERE id = @id"
+            Using cmd As New MySqlCommand(sql, conn)
+                cmd.Parameters.AddWithValue("@id", idBarangKeluar)
+                cmd.ExecuteNonQuery()
+            End Using
+            LoadDataBarangKeluar(TextBox1.Text)
+        End If
+    End Sub
 End Class
