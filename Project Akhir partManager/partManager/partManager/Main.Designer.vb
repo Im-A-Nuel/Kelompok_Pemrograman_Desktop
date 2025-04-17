@@ -24,6 +24,7 @@ Partial Class Main
     Private Sub InitializeComponent()
         PanelKanan = New Panel()
         PanelKiri = New Panel()
+        btnManajemenP = New Button()
         Label8 = New Label()
         PictureBox7 = New PictureBox()
         btnDashboard = New Button()
@@ -32,7 +33,6 @@ Partial Class Main
         btnBarangKeluar = New Button()
         btnLaporan = New Button()
         btnLogout = New Button()
-        btnManajemenP = New Button()
         PanelKiri.SuspendLayout()
         CType(PictureBox7, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -65,6 +65,15 @@ Partial Class Main
         PanelKiri.Name = "PanelKiri"
         PanelKiri.Size = New Size(204, 639)
         PanelKiri.TabIndex = 3
+        ' 
+        ' btnManajemenP
+        ' 
+        btnManajemenP.Location = New Point(12, 463)
+        btnManajemenP.Margin = New Padding(3, 4, 3, 4)
+        btnManajemenP.Name = "btnManajemenP"
+        btnManajemenP.Size = New Size(180, 50)
+        btnManajemenP.TabIndex = 8
+        btnManajemenP.Text = "Manajemen Pengguna"
         ' 
         ' Label8
         ' 
@@ -140,16 +149,7 @@ Partial Class Main
         btnLogout.TabIndex = 5
         btnLogout.Text = "Logout"
         ' 
-        ' btnManajemenP
-        ' 
-        btnManajemenP.Location = New Point(12, 463)
-        btnManajemenP.Margin = New Padding(3, 4, 3, 4)
-        btnManajemenP.Name = "btnManajemenP"
-        btnManajemenP.Size = New Size(180, 50)
-        btnManajemenP.TabIndex = 8
-        btnManajemenP.Text = "Manajemen Pengguna"
-        ' 
-        ' Form2
+        ' Main
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
@@ -159,7 +159,8 @@ Partial Class Main
         Controls.Add(PanelKiri)
         DoubleBuffered = True
         Margin = New Padding(3, 4, 3, 4)
-        Name = "Form2"
+        Name = "Main"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "partManager"
         PanelKiri.ResumeLayout(False)
         PanelKiri.PerformLayout()

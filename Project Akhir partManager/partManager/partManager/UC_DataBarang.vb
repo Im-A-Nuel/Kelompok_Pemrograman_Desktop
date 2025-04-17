@@ -7,7 +7,8 @@ Public Class UC_DataBarang
     End Sub
 
     Private Sub LoadDataBarang(keyword As String)
-        ' Kosongkan isi TableLayoutPanel1 dulu
+        TableLayoutPanel1.SuspendLayout()
+
         For i = TableLayoutPanel1.RowCount - 1 To 3 Step -1
             For Each ctrl As Control In TableLayoutPanel1.Controls
                 If TableLayoutPanel1.GetRow(ctrl) = i Then
@@ -18,7 +19,6 @@ Public Class UC_DataBarang
             TableLayoutPanel1.RowCount -= 1
         Next
 
-        ' Koneksi dan query
         If conn.State = ConnectionState.Closed Then conn.Open()
         Dim sql = "SELECT * FROM tblbarang WHERE nama_barang LIKE @keyword OR kategori LIKE @keyword"
         Using cmd As New MySqlCommand(sql, conn)
@@ -31,22 +31,19 @@ Public Class UC_DataBarang
                     TableLayoutPanel1.RowCount += 1
                     TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 50))
 
-                    ' Data barang
-                    TableLayoutPanel1.Controls.Add(New Label With {.Text = no.ToString()}, 0, rowIndex)
-                    TableLayoutPanel1.Controls.Add(New Label With {.Text = reader("nama_barang").ToString()}, 1, rowIndex)
-                    TableLayoutPanel1.Controls.Add(New Label With {.Text = reader("stok").ToString()}, 2, rowIndex)
-                    TableLayoutPanel1.Controls.Add(New Label With {.Text = reader("harga").ToString()}, 3, rowIndex)
-                    TableLayoutPanel1.Controls.Add(New Label With {.Text = reader("kategori").ToString()}, 4, rowIndex)
-                    TableLayoutPanel1.Controls.Add(New Label With {.Text = Convert.ToDateTime(reader("tanggal_masuk")).ToShortDateString()}, 5, rowIndex)
-                    TableLayoutPanel1.Controls.Add(New Label With {.Text = reader("supplier").ToString()}, 6, rowIndex)
+                    TableLayoutPanel1.Controls.Add(New Label With {.Text = no.ToString(), .AutoSize = True, .Anchor = AnchorStyles.Left}, 0, rowIndex)
+                    TableLayoutPanel1.Controls.Add(New Label With {.Text = reader("nama_barang").ToString(), .AutoSize = True, .Anchor = AnchorStyles.Left}, 1, rowIndex)
+                    TableLayoutPanel1.Controls.Add(New Label With {.Text = reader("stok").ToString(), .AutoSize = True, .Anchor = AnchorStyles.Left}, 2, rowIndex)
+                    TableLayoutPanel1.Controls.Add(New Label With {.Text = reader("harga").ToString(), .AutoSize = True, .Anchor = AnchorStyles.Left}, 3, rowIndex)
+                    TableLayoutPanel1.Controls.Add(New Label With {.Text = reader("kategori").ToString(), .AutoSize = True, .Anchor = AnchorStyles.Left}, 4, rowIndex)
+                    TableLayoutPanel1.Controls.Add(New Label With {.Text = Convert.ToDateTime(reader("tanggal_masuk")).ToShortDateString(), .AutoSize = True, .Anchor = AnchorStyles.Left}, 5, rowIndex)
+                    TableLayoutPanel1.Controls.Add(New Label With {.Text = reader("supplier").ToString(), .AutoSize = True, .Anchor = AnchorStyles.Left}, 6, rowIndex)
 
-                    ' Tombol Edit
-                    Dim btnEdit As New Button With {.Text = "Edit", .Tag = reader("id")}
+                    Dim btnEdit As New Button With {.Text = "Edit", .Tag = reader("id"), .Width = 60, .Height = 30}
                     AddHandler btnEdit.Click, AddressOf EditBarang
                     TableLayoutPanel1.Controls.Add(btnEdit, 7, rowIndex)
 
-                    ' Tombol Hapus
-                    Dim btnHapus As New Button With {.Text = "Hapus", .Tag = reader("id")}
+                    Dim btnHapus As New Button With {.Text = "Hapus", .Tag = reader("id"), .Width = 60, .Height = 30, .BackColor = Color.Red, .ForeColor = Color.White}
                     AddHandler btnHapus.Click, AddressOf HapusBarang
                     TableLayoutPanel1.Controls.Add(btnHapus, 8, rowIndex)
 
@@ -55,14 +52,19 @@ Public Class UC_DataBarang
                 End While
             End Using
         End Using
+
+        TableLayoutPanel1.ResumeLayout()
     End Sub
 
     Private Sub EditBarang(sender As Object, e As EventArgs)
         Dim btn As Button = CType(sender, Button)
         Dim idBarang As Integer = CInt(btn.Tag)
 
-        MessageBox.Show("Edit barang dengan ID: " & idBarang.ToString())
-        ' TODO: Tambahkan form popup edit barang
+        Dim frm As New Tambah_Barang()
+        frm.Mode = "Edit"
+        frm.BarangID = idBarang
+        frm.RefreshCallback = Sub() LoadDataBarang(txtSearch.Text)
+        frm.ShowDialog()
     End Sub
 
     Private Sub HapusBarang(sender As Object, e As EventArgs)
@@ -80,17 +82,21 @@ Public Class UC_DataBarang
         End If
     End Sub
 
-    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+    Private Sub BtnSearch_Click(sender As Object, e As EventArgs)
         LoadDataBarang(txtSearch.Text)
     End Sub
 
-    Private Sub btnAddBarang_Click(sender As Object, e As EventArgs) Handles btnAddBarang.Click
-        MessageBox.Show("Tambah Barang diklik.")
-        ' TODO: Panggil Form untuk tambah barang baru
+    Private Sub txtSearch_KeyDown(sender As Object, e As KeyEventArgs) Handles txtSearch.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            LoadDataBarang(txtSearch.Text)
+        End If
     End Sub
 
-    Private Sub btnRestock_Click(sender As Object, e As EventArgs) Handles btnRestock.Click
-        MessageBox.Show("Restock barang.")
-        ' TODO: Tambahkan form input restock barang
+    Private Sub btnAddBarang_Click(sender As Object, e As EventArgs) Handles btnAddBarang.Click
+        Dim frm As New Tambah_Barang()
+        frm.Mode = "Add"
+        frm.RefreshCallback = Sub() LoadDataBarang(txtSearch.Text)
+        frm.ShowDialog()
     End Sub
+
 End Class
