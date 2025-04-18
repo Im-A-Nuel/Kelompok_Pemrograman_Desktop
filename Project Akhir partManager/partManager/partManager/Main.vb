@@ -26,14 +26,33 @@
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        Dim loginForm As New Main()
+        ' Hapus file session
+        If System.IO.File.Exists("session.txt") Then
+            System.IO.File.Delete("session.txt")
+        End If
+
+        Dim loginForm As New Login()
         loginForm.Show()
-        Application.Exit()
+        Me.Close()
     End Sub
 
+
+
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Check if session file exists
+        If Not System.IO.File.Exists("session.txt") Then
+            ' Redirect to login form if session is invalid
+            Dim loginForm As New Login()
+            loginForm.Show()
+            Me.Close()
+            Return
+        End If
+
+        ' Load the default user control
         TampilkanUserControl(New UC_Dashboard())
     End Sub
+    ' chimpanzee bananini
+
 
     Private Sub btnManajemenP_Click(sender As Object, e As EventArgs) Handles btnManajemenP.Click
         TampilkanUserControl(New UC_ManajemenPengguna)

@@ -3,27 +3,24 @@
 Public Class Login
     Private Sub btnMasuk_Click(sender As Object, e As EventArgs) Handles btnMasuk.Click
         Dim role As String = Login(txtUsername.Text, txtPassword.Text)
-        If role = "admin" Then
-            MessageBox.Show("Login sebagai Admin")
-            ' Buka form Admin
-            Main.Show()
-            Me.Hide()
-        ElseIf role = "karyawan" Then
-            MessageBox.Show("Login sebagai Karyawan")
-            ' Buka form Karyawan
-            Main.Show()
-            Me.Hide()
-        ElseIf role = "manager" Then
-            MessageBox.Show("Login sebagai Manager")
-            ' Buka form Manager
+
+        If role = "admin" OrElse role = "karyawan" OrElse role = "manager" Then
+            MessageBox.Show("Login sebagai " & role)
+            ' Simpan session ke file
+            SaveSessionToFile(txtUsername.Text, role)
+
+
+            ' Simpan data session
+            LoggedInUsername = txtUsername.Text
+            LoggedInRole = role
+
+            ' Buka form utama
             Main.Show()
             Me.Hide()
         Else
             MessageBox.Show("Username atau password salah!", "Login Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
-
-
 
     Public Function Login(username As String, password As String) As String
         Dim role As String = ""
@@ -53,7 +50,25 @@ Public Class Login
         Return role
     End Function
 
+    Private Sub SaveSessionToFile(username As String, role As String)
+        Dim lines() As String = {username, role}
+        System.IO.File.WriteAllLines("session.txt", lines)
+    End Sub
+
+
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ConnectDB()
+
+        If System.IO.File.Exists("session.txt") Then
+            Dim lines() As String = System.IO.File.ReadAllLines("session.txt")
+            If lines.Length = 2 Then
+                LoggedInUsername = lines(0)
+                LoggedInRole = lines(1)
+
+                ' Buka form Main langsung tanpa login ulang
+                Main.Show()
+                Me.Hide()
+            End If
+        End If
     End Sub
 End Class
