@@ -23,9 +23,9 @@ Partial Class Login
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Label1 = New Label()
-        TextBox1 = New TextBox()
-        TextBox2 = New TextBox()
-        Button1 = New Button()
+        txtUsername = New TextBox()
+        txtPassword = New TextBox()
+        btnMasuk = New Button()
         SuspendLayout()
         ' 
         ' Label1
@@ -40,50 +40,50 @@ Partial Class Login
         Label1.Text = "LOGIN"
         Label1.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' TextBox1
+        ' txtUsername
         ' 
-        TextBox1.Location = New Point(356, 210)
-        TextBox1.Margin = New Padding(3, 2, 3, 2)
-        TextBox1.Name = "TextBox1"
-        TextBox1.PlaceholderText = "Username"
-        TextBox1.Size = New Size(279, 27)
-        TextBox1.TabIndex = 1
+        txtUsername.Location = New Point(356, 210)
+        txtUsername.Margin = New Padding(3, 2, 3, 2)
+        txtUsername.Name = "txtUsername"
+        txtUsername.PlaceholderText = "Username"
+        txtUsername.Size = New Size(279, 27)
+        txtUsername.TabIndex = 1
         ' 
-        ' TextBox2
+        ' txtPassword
         ' 
-        TextBox2.Location = New Point(356, 272)
-        TextBox2.Margin = New Padding(3, 2, 3, 2)
-        TextBox2.Name = "TextBox2"
-        TextBox2.PlaceholderText = "Password"
-        TextBox2.Size = New Size(279, 27)
-        TextBox2.TabIndex = 2
-        TextBox2.UseSystemPasswordChar = True
+        txtPassword.Location = New Point(356, 272)
+        txtPassword.Margin = New Padding(3, 2, 3, 2)
+        txtPassword.Name = "txtPassword"
+        txtPassword.PlaceholderText = "Password"
+        txtPassword.Size = New Size(279, 27)
+        txtPassword.TabIndex = 2
+        txtPassword.UseSystemPasswordChar = True
         ' 
-        ' Button1
+        ' btnMasuk
         ' 
-        Button1.AutoSize = True
-        Button1.Location = New Point(445, 344)
-        Button1.Margin = New Padding(3, 2, 3, 2)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(94, 34)
-        Button1.TabIndex = 3
-        Button1.Text = "Masuk"
-        Button1.UseVisualStyleBackColor = True
+        btnMasuk.AutoSize = True
+        btnMasuk.Location = New Point(445, 344)
+        btnMasuk.Margin = New Padding(3, 2, 3, 2)
+        btnMasuk.Name = "btnMasuk"
+        btnMasuk.Size = New Size(94, 34)
+        btnMasuk.TabIndex = 3
+        btnMasuk.Text = "Masuk"
+        btnMasuk.UseVisualStyleBackColor = True
         ' 
-        ' Form1
+        ' Login
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         AutoSize = True
         BackColor = Color.FromArgb(CByte(215), CByte(230), CByte(244))
         ClientSize = New Size(1012, 639)
-        Controls.Add(Button1)
-        Controls.Add(TextBox2)
-        Controls.Add(TextBox1)
+        Controls.Add(btnMasuk)
+        Controls.Add(txtPassword)
+        Controls.Add(txtUsername)
         Controls.Add(Label1)
         Margin = New Padding(3, 2, 3, 2)
         MaximizeBox = False
-        Name = "Form1"
+        Name = "Login"
         StartPosition = FormStartPosition.CenterScreen
         Text = "partManager"
         ResumeLayout(False)
@@ -91,8 +91,8 @@ Partial Class Login
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents txtUsername As TextBox
+    Friend WithEvents txtPassword As TextBox
+    Friend WithEvents btnMasuk As Button
 
 End Class
