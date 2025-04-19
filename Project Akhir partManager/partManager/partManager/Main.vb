@@ -39,18 +39,15 @@
 
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Check if session file exists
-        If Not System.IO.File.Exists("session.txt") Then
-            ' Redirect to login form if session is invalid
-            Dim loginForm As New Login()
-            loginForm.Show()
+        If String.IsNullOrEmpty(LoggedInUsername) OrElse String.IsNullOrEmpty(LoggedInRole) Then
+            MessageBox.Show("Session tidak valid.")
             Me.Close()
-            Return
         End If
 
-        ' Load the default user control
+        ' Tampilkan dashboard
         TampilkanUserControl(New UC_Dashboard())
     End Sub
+
     ' chimpanzee bananini
 
 

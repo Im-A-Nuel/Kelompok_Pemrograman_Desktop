@@ -6,16 +6,17 @@ Public Class Login
 
         If role = "admin" OrElse role = "karyawan" OrElse role = "manager" Then
             MessageBox.Show("Login sebagai " & role)
-            ' Simpan session ke file
+
             SaveSessionToFile(txtUsername.Text, role)
 
-
-            ' Simpan data session
             LoggedInUsername = txtUsername.Text
             LoggedInRole = role
 
-            ' Buka form utama
-            Main.Show()
+            ' Buka Main
+            Dim mainForm As New Main()
+            mainForm.Show()
+
+            ' Sembunyikan form login
             Me.Hide()
         Else
             MessageBox.Show("Username atau password salah!", "Login Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -26,7 +27,6 @@ Public Class Login
         Dim role As String = ""
 
         Try
-
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
@@ -55,20 +55,32 @@ Public Class Login
         System.IO.File.WriteAllLines("session.txt", lines)
     End Sub
 
-
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ConnectDB()
 
+        ' Cek session
         If System.IO.File.Exists("session.txt") Then
             Dim lines() As String = System.IO.File.ReadAllLines("session.txt")
             If lines.Length = 2 Then
                 LoggedInUsername = lines(0)
                 LoggedInRole = lines(1)
 
-                ' Buka form Main langsung tanpa login ulang
-                Main.Show()
+                ' Buka Main sebagai form utama
+                Dim mainForm As New Main()
+
+                ' Tampilkan Main
+                mainForm.Show()
+
+                ' Langsung tutup Login
                 Me.Hide()
+                Me.Opacity = 0
             End If
+        End If
+    End Sub
+
+    Private Sub txtPassword_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPassword.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            btnMasuk.PerformClick()
         End If
     End Sub
 End Class
