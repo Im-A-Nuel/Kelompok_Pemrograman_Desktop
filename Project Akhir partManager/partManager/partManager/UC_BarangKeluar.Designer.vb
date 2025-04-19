@@ -36,7 +36,6 @@ Partial Class UC_BarangKeluar
         Label31 = New Label()
         Panel3 = New Panel()
         TableLayoutPanel1 = New TableLayoutPanel()
-        Button1 = New Button()
         Panel3.SuspendLayout()
         TableLayoutPanel1.SuspendLayout()
         SuspendLayout()
@@ -44,7 +43,7 @@ Partial Class UC_BarangKeluar
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(564, 70)
+        Label2.Location = New Point(565, 69)
         Label2.Name = "Label2"
         Label2.Size = New Size(54, 20)
         Label2.TabIndex = 17
@@ -62,7 +61,7 @@ Partial Class UC_BarangKeluar
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(44, 53)
+        Label1.Location = New Point(43, 53)
         Label1.Name = "Label1"
         Label1.Size = New Size(200, 41)
         Label1.TabIndex = 15
@@ -71,7 +70,7 @@ Partial Class UC_BarangKeluar
         ' Label32
         ' 
         Label32.AutoSize = True
-        Label32.Location = New Point(626, 0)
+        Label32.Location = New Point(619, 0)
         Label32.Name = "Label32"
         Label32.Size = New Size(51, 20)
         Label32.TabIndex = 26
@@ -80,7 +79,7 @@ Partial Class UC_BarangKeluar
         ' Label16
         ' 
         Label16.AutoSize = True
-        Label16.Location = New Point(476, 0)
+        Label16.Location = New Point(470, 0)
         Label16.Name = "Label16"
         Label16.Size = New Size(64, 20)
         Label16.TabIndex = 6
@@ -89,7 +88,7 @@ Partial Class UC_BarangKeluar
         ' Label15
         ' 
         Label15.AutoSize = True
-        Label15.Location = New Point(270, 0)
+        Label15.Location = New Point(266, 0)
         Label15.Name = "Label15"
         Label15.Size = New Size(66, 20)
         Label15.TabIndex = 5
@@ -98,7 +97,7 @@ Partial Class UC_BarangKeluar
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Location = New Point(184, 0)
+        Label6.Location = New Point(181, 0)
         Label6.Name = "Label6"
         Label6.Size = New Size(50, 20)
         Label6.TabIndex = 3
@@ -107,7 +106,7 @@ Partial Class UC_BarangKeluar
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Location = New Point(135, 0)
+        Label5.Location = New Point(132, 0)
         Label5.Name = "Label5"
         Label5.Size = New Size(38, 20)
         Label5.TabIndex = 2
@@ -116,7 +115,7 @@ Partial Class UC_BarangKeluar
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(39, 0)
+        Label4.Location = New Point(38, 0)
         Label4.Name = "Label4"
         Label4.Size = New Size(56, 40)
         Label4.TabIndex = 1
@@ -134,16 +133,16 @@ Partial Class UC_BarangKeluar
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Location = New Point(363, 0)
+        Label7.Location = New Point(358, 0)
         Label7.Name = "Label7"
-        Label7.Size = New Size(107, 20)
+        Label7.Size = New Size(65, 40)
         Label7.TabIndex = 4
         Label7.Text = "Tanggal Keluar"
         ' 
         ' Label31
         ' 
         Label31.AutoSize = True
-        Label31.Location = New Point(567, 0)
+        Label31.Location = New Point(560, 0)
         Label31.Name = "Label31"
         Label31.Size = New Size(35, 20)
         Label31.TabIndex = 21
@@ -152,8 +151,7 @@ Partial Class UC_BarangKeluar
         ' Panel3
         ' 
         Panel3.Controls.Add(TableLayoutPanel1)
-        Panel3.Controls.Add(Button1)
-        Panel3.Location = New Point(44, 103)
+        Panel3.Location = New Point(43, 103)
         Panel3.Margin = New Padding(3, 4, 3, 4)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(719, 483)
@@ -161,6 +159,7 @@ Partial Class UC_BarangKeluar
         ' 
         ' TableLayoutPanel1
         ' 
+        TableLayoutPanel1.AutoScroll = True
         TableLayoutPanel1.BackgroundImageLayout = ImageLayout.None
         TableLayoutPanel1.ColumnCount = 9
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 6.401384F))
@@ -171,7 +170,7 @@ Partial Class UC_BarangKeluar
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 16.1554184F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 59F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 81F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 89F))
         TableLayoutPanel1.Controls.Add(Label32, 8, 0)
         TableLayoutPanel1.Controls.Add(Label16, 6, 0)
         TableLayoutPanel1.Controls.Add(Label15, 4, 0)
@@ -188,17 +187,8 @@ Partial Class UC_BarangKeluar
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 28.5714283F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 71.42857F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 101F))
-        TableLayoutPanel1.Size = New Size(708, 311)
+        TableLayoutPanel1.Size = New Size(709, 311)
         TableLayoutPanel1.TabIndex = 1
-        ' 
-        ' Button1
-        ' 
-        Button1.Location = New Point(596, 12)
-        Button1.Margin = New Padding(3, 4, 3, 4)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(98, 29)
-        Button1.TabIndex = 0
-        Button1.UseVisualStyleBackColor = True
         ' 
         ' UC_BarangKeluar
         ' 
@@ -232,6 +222,5 @@ Partial Class UC_BarangKeluar
     Friend WithEvents Label31 As Label
     Friend WithEvents Panel3 As Panel
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Button1 As Button
 
 End Class

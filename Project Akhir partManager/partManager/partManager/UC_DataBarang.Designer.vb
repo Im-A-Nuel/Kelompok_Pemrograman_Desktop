@@ -27,6 +27,7 @@ Partial Class UC_DataBarang
         Label1 = New Label()
         btnAddBarang = New Button()
         TableLayoutPanel1 = New TableLayoutPanel()
+        Label7 = New Label()
         Label32 = New Label()
         Label3 = New Label()
         Label4 = New Label()
@@ -36,7 +37,6 @@ Partial Class UC_DataBarang
         Label6 = New Label()
         Label15 = New Label()
         Panel3 = New Panel()
-        Label7 = New Label()
         TableLayoutPanel1.SuspendLayout()
         Panel3.SuspendLayout()
         SuspendLayout()
@@ -80,6 +80,7 @@ Partial Class UC_DataBarang
         ' 
         ' TableLayoutPanel1
         ' 
+        TableLayoutPanel1.AutoScroll = True
         TableLayoutPanel1.BackgroundImageLayout = ImageLayout.None
         TableLayoutPanel1.ColumnCount = 9
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 6.749556F))
@@ -109,6 +110,15 @@ Partial Class UC_DataBarang
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 48F))
         TableLayoutPanel1.Size = New Size(704, 351)
         TableLayoutPanel1.TabIndex = 1
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Location = New Point(362, 0)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(61, 20)
+        Label7.TabIndex = 36
+        Label7.Text = "Tanggal"
         ' 
         ' Label32
         ' 
@@ -191,15 +201,6 @@ Partial Class UC_DataBarang
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(731, 496)
         Panel3.TabIndex = 8
-        ' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.Location = New Point(362, 0)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(61, 20)
-        Label7.TabIndex = 36
-        Label7.Text = "Tanggal"
         ' 
         ' UC_DataBarang
         ' 
