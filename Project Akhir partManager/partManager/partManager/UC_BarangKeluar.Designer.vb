@@ -43,80 +43,81 @@ Partial Class UC_BarangKeluar
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(494, 52)
+        Label2.Location = New Point(565, 69)
         Label2.Name = "Label2"
-        Label2.Size = New Size(44, 15)
+        Label2.Size = New Size(54, 20)
         Label2.TabIndex = 17
         Label2.Text = "search:"
         ' 
         ' TextBox1
         ' 
-        TextBox1.Location = New Point(543, 49)
+        TextBox1.Location = New Point(621, 65)
+        TextBox1.Margin = New Padding(3, 4, 3, 4)
         TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(126, 23)
+        TextBox1.Size = New Size(143, 27)
         TextBox1.TabIndex = 16
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(38, 40)
+        Label1.Location = New Point(43, 53)
         Label1.Name = "Label1"
-        Label1.Size = New Size(162, 32)
+        Label1.Size = New Size(200, 41)
         Label1.TabIndex = 15
         Label1.Text = "Barang Keluar"
         ' 
         ' Label32
         ' 
         Label32.AutoSize = True
-        Label32.Location = New Point(545, 0)
+        Label32.Location = New Point(619, 0)
         Label32.Name = "Label32"
-        Label32.Size = New Size(41, 15)
+        Label32.Size = New Size(51, 20)
         Label32.TabIndex = 26
         Label32.Text = "Hapus"
         ' 
         ' Label16
         ' 
         Label16.AutoSize = True
-        Label16.Location = New Point(414, 0)
+        Label16.Location = New Point(470, 0)
         Label16.Name = "Label16"
-        Label16.Size = New Size(50, 15)
+        Label16.Size = New Size(64, 20)
         Label16.TabIndex = 6
         Label16.Text = "Supplier"
         ' 
         ' Label15
         ' 
         Label15.AutoSize = True
-        Label15.Location = New Point(235, 0)
+        Label15.Location = New Point(266, 0)
         Label15.Name = "Label15"
-        Label15.Size = New Size(51, 15)
+        Label15.Size = New Size(66, 20)
         Label15.TabIndex = 5
         Label15.Text = "Kategori"
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Location = New Point(160, 0)
+        Label6.Location = New Point(181, 0)
         Label6.Name = "Label6"
-        Label6.Size = New Size(39, 15)
+        Label6.Size = New Size(50, 20)
         Label6.TabIndex = 3
         Label6.Text = "Harga"
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Location = New Point(117, 0)
+        Label5.Location = New Point(132, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(30, 15)
+        Label5.Size = New Size(38, 20)
         Label5.TabIndex = 2
         Label5.Text = "Stok"
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(34, 0)
+        Label4.Location = New Point(38, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(44, 30)
+        Label4.Size = New Size(56, 40)
         Label4.TabIndex = 1
         Label4.Text = "Nama Barang"
         ' 
@@ -125,38 +126,40 @@ Partial Class UC_BarangKeluar
         Label3.AutoSize = True
         Label3.Location = New Point(3, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(23, 15)
+        Label3.Size = New Size(29, 20)
         Label3.TabIndex = 0
         Label3.Text = "No"
         ' 
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Location = New Point(316, 0)
+        Label7.Location = New Point(358, 0)
         Label7.Name = "Label7"
-        Label7.Size = New Size(85, 15)
+        Label7.Size = New Size(65, 40)
         Label7.TabIndex = 4
         Label7.Text = "Tanggal Keluar"
         ' 
         ' Label31
         ' 
         Label31.AutoSize = True
-        Label31.Location = New Point(493, 0)
+        Label31.Location = New Point(560, 0)
         Label31.Name = "Label31"
-        Label31.Size = New Size(27, 15)
+        Label31.Size = New Size(35, 20)
         Label31.TabIndex = 21
         Label31.Text = "Edit"
         ' 
         ' Panel3
         ' 
         Panel3.Controls.Add(TableLayoutPanel1)
-        Panel3.Location = New Point(38, 77)
+        Panel3.Location = New Point(43, 103)
+        Panel3.Margin = New Padding(3, 4, 3, 4)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(629, 362)
+        Panel3.Size = New Size(719, 483)
         Panel3.TabIndex = 18
         ' 
         ' TableLayoutPanel1
         ' 
+        TableLayoutPanel1.AutoScroll = True
         TableLayoutPanel1.BackgroundImageLayout = ImageLayout.None
         TableLayoutPanel1.ColumnCount = 9
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 6.401384F))
@@ -166,8 +169,8 @@ Partial Class UC_BarangKeluar
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 16.5306129F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 16.1554184F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 52F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 74F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 59F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 89F))
         TableLayoutPanel1.Controls.Add(Label32, 8, 0)
         TableLayoutPanel1.Controls.Add(Label16, 6, 0)
         TableLayoutPanel1.Controls.Add(Label15, 4, 0)
@@ -177,27 +180,27 @@ Partial Class UC_BarangKeluar
         TableLayoutPanel1.Controls.Add(Label3, 0, 0)
         TableLayoutPanel1.Controls.Add(Label7, 5, 0)
         TableLayoutPanel1.Controls.Add(Label31, 7, 0)
-        TableLayoutPanel1.Location = New Point(7, 41)
+        TableLayoutPanel1.Location = New Point(8, 55)
+        TableLayoutPanel1.Margin = New Padding(3, 4, 3, 4)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 3
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 28.5714283F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 71.42857F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 76F))
-        TableLayoutPanel1.Size = New Size(620, 233)
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 101F))
+        TableLayoutPanel1.Size = New Size(709, 311)
         TableLayoutPanel1.TabIndex = 1
         ' 
         ' UC_BarangKeluar
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(215), CByte(230), CByte(244))
         Controls.Add(Label2)
         Controls.Add(TextBox1)
         Controls.Add(Label1)
         Controls.Add(Panel3)
-        Margin = New Padding(3, 2, 3, 2)
         Name = "UC_BarangKeluar"
-        Size = New Size(707, 479)
+        Size = New Size(808, 639)
         Panel3.ResumeLayout(False)
         TableLayoutPanel1.ResumeLayout(False)
         TableLayoutPanel1.PerformLayout()

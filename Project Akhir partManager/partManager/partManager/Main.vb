@@ -26,7 +26,7 @@
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        ' Hapus file session
+
         If System.IO.File.Exists("session.txt") Then
             System.IO.File.Delete("session.txt")
         End If
@@ -43,8 +43,6 @@
             MessageBox.Show("Session tidak valid.")
             Me.Close()
         End If
-
-        ' Tampilkan dashboard
         TampilkanUserControl(New UC_Dashboard())
     End Sub
 

@@ -12,11 +12,11 @@ Public Class Login
             LoggedInUsername = txtUsername.Text
             LoggedInRole = role
 
-            ' Buka Main
+
             Dim mainForm As New Main()
             mainForm.Show()
 
-            ' Sembunyikan form login
+
             Me.Hide()
         Else
             MessageBox.Show("Username atau password salah!", "Login Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -58,20 +58,20 @@ Public Class Login
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ConnectDB()
 
-        ' Cek session
+
         If System.IO.File.Exists("session.txt") Then
             Dim lines() As String = System.IO.File.ReadAllLines("session.txt")
             If lines.Length = 2 Then
                 LoggedInUsername = lines(0)
                 LoggedInRole = lines(1)
 
-                ' Buka Main sebagai form utama
+
                 Dim mainForm As New Main()
 
-                ' Tampilkan Main
+
                 mainForm.Show()
 
-                ' Langsung tutup Login
+
                 Me.Hide()
                 Me.Opacity = 0
             End If
