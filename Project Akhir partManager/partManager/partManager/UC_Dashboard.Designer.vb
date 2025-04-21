@@ -22,71 +22,71 @@ Partial Class UC_Dashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Label6 = New Label()
-        PictureBox5 = New PictureBox()
-        Label16 = New Label()
-        Label15 = New Label()
+        lblLaporan = New Label()
+        pbLaporan = New PictureBox()
+        lblLvlAkses = New Label()
+        lblUsername = New Label()
         Label14 = New Label()
         Label13 = New Label()
-        Label7 = New Label()
+        lblDetail = New Label()
         PictureBox6 = New PictureBox()
-        Label5 = New Label()
-        PictureBox4 = New PictureBox()
-        Label4 = New Label()
-        Label3 = New Label()
-        Label2 = New Label()
-        Label1 = New Label()
-        PictureBox3 = New PictureBox()
-        PictureBox2 = New PictureBox()
-        PictureBox1 = New PictureBox()
-        CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
+        lblManPengguna = New Label()
+        pbManPengguna = New PictureBox()
+        lblBarangKeluar = New Label()
+        lblBarangMasuk = New Label()
+        lblDataBarang = New Label()
+        lblDashboard = New Label()
+        pbBarangKeluar = New PictureBox()
+        pbBarangMasuk = New PictureBox()
+        pbDataBarang = New PictureBox()
+        CType(pbLaporan, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(pbManPengguna, ComponentModel.ISupportInitialize).BeginInit()
+        CType(pbBarangKeluar, ComponentModel.ISupportInitialize).BeginInit()
+        CType(pbBarangMasuk, ComponentModel.ISupportInitialize).BeginInit()
+        CType(pbDataBarang, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' Label6
+        ' lblLaporan
         ' 
-        Label6.AutoSize = True
-        Label6.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
-        Label6.ForeColor = Color.White
-        Label6.Location = New Point(325, 365)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(63, 20)
-        Label6.TabIndex = 39
-        Label6.Text = "Laporan"
+        lblLaporan.AutoSize = True
+        lblLaporan.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
+        lblLaporan.ForeColor = Color.White
+        lblLaporan.Location = New Point(325, 365)
+        lblLaporan.Name = "lblLaporan"
+        lblLaporan.Size = New Size(63, 20)
+        lblLaporan.TabIndex = 39
+        lblLaporan.Text = "Laporan"
         ' 
-        ' PictureBox5
+        ' pbLaporan
         ' 
-        PictureBox5.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
-        PictureBox5.Location = New Point(305, 267)
-        PictureBox5.Margin = New Padding(3, 4, 3, 4)
-        PictureBox5.Name = "PictureBox5"
-        PictureBox5.Size = New Size(199, 146)
-        PictureBox5.TabIndex = 38
-        PictureBox5.TabStop = False
+        pbLaporan.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
+        pbLaporan.Location = New Point(305, 267)
+        pbLaporan.Margin = New Padding(3, 4, 3, 4)
+        pbLaporan.Name = "pbLaporan"
+        pbLaporan.Size = New Size(199, 146)
+        pbLaporan.TabIndex = 38
+        pbLaporan.TabStop = False
         ' 
-        ' Label16
+        ' lblLvlAkses
         ' 
-        Label16.AutoSize = True
-        Label16.BackColor = Color.White
-        Label16.Location = New Point(198, 563)
-        Label16.Name = "Label16"
-        Label16.Size = New Size(58, 20)
-        Label16.TabIndex = 37
-        Label16.Text = "ADMIN"
+        lblLvlAkses.AutoSize = True
+        lblLvlAkses.BackColor = Color.White
+        lblLvlAkses.Location = New Point(198, 563)
+        lblLvlAkses.Name = "lblLvlAkses"
+        lblLvlAkses.Size = New Size(58, 20)
+        lblLvlAkses.TabIndex = 37
+        lblLvlAkses.Text = "ADMIN"
         ' 
-        ' Label15
+        ' lblUsername
         ' 
-        Label15.AutoSize = True
-        Label15.BackColor = Color.White
-        Label15.Location = New Point(198, 535)
-        Label15.Name = "Label15"
-        Label15.Size = New Size(51, 20)
-        Label15.TabIndex = 36
-        Label15.Text = "admin"
+        lblUsername.AutoSize = True
+        lblUsername.BackColor = Color.White
+        lblUsername.Location = New Point(198, 535)
+        lblUsername.Name = "lblUsername"
+        lblUsername.Size = New Size(51, 20)
+        lblUsername.TabIndex = 36
+        lblUsername.Text = "admin"
         ' 
         ' Label14
         ' 
@@ -110,15 +110,15 @@ Partial Class UC_Dashboard
         Label13.TabIndex = 34
         Label13.Text = "Level Akses"
         ' 
-        ' Label7
+        ' lblDetail
         ' 
-        Label7.AutoSize = True
-        Label7.BackColor = Color.White
-        Label7.Location = New Point(68, 503)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(90, 20)
-        Label7.TabIndex = 33
-        Label7.Text = "Detail Login"
+        lblDetail.AutoSize = True
+        lblDetail.BackColor = Color.White
+        lblDetail.Location = New Point(68, 503)
+        lblDetail.Name = "lblDetail"
+        lblDetail.Size = New Size(90, 20)
+        lblDetail.TabIndex = 33
+        lblDetail.Text = "Detail Login"
         ' 
         ' PictureBox6
         ' 
@@ -130,150 +130,150 @@ Partial Class UC_Dashboard
         PictureBox6.TabIndex = 32
         PictureBox6.TabStop = False
         ' 
-        ' Label5
+        ' lblManPengguna
         ' 
-        Label5.AutoSize = True
-        Label5.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
-        Label5.ForeColor = Color.White
-        Label5.Location = New Point(82, 368)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(156, 20)
-        Label5.TabIndex = 31
-        Label5.Text = "Manajemen Pengguna"
+        lblManPengguna.AutoSize = True
+        lblManPengguna.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
+        lblManPengguna.ForeColor = Color.White
+        lblManPengguna.Location = New Point(82, 368)
+        lblManPengguna.Name = "lblManPengguna"
+        lblManPengguna.Size = New Size(156, 20)
+        lblManPengguna.TabIndex = 31
+        lblManPengguna.Text = "Manajemen Pengguna"
         ' 
-        ' PictureBox4
+        ' pbManPengguna
         ' 
-        PictureBox4.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
-        PictureBox4.Location = New Point(66, 267)
-        PictureBox4.Margin = New Padding(3, 4, 3, 4)
-        PictureBox4.Name = "PictureBox4"
-        PictureBox4.Size = New Size(199, 146)
-        PictureBox4.TabIndex = 30
-        PictureBox4.TabStop = False
+        pbManPengguna.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
+        pbManPengguna.Location = New Point(66, 267)
+        pbManPengguna.Margin = New Padding(3, 4, 3, 4)
+        pbManPengguna.Name = "pbManPengguna"
+        pbManPengguna.Size = New Size(199, 146)
+        pbManPengguna.TabIndex = 30
+        pbManPengguna.TabStop = False
         ' 
-        ' Label4
+        ' lblBarangKeluar
         ' 
-        Label4.AutoSize = True
-        Label4.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
-        Label4.ForeColor = Color.White
-        Label4.Location = New Point(565, 200)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(102, 20)
-        Label4.TabIndex = 29
-        Label4.Text = "Barang Keluar"
+        lblBarangKeluar.AutoSize = True
+        lblBarangKeluar.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
+        lblBarangKeluar.ForeColor = Color.White
+        lblBarangKeluar.Location = New Point(565, 200)
+        lblBarangKeluar.Name = "lblBarangKeluar"
+        lblBarangKeluar.Size = New Size(102, 20)
+        lblBarangKeluar.TabIndex = 29
+        lblBarangKeluar.Text = "Barang Keluar"
         ' 
-        ' Label3
+        ' lblBarangMasuk
         ' 
-        Label3.AutoSize = True
-        Label3.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
-        Label3.ForeColor = Color.White
-        Label3.Location = New Point(328, 198)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(102, 20)
-        Label3.TabIndex = 28
-        Label3.Text = "Barang Masuk"
+        lblBarangMasuk.AutoSize = True
+        lblBarangMasuk.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
+        lblBarangMasuk.ForeColor = Color.White
+        lblBarangMasuk.Location = New Point(328, 198)
+        lblBarangMasuk.Name = "lblBarangMasuk"
+        lblBarangMasuk.Size = New Size(102, 20)
+        lblBarangMasuk.TabIndex = 28
+        lblBarangMasuk.Text = "Barang Masuk"
         ' 
-        ' Label2
+        ' lblDataBarang
         ' 
-        Label2.AutoSize = True
-        Label2.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
-        Label2.ForeColor = Color.White
-        Label2.Location = New Point(83, 198)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(92, 20)
-        Label2.TabIndex = 27
-        Label2.Text = "Data Barang"
+        lblDataBarang.AutoSize = True
+        lblDataBarang.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
+        lblDataBarang.ForeColor = Color.White
+        lblDataBarang.Location = New Point(83, 198)
+        lblDataBarang.Name = "lblDataBarang"
+        lblDataBarang.Size = New Size(92, 20)
+        lblDataBarang.TabIndex = 27
+        lblDataBarang.Text = "Data Barang"
         ' 
-        ' Label1
+        ' lblDashboard
         ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 18F)
-        Label1.Location = New Point(64, 48)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(163, 41)
-        Label1.TabIndex = 26
-        Label1.Text = "Dashboard"
+        lblDashboard.AutoSize = True
+        lblDashboard.Font = New Font("Segoe UI", 18F)
+        lblDashboard.Location = New Point(64, 48)
+        lblDashboard.Name = "lblDashboard"
+        lblDashboard.Size = New Size(163, 41)
+        lblDashboard.TabIndex = 26
+        lblDashboard.Text = "Dashboard"
         ' 
-        ' PictureBox3
+        ' pbBarangKeluar
         ' 
-        PictureBox3.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
-        PictureBox3.Location = New Point(545, 102)
-        PictureBox3.Margin = New Padding(3, 4, 3, 4)
-        PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(199, 146)
-        PictureBox3.TabIndex = 25
-        PictureBox3.TabStop = False
+        pbBarangKeluar.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
+        pbBarangKeluar.Location = New Point(545, 102)
+        pbBarangKeluar.Margin = New Padding(3, 4, 3, 4)
+        pbBarangKeluar.Name = "pbBarangKeluar"
+        pbBarangKeluar.Size = New Size(199, 146)
+        pbBarangKeluar.TabIndex = 25
+        pbBarangKeluar.TabStop = False
         ' 
-        ' PictureBox2
+        ' pbBarangMasuk
         ' 
-        PictureBox2.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
-        PictureBox2.Location = New Point(305, 102)
-        PictureBox2.Margin = New Padding(3, 4, 3, 4)
-        PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(199, 146)
-        PictureBox2.TabIndex = 24
-        PictureBox2.TabStop = False
+        pbBarangMasuk.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
+        pbBarangMasuk.Location = New Point(305, 102)
+        pbBarangMasuk.Margin = New Padding(3, 4, 3, 4)
+        pbBarangMasuk.Name = "pbBarangMasuk"
+        pbBarangMasuk.Size = New Size(199, 146)
+        pbBarangMasuk.TabIndex = 24
+        pbBarangMasuk.TabStop = False
         ' 
-        ' PictureBox1
+        ' pbDataBarang
         ' 
-        PictureBox1.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
-        PictureBox1.Location = New Point(66, 102)
-        PictureBox1.Margin = New Padding(3, 4, 3, 4)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(199, 146)
-        PictureBox1.TabIndex = 23
-        PictureBox1.TabStop = False
+        pbDataBarang.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
+        pbDataBarang.Location = New Point(66, 102)
+        pbDataBarang.Margin = New Padding(3, 4, 3, 4)
+        pbDataBarang.Name = "pbDataBarang"
+        pbDataBarang.Size = New Size(199, 146)
+        pbDataBarang.TabIndex = 23
+        pbDataBarang.TabStop = False
         ' 
         ' UC_Dashboard
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(215), CByte(230), CByte(244))
-        Controls.Add(Label6)
-        Controls.Add(PictureBox5)
-        Controls.Add(Label16)
-        Controls.Add(Label15)
+        Controls.Add(lblLaporan)
+        Controls.Add(pbLaporan)
+        Controls.Add(lblLvlAkses)
+        Controls.Add(lblUsername)
         Controls.Add(Label14)
         Controls.Add(Label13)
-        Controls.Add(Label7)
+        Controls.Add(lblDetail)
         Controls.Add(PictureBox6)
-        Controls.Add(Label5)
-        Controls.Add(PictureBox4)
-        Controls.Add(Label4)
-        Controls.Add(Label3)
-        Controls.Add(Label2)
-        Controls.Add(Label1)
-        Controls.Add(PictureBox3)
-        Controls.Add(PictureBox2)
-        Controls.Add(PictureBox1)
+        Controls.Add(lblManPengguna)
+        Controls.Add(pbManPengguna)
+        Controls.Add(lblBarangKeluar)
+        Controls.Add(lblBarangMasuk)
+        Controls.Add(lblDataBarang)
+        Controls.Add(lblDashboard)
+        Controls.Add(pbBarangKeluar)
+        Controls.Add(pbBarangMasuk)
+        Controls.Add(pbDataBarang)
         Name = "UC_Dashboard"
         Size = New Size(808, 639)
-        CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
+        CType(pbLaporan, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(pbManPengguna, ComponentModel.ISupportInitialize).EndInit()
+        CType(pbBarangKeluar, ComponentModel.ISupportInitialize).EndInit()
+        CType(pbBarangMasuk, ComponentModel.ISupportInitialize).EndInit()
+        CType(pbDataBarang, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
-    Friend WithEvents Label6 As Label
-    Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label15 As Label
+    Friend WithEvents lblLaporan As Label
+    Friend WithEvents pbLaporan As PictureBox
+    Friend WithEvents lblLvlAkses As Label
+    Friend WithEvents lblUsername As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents Label7 As Label
+    Friend WithEvents lblDetail As Label
     Friend WithEvents PictureBox6 As PictureBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents lblManPengguna As Label
+    Friend WithEvents pbManPengguna As PictureBox
+    Friend WithEvents lblBarangKeluar As Label
+    Friend WithEvents lblBarangMasuk As Label
+    Friend WithEvents lblDataBarang As Label
+    Friend WithEvents lblDashboard As Label
+    Friend WithEvents pbBarangKeluar As PictureBox
+    Friend WithEvents pbBarangMasuk As PictureBox
+    Friend WithEvents pbDataBarang As PictureBox
 
 End Class

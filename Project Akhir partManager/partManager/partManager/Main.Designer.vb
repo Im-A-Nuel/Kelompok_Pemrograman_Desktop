@@ -1,9 +1,8 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Main
     Inherits System.Windows.Forms.Form
 
-    'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -14,27 +13,26 @@ Partial Class Main
         End Try
     End Sub
 
-    'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
 
-    'NOTE: The following procedure is required by the Windows Form Designer
-    'It can be modified using the Windows Form Designer.  
-    'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         PanelKanan = New Panel()
-        PanelKiri = New Panel()
-        btnManajemenP = New Button()
-        Label8 = New Label()
-        PictureBox7 = New PictureBox()
+        BackgroundWorker1 = New ComponentModel.BackgroundWorker()
+        flowPanelMenu = New FlowLayoutPanel()
         btnDashboard = New Button()
         btnDataBarang = New Button()
         btnBarangMasuk = New Button()
         btnBarangKeluar = New Button()
         btnLaporan = New Button()
+        btnManajemenP = New Button()
         btnLogout = New Button()
-        PanelKiri.SuspendLayout()
+        PictureBox7 = New PictureBox()
+        lblUser = New Label()
+        PanelKiri = New Panel()
+        flowPanelMenu.SuspendLayout()
         CType(PictureBox7, ComponentModel.ISupportInitialize).BeginInit()
+        PanelKiri.SuspendLayout()
         SuspendLayout()
         ' 
         ' PanelKanan
@@ -47,18 +45,106 @@ Partial Class Main
         PanelKanan.Size = New Size(808, 639)
         PanelKanan.TabIndex = 2
         ' 
+        ' flowPanelMenu
+        ' 
+        flowPanelMenu.BackColor = SystemColors.ActiveCaption
+        flowPanelMenu.Controls.Add(btnDashboard)
+        flowPanelMenu.Controls.Add(btnDataBarang)
+        flowPanelMenu.Controls.Add(btnBarangMasuk)
+        flowPanelMenu.Controls.Add(btnBarangKeluar)
+        flowPanelMenu.Controls.Add(btnLaporan)
+        flowPanelMenu.Controls.Add(btnManajemenP)
+        flowPanelMenu.Controls.Add(btnLogout)
+        flowPanelMenu.FlowDirection = FlowDirection.TopDown
+        flowPanelMenu.Location = New Point(0, 130)
+        flowPanelMenu.Margin = New Padding(0)
+        flowPanelMenu.Name = "flowPanelMenu"
+        flowPanelMenu.Size = New Size(204, 500)
+        flowPanelMenu.TabIndex = 10
+        flowPanelMenu.WrapContents = False
+        ' 
+        ' btnDashboard
+        ' 
+        btnDashboard.Location = New Point(3, 3)
+        btnDashboard.Name = "btnDashboard"
+        btnDashboard.Size = New Size(195, 61)
+        btnDashboard.TabIndex = 0
+        btnDashboard.Text = "Dashboard"
+        ' 
+        ' btnDataBarang
+        ' 
+        btnDataBarang.Location = New Point(3, 70)
+        btnDataBarang.Name = "btnDataBarang"
+        btnDataBarang.Size = New Size(195, 61)
+        btnDataBarang.TabIndex = 1
+        btnDataBarang.Text = "Data Barang"
+        ' 
+        ' btnBarangMasuk
+        ' 
+        btnBarangMasuk.Location = New Point(3, 137)
+        btnBarangMasuk.Name = "btnBarangMasuk"
+        btnBarangMasuk.Size = New Size(195, 61)
+        btnBarangMasuk.TabIndex = 2
+        btnBarangMasuk.Text = "Barang Masuk"
+        ' 
+        ' btnBarangKeluar
+        ' 
+        btnBarangKeluar.Location = New Point(3, 204)
+        btnBarangKeluar.Name = "btnBarangKeluar"
+        btnBarangKeluar.Size = New Size(195, 61)
+        btnBarangKeluar.TabIndex = 3
+        btnBarangKeluar.Text = "Barang Keluar"
+        ' 
+        ' btnLaporan
+        ' 
+        btnLaporan.Location = New Point(3, 271)
+        btnLaporan.Name = "btnLaporan"
+        btnLaporan.Size = New Size(195, 61)
+        btnLaporan.TabIndex = 4
+        btnLaporan.Text = "Laporan"
+        ' 
+        ' btnManajemenP
+        ' 
+        btnManajemenP.Location = New Point(3, 338)
+        btnManajemenP.Name = "btnManajemenP"
+        btnManajemenP.Size = New Size(195, 61)
+        btnManajemenP.TabIndex = 5
+        btnManajemenP.Text = "Manajemen Pengguna"
+        ' 
+        ' btnLogout
+        ' 
+        btnLogout.Location = New Point(3, 405)
+        btnLogout.Name = "btnLogout"
+        btnLogout.Size = New Size(195, 61)
+        btnLogout.TabIndex = 6
+        btnLogout.Text = "Logout"
+        ' 
+        ' PictureBox7
+        ' 
+        PictureBox7.Image = My.Resources.Resources.WIN_20240905_07_43_27_Pro
+        PictureBox7.Location = New Point(28, 22)
+        PictureBox7.Margin = New Padding(3, 4, 3, 4)
+        PictureBox7.Name = "PictureBox7"
+        PictureBox7.Size = New Size(148, 73)
+        PictureBox7.TabIndex = 6
+        PictureBox7.TabStop = False
+        ' 
+        ' lblUser
+        ' 
+        lblUser.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblUser.Location = New Point(3, 99)
+        lblUser.Name = "lblUser"
+        lblUser.Size = New Size(201, 31)
+        lblUser.TabIndex = 7
+        lblUser.Text = "admin"
+        lblUser.TextAlign = ContentAlignment.MiddleCenter
+        ' 
         ' PanelKiri
         ' 
         PanelKiri.BackColor = SystemColors.ActiveCaption
-        PanelKiri.Controls.Add(btnManajemenP)
-        PanelKiri.Controls.Add(Label8)
+        PanelKiri.Controls.Add(lblUser)
         PanelKiri.Controls.Add(PictureBox7)
-        PanelKiri.Controls.Add(btnDashboard)
-        PanelKiri.Controls.Add(btnDataBarang)
-        PanelKiri.Controls.Add(btnBarangMasuk)
-        PanelKiri.Controls.Add(btnBarangKeluar)
-        PanelKiri.Controls.Add(btnLaporan)
-        PanelKiri.Controls.Add(btnLogout)
+        PanelKiri.Controls.Add(flowPanelMenu)
         PanelKiri.Dock = DockStyle.Left
         PanelKiri.Location = New Point(0, 0)
         PanelKiri.Margin = New Padding(3, 4, 3, 4)
@@ -66,92 +152,9 @@ Partial Class Main
         PanelKiri.Size = New Size(204, 639)
         PanelKiri.TabIndex = 3
         ' 
-        ' btnManajemenP
-        ' 
-        btnManajemenP.Location = New Point(12, 463)
-        btnManajemenP.Margin = New Padding(3, 4, 3, 4)
-        btnManajemenP.Name = "btnManajemenP"
-        btnManajemenP.Size = New Size(180, 50)
-        btnManajemenP.TabIndex = 8
-        btnManajemenP.Text = "Manajemen Pengguna"
-        ' 
-        ' Label8
-        ' 
-        Label8.AutoSize = True
-        Label8.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label8.Location = New Point(75, 99)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(53, 20)
-        Label8.TabIndex = 7
-        Label8.Text = "admin"
-        ' 
-        ' PictureBox7
-        ' 
-        PictureBox7.Image = My.Resources.Resources.WIN_20240905_07_43_27_Pro
-        PictureBox7.Location = New Point(53, 22)
-        PictureBox7.Margin = New Padding(3, 4, 3, 4)
-        PictureBox7.Name = "PictureBox7"
-        PictureBox7.Size = New Size(88, 73)
-        PictureBox7.TabIndex = 6
-        PictureBox7.TabStop = False
-        ' 
-        ' btnDashboard
-        ' 
-        btnDashboard.Location = New Point(12, 146)
-        btnDashboard.Margin = New Padding(3, 4, 3, 4)
-        btnDashboard.Name = "btnDashboard"
-        btnDashboard.Size = New Size(180, 50)
-        btnDashboard.TabIndex = 0
-        btnDashboard.Text = "Dashboard"
-        ' 
-        ' btnDataBarang
-        ' 
-        btnDataBarang.Location = New Point(12, 209)
-        btnDataBarang.Margin = New Padding(3, 4, 3, 4)
-        btnDataBarang.Name = "btnDataBarang"
-        btnDataBarang.Size = New Size(180, 50)
-        btnDataBarang.TabIndex = 1
-        btnDataBarang.Text = "Data Barang"
-        ' 
-        ' btnBarangMasuk
-        ' 
-        btnBarangMasuk.Location = New Point(12, 271)
-        btnBarangMasuk.Margin = New Padding(3, 4, 3, 4)
-        btnBarangMasuk.Name = "btnBarangMasuk"
-        btnBarangMasuk.Size = New Size(180, 50)
-        btnBarangMasuk.TabIndex = 2
-        btnBarangMasuk.Text = "Barang Masuk"
-        ' 
-        ' btnBarangKeluar
-        ' 
-        btnBarangKeluar.Location = New Point(12, 333)
-        btnBarangKeluar.Margin = New Padding(3, 4, 3, 4)
-        btnBarangKeluar.Name = "btnBarangKeluar"
-        btnBarangKeluar.Size = New Size(180, 50)
-        btnBarangKeluar.TabIndex = 3
-        btnBarangKeluar.Text = "Barang Keluar"
-        ' 
-        ' btnLaporan
-        ' 
-        btnLaporan.Location = New Point(12, 396)
-        btnLaporan.Margin = New Padding(3, 4, 3, 4)
-        btnLaporan.Name = "btnLaporan"
-        btnLaporan.Size = New Size(180, 50)
-        btnLaporan.TabIndex = 4
-        btnLaporan.Text = "Laporan"
-        ' 
-        ' btnLogout
-        ' 
-        btnLogout.Location = New Point(12, 531)
-        btnLogout.Margin = New Padding(3, 4, 3, 4)
-        btnLogout.Name = "btnLogout"
-        btnLogout.Size = New Size(180, 50)
-        btnLogout.TabIndex = 5
-        btnLogout.Text = "Logout"
-        ' 
         ' Main
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(215), CByte(230), CByte(244))
         ClientSize = New Size(1012, 639)
@@ -162,21 +165,23 @@ Partial Class Main
         Name = "Main"
         StartPosition = FormStartPosition.CenterScreen
         Text = "partManager"
-        PanelKiri.ResumeLayout(False)
-        PanelKiri.PerformLayout()
+        flowPanelMenu.ResumeLayout(False)
         CType(PictureBox7, ComponentModel.ISupportInitialize).EndInit()
+        PanelKiri.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
     Private WithEvents PanelKanan As Panel
-    Private WithEvents PanelKiri As Panel
-    Friend WithEvents Label8 As Label
-    Friend WithEvents PictureBox7 As PictureBox
-    Private WithEvents btnDashboard As Button
-    Private WithEvents btnDataBarang As Button
-    Private WithEvents btnBarangMasuk As Button
-    Private WithEvents btnBarangKeluar As Button
-    Private WithEvents btnLaporan As Button
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Private WithEvents btnLogout As Button
+    Private WithEvents btnLaporan As Button
+    Private WithEvents btnBarangKeluar As Button
+    Private WithEvents btnBarangMasuk As Button
+    Private WithEvents btnDataBarang As Button
+    Private WithEvents btnDashboard As Button
+    Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents lblUser As Label
     Private WithEvents btnManajemenP As Button
+    Private WithEvents PanelKiri As Panel
+    Private WithEvents flowPanelMenu As FlowLayoutPanel
 End Class

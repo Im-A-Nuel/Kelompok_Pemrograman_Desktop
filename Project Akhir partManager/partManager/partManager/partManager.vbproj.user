@@ -7,9 +7,6 @@
     <Compile Update="Main.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form8.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Tambah_Barang.vb">
       <SubType>Form</SubType>
     </Compile>
