@@ -26,14 +26,28 @@
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        Dim loginForm As New Main()
+
+        If System.IO.File.Exists("session.txt") Then
+            System.IO.File.Delete("session.txt")
+        End If
+
+        Dim loginForm As New Login()
         loginForm.Show()
-        Application.Exit()
+        Me.Close()
     End Sub
 
+
+
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If String.IsNullOrEmpty(LoggedInUsername) OrElse String.IsNullOrEmpty(LoggedInRole) Then
+            MessageBox.Show("Session tidak valid.")
+            Me.Close()
+        End If
         TampilkanUserControl(New UC_Dashboard())
     End Sub
+
+    ' chimpanzee bananini
+
 
     Private Sub btnManajemenP_Click(sender As Object, e As EventArgs) Handles btnManajemenP.Click
         TampilkanUserControl(New UC_ManajemenPengguna)

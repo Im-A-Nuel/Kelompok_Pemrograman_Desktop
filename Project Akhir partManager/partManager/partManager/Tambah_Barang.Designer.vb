@@ -40,49 +40,43 @@ Partial Class Tambah_Barang
         ' 
         Panel2.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
         Panel2.Location = New Point(1, -1)
-        Panel2.Margin = New Padding(3, 4, 3, 4)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(564, 59)
+        Panel2.Size = New Size(494, 44)
         Panel2.TabIndex = 4
         ' 
         ' txtNamaBarang
         ' 
-        txtNamaBarang.Location = New Point(65, 135)
-        txtNamaBarang.Margin = New Padding(3, 4, 3, 4)
+        txtNamaBarang.Location = New Point(57, 101)
         txtNamaBarang.Name = "txtNamaBarang"
-        txtNamaBarang.Size = New Size(348, 27)
+        txtNamaBarang.Size = New Size(305, 23)
         txtNamaBarang.TabIndex = 5
         ' 
         ' txtStok
         ' 
-        txtStok.Location = New Point(65, 205)
-        txtStok.Margin = New Padding(3, 4, 3, 4)
+        txtStok.Location = New Point(57, 154)
         txtStok.Name = "txtStok"
-        txtStok.Size = New Size(134, 27)
+        txtStok.Size = New Size(118, 23)
         txtStok.TabIndex = 6
         ' 
         ' txtHarga
         ' 
-        txtHarga.Location = New Point(65, 275)
-        txtHarga.Margin = New Padding(3, 4, 3, 4)
+        txtHarga.Location = New Point(57, 206)
         txtHarga.Name = "txtHarga"
-        txtHarga.Size = New Size(239, 27)
+        txtHarga.Size = New Size(210, 23)
         txtHarga.TabIndex = 7
         ' 
         ' txtSupplier
         ' 
-        txtSupplier.Location = New Point(65, 431)
-        txtSupplier.Margin = New Padding(3, 4, 3, 4)
+        txtSupplier.Location = New Point(57, 323)
         txtSupplier.Name = "txtSupplier"
-        txtSupplier.Size = New Size(348, 27)
+        txtSupplier.Size = New Size(305, 23)
         txtSupplier.TabIndex = 9
         ' 
         ' btnTambahBarang
         ' 
-        btnTambahBarang.Location = New Point(402, 518)
-        btnTambahBarang.Margin = New Padding(3, 4, 3, 4)
+        btnTambahBarang.Location = New Point(352, 388)
         btnTambahBarang.Name = "btnTambahBarang"
-        btnTambahBarang.Size = New Size(123, 29)
+        btnTambahBarang.Size = New Size(108, 22)
         btnTambahBarang.TabIndex = 10
         btnTambahBarang.Text = "Tambah Barang"
         btnTambahBarang.UseVisualStyleBackColor = True
@@ -90,45 +84,45 @@ Partial Class Tambah_Barang
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(65, 103)
+        Label1.Location = New Point(57, 77)
         Label1.Name = "Label1"
-        Label1.Size = New Size(100, 20)
+        Label1.Size = New Size(79, 15)
         Label1.TabIndex = 11
         Label1.Text = "Nama Barang"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(65, 181)
+        Label2.Location = New Point(57, 136)
         Label2.Name = "Label2"
-        Label2.Size = New Size(38, 20)
+        Label2.Size = New Size(30, 15)
         Label2.TabIndex = 12
         Label2.Text = "Stok"
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(65, 251)
+        Label3.Location = New Point(57, 188)
         Label3.Name = "Label3"
-        Label3.Size = New Size(50, 20)
+        Label3.Size = New Size(39, 15)
         Label3.TabIndex = 13
         Label3.Text = "Harga"
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(65, 329)
+        Label4.Location = New Point(57, 247)
         Label4.Name = "Label4"
-        Label4.Size = New Size(66, 20)
+        Label4.Size = New Size(51, 15)
         Label4.TabIndex = 14
         Label4.Text = "Kategori"
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Location = New Point(65, 407)
+        Label5.Location = New Point(57, 305)
         Label5.Name = "Label5"
-        Label5.Size = New Size(64, 20)
+        Label5.Size = New Size(50, 15)
         Label5.TabIndex = 15
         Label5.Text = "Supplier"
         ' 
@@ -136,18 +130,17 @@ Partial Class Tambah_Barang
         ' 
         cbKategori.FormattingEnabled = True
         cbKategori.Items.AddRange(New Object() {"Prosesor (CPU)", "Motherboard", "RAM (Memory)", "Harddisk / SSD", "Power Supply", "VGA (Graphics Card)", "Casing", "Monitor", "Keyboard", "Mouse", "Cooling Fan", "Kabel & Connector", "Network (LAN Card / Modem)", "Software / License", "Aksesoris"})
-        cbKategori.Location = New Point(65, 353)
-        cbKategori.Margin = New Padding(3, 4, 3, 4)
+        cbKategori.Location = New Point(57, 265)
         cbKategori.Name = "cbKategori"
-        cbKategori.Size = New Size(239, 28)
+        cbKategori.Size = New Size(210, 23)
         cbKategori.TabIndex = 16
         ' 
         ' Tambah_Barang
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(215), CByte(230), CByte(244))
-        ClientSize = New Size(561, 582)
+        ClientSize = New Size(491, 436)
         Controls.Add(cbKategori)
         Controls.Add(Label5)
         Controls.Add(Label4)
@@ -160,11 +153,10 @@ Partial Class Tambah_Barang
         Controls.Add(txtStok)
         Controls.Add(txtNamaBarang)
         Controls.Add(Panel2)
-        Margin = New Padding(3, 4, 3, 4)
         MaximizeBox = False
         Name = "Tambah_Barang"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "Form7"
+        Text = "Tambah Barang"
         ResumeLayout(False)
         PerformLayout()
     End Sub

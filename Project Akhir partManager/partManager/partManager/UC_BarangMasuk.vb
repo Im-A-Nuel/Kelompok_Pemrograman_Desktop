@@ -10,10 +10,13 @@ Public Class UC_BarangMasuk
     End Sub
 
     Private Sub LoadDataBarangMasuk(keyword As String)
+        ' Hapus semua baris kecuali header (baris ke-0)
         For i = TableLayoutPanel1.RowCount - 1 To 1 Step -1
-            For Each ctrl As Control In TableLayoutPanel1.Controls
-                If TableLayoutPanel1.GetRow(ctrl) = i Then
+            For j = TableLayoutPanel1.ColumnCount - 1 To 0 Step -1
+                Dim ctrl = TableLayoutPanel1.GetControlFromPosition(j, i)
+                If ctrl IsNot Nothing Then
                     TableLayoutPanel1.Controls.Remove(ctrl)
+                    ctrl.Dispose()
                 End If
             Next
             TableLayoutPanel1.RowStyles.RemoveAt(i)
@@ -21,9 +24,10 @@ Public Class UC_BarangMasuk
         Next
 
         If conn.State = ConnectionState.Closed Then conn.Open()
+
         Dim sql As String = "SELECT bm.id, b.nama_barang, bm.jumlah, b.harga, b.kategori, bm.tanggal, b.supplier " &
-                            "FROM barang_masuk bm JOIN tblbarang b ON bm.id_barang = b.id " &
-                            "WHERE b.nama_barang LIKE @key OR b.kategori LIKE @key OR bm.tanggal LIKE @key"
+                        "FROM barang_masuk bm JOIN tblbarang b ON bm.id_barang = b.id " &
+                        "WHERE b.nama_barang LIKE @key OR b.kategori LIKE @key OR bm.tanggal LIKE @key"
         Using cmd As New MySqlCommand(sql, conn)
             cmd.Parameters.AddWithValue("@key", "%" & keyword & "%")
             Using reader = cmd.ExecuteReader()
@@ -42,22 +46,22 @@ Public Class UC_BarangMasuk
                     TableLayoutPanel1.Controls.Add(New Label With {.Text = reader("supplier").ToString(), .AutoSize = True}, 6, rowIndex)
 
                     Dim btnEdit As New Button With {
-                        .Text = "Edit",
-                        .Tag = reader("id"),
-                        .Height = 30,
-                        .Width = 50
-                    }
+                    .Text = "Edit",
+                    .Tag = reader("id"),
+                    .Height = 30,
+                    .Width = 50
+                }
                     AddHandler btnEdit.Click, AddressOf BtnEdit_Click
                     TableLayoutPanel1.Controls.Add(btnEdit, 7, rowIndex)
 
                     Dim btnHapus As New Button With {
-                        .Text = "Hapus",
-                        .Tag = reader("id"),
-                        .Height = 30,
-                        .Width = 60,
-                        .BackColor = Color.Red,
-                        .ForeColor = Color.White
-                    }
+                    .Text = "Hapus",
+                    .Tag = reader("id"),
+                    .Height = 30,
+                    .Width = 60,
+                    .BackColor = Color.Red,
+                    .ForeColor = Color.White
+                }
                     AddHandler btnHapus.Click, AddressOf BtnHapus_Click
                     TableLayoutPanel1.Controls.Add(btnHapus, 8, rowIndex)
 
@@ -67,6 +71,7 @@ Public Class UC_BarangMasuk
             End Using
         End Using
     End Sub
+
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs)
         Dim btn As Button = CType(sender, Button)

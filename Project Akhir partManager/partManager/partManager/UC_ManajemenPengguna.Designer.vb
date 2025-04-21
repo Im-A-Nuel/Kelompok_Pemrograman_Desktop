@@ -50,6 +50,7 @@ Partial Class UC_ManajemenPengguna
         ' 
         ' TableLayoutPanel1
         ' 
+        TableLayoutPanel1.AutoScroll = True
         TableLayoutPanel1.BackgroundImageLayout = ImageLayout.None
         TableLayoutPanel1.ColumnCount = 6
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 13.2420092F))
@@ -70,8 +71,8 @@ Partial Class UC_ManajemenPengguna
         TableLayoutPanel1.RowCount = 4
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 41.60584F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 58.39416F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 63.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 56.0F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 63F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 56F))
         TableLayoutPanel1.Size = New Size(688, 216)
         TableLayoutPanel1.TabIndex = 1
         ' 
