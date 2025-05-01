@@ -10,6 +10,7 @@ Public Class Tambah_Barang
 
         If Mode = "Edit" AndAlso BarangID <> -1 Then
             LoadDataBarang()
+            Me.Text = "Edit Barang"
             btnTambahBarang.Text = "Update Barang"
         Else
             btnTambahBarang.Text = "Tambah Barang"
@@ -29,10 +30,8 @@ Public Class Tambah_Barang
             Using reader = cmd.ExecuteReader()
                 If reader.Read() Then
                     txtNamaBarang.Text = reader("nama_barang").ToString()
-                    txtStok.Text = reader("stok").ToString()
-                    txtHarga.Text = reader("harga").ToString()
+                    txtDeskripsi.Text = reader("deskripsi").ToString()
                     cbKategori.Text = reader("kategori").ToString()
-                    txtSupplier.Text = reader("supplier").ToString()
                 End If
             End Using
         End Using
@@ -42,16 +41,6 @@ Public Class Tambah_Barang
         If String.IsNullOrWhiteSpace(txtNamaBarang.Text) Then
             MessageBox.Show("Nama barang wajib diisi!", "Validasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             txtNamaBarang.Focus()
-            Return False
-        End If
-        If Not Integer.TryParse(txtStok.Text, Nothing) OrElse Val(txtStok.Text) < 0 Then
-            MessageBox.Show("Stok harus berupa angka dan tidak boleh negatif!", "Validasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            txtStok.Focus()
-            Return False
-        End If
-        If Not Decimal.TryParse(txtHarga.Text, Nothing) OrElse Val(txtHarga.Text) <= 0 Then
-            MessageBox.Show("Harga harus angka dan lebih dari 0!", "Validasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            txtHarga.Focus()
             Return False
         End If
         If cbKategori.SelectedIndex = -1 Then
@@ -68,33 +57,27 @@ Public Class Tambah_Barang
         If conn.State = ConnectionState.Closed Then conn.Open()
 
         If Mode = "Add" Then
-            Dim sql = "INSERT INTO tblbarang (nama_barang, stok, harga, kategori, tanggal_masuk, supplier) VALUES (@nama_barang, @stok, @harga, @kategori, @tanggal_masuk, @supplier)"
+            Dim sql = "INSERT INTO tblbarang (nama_barang, deskripsi,kategori) VALUES (@nama_barang, @deskripsi,@kategori)"
             Using cmd As New MySqlCommand(sql, conn)
                 cmd.Parameters.AddWithValue("@nama_barang", txtNamaBarang.Text)
-                cmd.Parameters.AddWithValue("@stok", CInt(txtStok.Text))
-                cmd.Parameters.AddWithValue("@harga", CDec(txtHarga.Text))
+                cmd.Parameters.AddWithValue("@deskripsi", txtDeskripsi.Text)
                 cmd.Parameters.AddWithValue("@kategori", cbKategori.Text)
-                cmd.Parameters.AddWithValue("@tanggal_masuk", DateTime.Now)
-                cmd.Parameters.AddWithValue("@supplier", txtSupplier.Text)
                 cmd.ExecuteNonQuery()
             End Using
             MessageBox.Show("Barang berhasil ditambahkan!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
         ElseIf Mode = "Edit" AndAlso BarangID <> -1 Then
-            Dim sql = "UPDATE tblbarang SET nama_barang=@nama_barang, stok=@stok, harga=@harga, kategori=@kategori, supplier=@supplier WHERE id=@id"
+            Dim sql = "UPDATE tblbarang SET nama_barang=@nama_barang, deskripsi = @deskripsi, kategori=@kategori WHERE id=@id"
             Using cmd As New MySqlCommand(sql, conn)
                 cmd.Parameters.AddWithValue("@nama_barang", txtNamaBarang.Text)
-                cmd.Parameters.AddWithValue("@stok", CInt(txtStok.Text))
-                cmd.Parameters.AddWithValue("@harga", CDec(txtHarga.Text))
+                cmd.Parameters.AddWithValue("@deskripsi", txtDeskripsi.Text)
                 cmd.Parameters.AddWithValue("@kategori", cbKategori.Text)
-                cmd.Parameters.AddWithValue("@supplier", txtSupplier.Text)
                 cmd.Parameters.AddWithValue("@id", BarangID)
                 cmd.ExecuteNonQuery()
             End Using
             MessageBox.Show("Barang berhasil diperbarui!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
 
-        ' Panggil refresh callback jika tersedia
         RefreshCallback?.Invoke()
 
         Me.Close()

@@ -25,19 +25,10 @@ Partial Class UC_BarangKeluar
         Label2 = New Label()
         TextBox1 = New TextBox()
         Label1 = New Label()
-        Label32 = New Label()
-        Label16 = New Label()
-        Label15 = New Label()
-        Label6 = New Label()
-        Label5 = New Label()
-        Label4 = New Label()
-        Label3 = New Label()
-        Label7 = New Label()
-        Label31 = New Label()
         Panel3 = New Panel()
-        TableLayoutPanel1 = New TableLayoutPanel()
+        DataGridView1 = New DataGridView()
         Panel3.SuspendLayout()
-        TableLayoutPanel1.SuspendLayout()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label2
@@ -67,128 +58,23 @@ Partial Class UC_BarangKeluar
         Label1.TabIndex = 15
         Label1.Text = "Barang Keluar"
         ' 
-        ' Label32
-        ' 
-        Label32.AutoSize = True
-        Label32.Location = New Point(619, 0)
-        Label32.Name = "Label32"
-        Label32.Size = New Size(51, 20)
-        Label32.TabIndex = 26
-        Label32.Text = "Hapus"
-        ' 
-        ' Label16
-        ' 
-        Label16.AutoSize = True
-        Label16.Location = New Point(470, 0)
-        Label16.Name = "Label16"
-        Label16.Size = New Size(64, 20)
-        Label16.TabIndex = 6
-        Label16.Text = "Supplier"
-        ' 
-        ' Label15
-        ' 
-        Label15.AutoSize = True
-        Label15.Location = New Point(266, 0)
-        Label15.Name = "Label15"
-        Label15.Size = New Size(66, 20)
-        Label15.TabIndex = 5
-        Label15.Text = "Kategori"
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.Location = New Point(181, 0)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(50, 20)
-        Label6.TabIndex = 3
-        Label6.Text = "Harga"
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Location = New Point(132, 0)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(38, 20)
-        Label5.TabIndex = 2
-        Label5.Text = "Stok"
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Location = New Point(38, 0)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(56, 40)
-        Label4.TabIndex = 1
-        Label4.Text = "Nama Barang"
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Location = New Point(3, 0)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(29, 20)
-        Label3.TabIndex = 0
-        Label3.Text = "No"
-        ' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.Location = New Point(358, 0)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(65, 40)
-        Label7.TabIndex = 4
-        Label7.Text = "Tanggal Keluar"
-        ' 
-        ' Label31
-        ' 
-        Label31.AutoSize = True
-        Label31.Location = New Point(560, 0)
-        Label31.Name = "Label31"
-        Label31.Size = New Size(35, 20)
-        Label31.TabIndex = 21
-        Label31.Text = "Edit"
-        ' 
         ' Panel3
         ' 
-        Panel3.Controls.Add(TableLayoutPanel1)
+        Panel3.Controls.Add(DataGridView1)
         Panel3.Location = New Point(43, 103)
         Panel3.Margin = New Padding(3, 4, 3, 4)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(719, 483)
         Panel3.TabIndex = 18
         ' 
-        ' TableLayoutPanel1
+        ' DataGridView1
         ' 
-        TableLayoutPanel1.AutoScroll = True
-        TableLayoutPanel1.BackgroundImageLayout = ImageLayout.None
-        TableLayoutPanel1.ColumnCount = 9
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 6.401384F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 16.9550171F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 8.77551F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 15.3061228F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 16.5306129F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 16.1554184F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 59F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 89F))
-        TableLayoutPanel1.Controls.Add(Label32, 8, 0)
-        TableLayoutPanel1.Controls.Add(Label16, 6, 0)
-        TableLayoutPanel1.Controls.Add(Label15, 4, 0)
-        TableLayoutPanel1.Controls.Add(Label6, 3, 0)
-        TableLayoutPanel1.Controls.Add(Label5, 2, 0)
-        TableLayoutPanel1.Controls.Add(Label4, 1, 0)
-        TableLayoutPanel1.Controls.Add(Label3, 0, 0)
-        TableLayoutPanel1.Controls.Add(Label7, 5, 0)
-        TableLayoutPanel1.Controls.Add(Label31, 7, 0)
-        TableLayoutPanel1.Location = New Point(8, 55)
-        TableLayoutPanel1.Margin = New Padding(3, 4, 3, 4)
-        TableLayoutPanel1.Name = "TableLayoutPanel1"
-        TableLayoutPanel1.RowCount = 3
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 28.5714283F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 71.42857F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 101F))
-        TableLayoutPanel1.Size = New Size(709, 311)
-        TableLayoutPanel1.TabIndex = 1
+        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView1.Location = New Point(-56, 34)
+        DataGridView1.Name = "DataGridView1"
+        DataGridView1.RowHeadersWidth = 51
+        DataGridView1.Size = New Size(772, 446)
+        DataGridView1.TabIndex = 2
         ' 
         ' UC_BarangKeluar
         ' 
@@ -202,8 +88,7 @@ Partial Class UC_BarangKeluar
         Name = "UC_BarangKeluar"
         Size = New Size(808, 639)
         Panel3.ResumeLayout(False)
-        TableLayoutPanel1.ResumeLayout(False)
-        TableLayoutPanel1.PerformLayout()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -211,16 +96,7 @@ Partial Class UC_BarangKeluar
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label32 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label31 As Label
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents DataGridView1 As DataGridView
 
 End Class

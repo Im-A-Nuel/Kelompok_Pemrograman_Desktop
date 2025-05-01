@@ -6,55 +6,44 @@ Public Class UC_DataBarang
         LoadDataBarang("")
     End Sub
 
-    Private Sub LoadDataBarang(keyword As String)
-        TableLayoutPanel1.SuspendLayout()
 
-        For i = TableLayoutPanel1.RowCount - 1 To 3 Step -1
-            For Each ctrl As Control In TableLayoutPanel1.Controls
-                If TableLayoutPanel1.GetRow(ctrl) = i Then
-                    TableLayoutPanel1.Controls.Remove(ctrl)
-                End If
-            Next
-            TableLayoutPanel1.RowStyles.RemoveAt(i)
-            TableLayoutPanel1.RowCount -= 1
-        Next
+    Private Sub LoadDataBarang(keyword As String)
+
+        DataGridView1.Columns.Clear()
+        DataGridView1.Rows.Clear()
+
+        DataGridView1.Columns.Add("No", "No")
+        DataGridView1.Columns.Add("nama_barang", "Nama Barang")
+        DataGridView1.Columns.Add("deskripsi", "Deskripsi")
+
+        Dim editButton As New DataGridViewButtonColumn()
+        editButton.HeaderText = "Edit"
+        editButton.Text = "Edit"
+        editButton.UseColumnTextForButtonValue = True
+        DataGridView1.Columns.Add(editButton)
+
+        Dim hapusButton As New DataGridViewButtonColumn()
+        hapusButton.HeaderText = "Hapus"
+        hapusButton.Text = "Hapus"
+        hapusButton.UseColumnTextForButtonValue = True
+        DataGridView1.Columns.Add(hapusButton)
 
         If conn.State = ConnectionState.Closed Then conn.Open()
-        Dim sql = "SELECT * FROM tblbarang WHERE nama_barang LIKE @keyword OR kategori LIKE @keyword"
+        Dim sql = "SELECT * FROM tblbarang"
         Using cmd As New MySqlCommand(sql, conn)
-            cmd.Parameters.AddWithValue("@keyword", "%" & keyword & "%")
             Using reader = cmd.ExecuteReader()
-                Dim rowIndex = 3
-                Dim no = 1
-
                 While reader.Read()
-                    TableLayoutPanel1.RowCount += 1
-                    TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 50))
-
-                    TableLayoutPanel1.Controls.Add(New Label With {.Text = no.ToString(), .AutoSize = True, .Anchor = AnchorStyles.Left}, 0, rowIndex)
-                    TableLayoutPanel1.Controls.Add(New Label With {.Text = reader("nama_barang").ToString(), .AutoSize = True, .Anchor = AnchorStyles.Left}, 1, rowIndex)
-                    TableLayoutPanel1.Controls.Add(New Label With {.Text = reader("stok").ToString(), .AutoSize = True, .Anchor = AnchorStyles.Left}, 2, rowIndex)
-                    TableLayoutPanel1.Controls.Add(New Label With {.Text = reader("harga").ToString(), .AutoSize = True, .Anchor = AnchorStyles.Left}, 3, rowIndex)
-                    TableLayoutPanel1.Controls.Add(New Label With {.Text = reader("kategori").ToString(), .AutoSize = True, .Anchor = AnchorStyles.Left}, 4, rowIndex)
-                    TableLayoutPanel1.Controls.Add(New Label With {.Text = Convert.ToDateTime(reader("tanggal_masuk")).ToShortDateString(), .AutoSize = True, .Anchor = AnchorStyles.Left}, 5, rowIndex)
-                    TableLayoutPanel1.Controls.Add(New Label With {.Text = reader("supplier").ToString(), .AutoSize = True, .Anchor = AnchorStyles.Left}, 6, rowIndex)
-
-                    Dim btnEdit As New Button With {.Text = "Edit", .Tag = reader("id"), .Width = 60, .Height = 30}
-                    AddHandler btnEdit.Click, AddressOf EditBarang
-                    TableLayoutPanel1.Controls.Add(btnEdit, 7, rowIndex)
-
-                    Dim btnHapus As New Button With {.Text = "Hapus", .Tag = reader("id"), .Width = 60, .Height = 30, .BackColor = Color.Red, .ForeColor = Color.White}
-                    AddHandler btnHapus.Click, AddressOf HapusBarang
-                    TableLayoutPanel1.Controls.Add(btnHapus, 8, rowIndex)
-
-                    rowIndex += 1
-                    no += 1
+                    DataGridView1.Rows.Add(
+                                       reader("id").ToString(),
+                                       reader("nama_barang").ToString(),
+                                       reader("deskripsi").ToString(),
+                                       reader("kategori").ToString())
                 End While
             End Using
         End Using
-
-        TableLayoutPanel1.ResumeLayout()
     End Sub
+
+
 
     Private Sub EditBarang(sender As Object, e As EventArgs)
         Dim btn As Button = CType(sender, Button)
@@ -98,5 +87,45 @@ Public Class UC_DataBarang
         frm.RefreshCallback = Sub() LoadDataBarang(txtSearch.Text)
         frm.ShowDialog()
     End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        If e.RowIndex >= 0 Then
+            Dim row As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
+
+            Dim namaBarang As String = row.Cells("namaBarang").Value.ToString()
+
+            If e.ColumnIndex = 4 Then
+                Dim idBarang As Integer = GetIdBarangByNama(namaBarang)
+                Dim frm As New Tambah_Barang()
+                frm.Mode = "Edit"
+                frm.BarangID = idBarang
+                frm.RefreshCallback = Sub() LoadDataBarang(txtSearch.Text)
+                frm.ShowDialog()
+            End If
+
+            If e.ColumnIndex = 5 Then
+                If MessageBox.Show("Yakin ingin menghapus barang ini?", "Konfirmasi", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+                    Dim idBarang As Integer = GetIdBarangByNama(namaBarang)
+                    If conn.State = ConnectionState.Closed Then conn.Open()
+                    Dim sql = "DELETE FROM tblbarang WHERE id = @id"
+                    Using cmd As New MySqlCommand(sql, conn)
+                        cmd.Parameters.AddWithValue("@id", idBarang)
+                        cmd.ExecuteNonQuery()
+                    End Using
+                    LoadDataBarang(txtSearch.Text)
+                End If
+            End If
+        End If
+    End Sub
+
+
+    Private Function GetIdBarangByNama(nama As String) As Integer
+        Dim sql = "SELECT id FROM tblbarang WHERE nama_barang = @nama LIMIT 1"
+        Using cmd As New MySqlCommand(sql, conn)
+            cmd.Parameters.AddWithValue("@nama", nama)
+            Dim result = cmd.ExecuteScalar()
+            Return If(result IsNot Nothing, CInt(result), 0)
+        End Using
+    End Function
 
 End Class
