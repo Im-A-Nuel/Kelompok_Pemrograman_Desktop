@@ -530,23 +530,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {},
+    "C:\\Users\\-A2-\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\partManager.vbproj",
+      "projectUniqueName": "D:\\kuliah\\semester 6\\progDesktop\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\partManager.vbproj",
       "projectName": "partManager",
-      "projectPath": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\partManager.vbproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\obj\\",
+      "projectPath": "D:\\kuliah\\semester 6\\progDesktop\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\partManager.vbproj",
+      "packagesPath": "C:\\Users\\-A2-\\.nuget\\packages\\",
+      "outputPath": "D:\\kuliah\\semester 6\\progDesktop\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\-A2-\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

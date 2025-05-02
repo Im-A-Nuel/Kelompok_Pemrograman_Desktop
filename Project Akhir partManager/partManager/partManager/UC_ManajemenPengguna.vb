@@ -14,19 +14,16 @@ Public Class UC_ManajemenPengguna
         DataGridView1.Columns.Clear()
         DataGridView1.Rows.Clear()
 
-        ' Tambahkan kolom
         DataGridView1.Columns.Add("No", "No")
         DataGridView1.Columns.Add("Username", "Username")
         DataGridView1.Columns.Add("Role", "Role")
 
-        ' Kolom Edit
         Dim colEdit As New DataGridViewButtonColumn()
         colEdit.HeaderText = "Edit"
         colEdit.Text = "Edit"
         colEdit.UseColumnTextForButtonValue = True
         DataGridView1.Columns.Add(colEdit)
 
-        ' Kolom Hapus
         Dim colHapus As New DataGridViewButtonColumn()
         colHapus.HeaderText = "Hapus"
         colHapus.Text = "Hapus"
@@ -53,12 +50,13 @@ Public Class UC_ManajemenPengguna
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         If e.RowIndex < 0 Then Exit Sub
 
-        Dim idUser As Integer = CInt(DataGridView1.Rows(e.RowIndex).Tag)
+        Dim username As String = DataGridView1.Rows(e.RowIndex).Cells("Username").Value.ToString()
+        Dim idUser As Integer = GetIdUserByUsername(username)
 
-        If e.ColumnIndex = 3 Then ' Edit
+        If e.ColumnIndex = 3 Then
             MessageBox.Show("Edit Pengguna ID: " & idUser)
-            ' Panggil form edit jika ada
-        ElseIf e.ColumnIndex = 4 Then ' Hapus
+
+        ElseIf e.ColumnIndex = 4 Then
             If MessageBox.Show("Yakin ingin menghapus user ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                 If conn.State = ConnectionState.Closed Then conn.Open()
                 Dim sql = "DELETE FROM tbluser WHERE id = @id"
@@ -71,4 +69,18 @@ Public Class UC_ManajemenPengguna
         End If
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim frm As New tambah_user()
+        frm.RefreshCallback = Sub() LoadDataPengguna(TextBox1.Text)
+        frm.ShowDialog()
+    End Sub
+
+    Private Function GetIdUserByUsername(username As String) As Integer
+        Dim sql = "SELECT id FROM tbluser WHERE username = @username LIMIT 1"
+        Using cmd As New MySqlCommand(sql, conn)
+            cmd.Parameters.AddWithValue("@username", username)
+            Dim result = cmd.ExecuteScalar()
+            Return If(result IsNot Nothing, CInt(result), 0)
+        End Using
+    End Function
 End Class

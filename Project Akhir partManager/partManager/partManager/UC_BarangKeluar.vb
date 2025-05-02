@@ -67,10 +67,10 @@ Public Class UC_BarangKeluar
         If e.RowIndex < 0 Then Exit Sub
         Dim idBarangKeluar As Integer = CInt(DataGridView1.Rows(e.RowIndex).Tag)
 
-        If e.ColumnIndex = 7 Then ' Edit
+        If e.ColumnIndex = 6 Then ' Edit
             MessageBox.Show("Edit Barang Keluar ID: " & idBarangKeluar)
             ' TODO: Panggil form edit jika ada
-        ElseIf e.ColumnIndex = 8 Then ' Hapus
+        ElseIf e.ColumnIndex = 7 Then ' Hapus
             If MessageBox.Show("Yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                 If conn.State = ConnectionState.Closed Then conn.Open()
                 Dim sql = "DELETE FROM barang_keluar WHERE id = @id"

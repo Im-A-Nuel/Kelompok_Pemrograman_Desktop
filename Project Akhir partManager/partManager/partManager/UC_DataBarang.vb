@@ -92,9 +92,9 @@ Public Class UC_DataBarang
         If e.RowIndex >= 0 Then
             Dim row As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
 
-            Dim namaBarang As String = row.Cells("namaBarang").Value.ToString()
+            Dim namaBarang As String = row.Cells("nama_barang").Value.ToString()
 
-            If e.ColumnIndex = 4 Then
+            If e.ColumnIndex = 3 Then
                 Dim idBarang As Integer = GetIdBarangByNama(namaBarang)
                 Dim frm As New Tambah_Barang()
                 frm.Mode = "Edit"
@@ -103,7 +103,7 @@ Public Class UC_DataBarang
                 frm.ShowDialog()
             End If
 
-            If e.ColumnIndex = 5 Then
+            If e.ColumnIndex = 4 Then
                 If MessageBox.Show("Yakin ingin menghapus barang ini?", "Konfirmasi", MessageBoxButtons.YesNo) = DialogResult.Yes Then
                     Dim idBarang As Integer = GetIdBarangByNama(namaBarang)
                     If conn.State = ConnectionState.Closed Then conn.Open()

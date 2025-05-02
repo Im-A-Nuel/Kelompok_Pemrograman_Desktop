@@ -10,6 +10,9 @@
     <Compile Update="Tambah_Barang.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="tambah_user.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UC_BarangKeluar.vb">
       <SubType>UserControl</SubType>
     </Compile>
