@@ -1,0 +1,28 @@
+F:\KULIAH SEM 6\Prog Desk\Tugas\#Folder Pertemuan 11\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\obj\Debug\Aplikasi Pengolahan Citra.vbproj.AssemblyReference.cache
+F:\KULIAH SEM 6\Prog Desk\Tugas\#Folder Pertemuan 11\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\obj\Debug\Aplikasi_Pengolahan_Citra.frmUtama.resources
+F:\KULIAH SEM 6\Prog Desk\Tugas\#Folder Pertemuan 11\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\obj\Debug\Aplikasi_Pengolahan_Citra.frmHistogram.resources
+F:\KULIAH SEM 6\Prog Desk\Tugas\#Folder Pertemuan 11\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\obj\Debug\Aplikasi_Pengolahan_Citra.Resources.resources
+F:\KULIAH SEM 6\Prog Desk\Tugas\#Folder Pertemuan 11\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\obj\Debug\Aplikasi Pengolahan Citra.vbproj.GenerateResource.cache
+F:\KULIAH SEM 6\Prog Desk\Tugas\#Folder Pertemuan 11\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\obj\Debug\Aplikasi Pengolahan Citra.vbproj.CoreCompileInputs.cache
+F:\KULIAH SEM 6\Prog Desk\Tugas\#Folder Pertemuan 11\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\bin\Debug\Aplikasi Pengolahan Citra.exe.config
+F:\KULIAH SEM 6\Prog Desk\Tugas\#Folder Pertemuan 11\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\bin\Debug\Aplikasi Pengolahan Citra.exe
+F:\KULIAH SEM 6\Prog Desk\Tugas\#Folder Pertemuan 11\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\bin\Debug\Aplikasi Pengolahan Citra.pdb
+F:\KULIAH SEM 6\Prog Desk\Tugas\#Folder Pertemuan 11\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\bin\Debug\Aplikasi Pengolahan Citra.xml
+F:\KULIAH SEM 6\Prog Desk\Tugas\#Folder Pertemuan 11\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\obj\Debug\Aplikasi Pengolahan Citra.exe
+F:\KULIAH SEM 6\Prog Desk\Tugas\#Folder Pertemuan 11\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\obj\Debug\Aplikasi Pengolahan Citra.xml
+F:\KULIAH SEM 6\Prog Desk\Tugas\#Folder Pertemuan 11\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\obj\Debug\Aplikasi Pengolahan Citra.pdb
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 3\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\bin\Debug\Aplikasi Pengolahan Citra.exe.config
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 3\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\bin\Debug\Aplikasi Pengolahan Citra.exe
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 3\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\bin\Debug\Aplikasi Pengolahan Citra.pdb
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 3\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\bin\Debug\Aplikasi Pengolahan Citra.xml
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 3\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\obj\Debug\Aplikasi Pengolahan Citra.vbproj.AssemblyReference.cache
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 3\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\obj\Debug\Aplikasi_Pengolahan_Citra.frmUtama.resources
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 3\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\obj\Debug\Aplikasi_Pengolahan_Citra.frmHistogram.resources
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 3\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\obj\Debug\Aplikasi_Pengolahan_Citra.Resources.resources
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 3\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\obj\Debug\Aplikasi_Pengolahan_Citra.OpsiBorder.resources
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 3\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\obj\Debug\Aplikasi Pengolahan Citra.vbproj.GenerateResource.cache
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 3\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\obj\Debug\Aplikasi Pengolahan Citra.vbproj.CoreCompileInputs.cache
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 3\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\obj\Debug\Aplikasi Pengolahan Citra.exe
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 3\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\obj\Debug\Aplikasi Pengolahan Citra.xml
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 3\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\obj\Debug\Aplikasi Pengolahan Citra.pdb
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 3\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\obj\Debug\Aplikasi_Pengolahan_Citra.Watermark.resources

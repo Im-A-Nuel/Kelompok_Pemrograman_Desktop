@@ -1,0 +1,114 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 3\\Aplikasi Pengolahan Citra\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5DC3479C-0740-43F3-9B8F-FCAADE422A14}|Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\#tugas 3\\aplikasi pengolahan citra\\aplikasi pengolahan citra\\frmutama.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{5DC3479C-0740-43F3-9B8F-FCAADE422A14}|Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra.vbproj|solutionrelative:aplikasi pengolahan citra\\frmutama.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DC3479C-0740-43F3-9B8F-FCAADE422A14}|Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\#tugas 3\\aplikasi pengolahan citra\\aplikasi pengolahan citra\\watermark.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{5DC3479C-0740-43F3-9B8F-FCAADE422A14}|Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra.vbproj|solutionrelative:aplikasi pengolahan citra\\watermark.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DC3479C-0740-43F3-9B8F-FCAADE422A14}|Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\#tugas 3\\aplikasi pengolahan citra\\aplikasi pengolahan citra\\frmutama.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{5DC3479C-0740-43F3-9B8F-FCAADE422A14}|Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra.vbproj|solutionrelative:aplikasi pengolahan citra\\frmutama.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DC3479C-0740-43F3-9B8F-FCAADE422A14}|Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\#tugas 3\\aplikasi pengolahan citra\\aplikasi pengolahan citra\\opsiborder.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{5DC3479C-0740-43F3-9B8F-FCAADE422A14}|Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra.vbproj|solutionrelative:aplikasi pengolahan citra\\opsiborder.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DC3479C-0740-43F3-9B8F-FCAADE422A14}|Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\#tugas 3\\aplikasi pengolahan citra\\aplikasi pengolahan citra\\opsiborder.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{5DC3479C-0740-43F3-9B8F-FCAADE422A14}|Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra.vbproj|solutionrelative:aplikasi pengolahan citra\\opsiborder.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Watermark.vb [Design]",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 3\\Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra\\Watermark.vb",
+              "RelativeDocumentMoniker": "Aplikasi Pengolahan Citra\\Watermark.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 3\\Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra\\Watermark.vb [Design]",
+              "RelativeToolTip": "Aplikasi Pengolahan Citra\\Watermark.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-05-09T06:57:43.604Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OpsiBorder.vb",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 3\\Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra\\OpsiBorder.vb",
+              "RelativeDocumentMoniker": "Aplikasi Pengolahan Citra\\OpsiBorder.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 3\\Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra\\OpsiBorder.vb",
+              "RelativeToolTip": "Aplikasi Pengolahan Citra\\OpsiBorder.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-05-09T06:03:10.819Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OpsiBorder.vb [Design]",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 3\\Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra\\OpsiBorder.vb",
+              "RelativeDocumentMoniker": "Aplikasi Pengolahan Citra\\OpsiBorder.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 3\\Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra\\OpsiBorder.vb [Design]",
+              "RelativeToolTip": "Aplikasi Pengolahan Citra\\OpsiBorder.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-05-09T05:57:21.228Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmUtama.vb",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 3\\Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra\\frmUtama.vb",
+              "RelativeDocumentMoniker": "Aplikasi Pengolahan Citra\\frmUtama.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 3\\Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra\\frmUtama.vb",
+              "RelativeToolTip": "Aplikasi Pengolahan Citra\\frmUtama.vb",
+              "ViewState": "AgIAAOwBAAAAAAAAAAAAAAoCAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-05-09T05:54:42.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmUtama.vb [Design]",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 3\\Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra\\frmUtama.vb",
+              "RelativeDocumentMoniker": "Aplikasi Pengolahan Citra\\frmUtama.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 3\\Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra\\frmUtama.vb [Design]",
+              "RelativeToolTip": "Aplikasi Pengolahan Citra\\frmUtama.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-05-09T05:52:16.958Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
