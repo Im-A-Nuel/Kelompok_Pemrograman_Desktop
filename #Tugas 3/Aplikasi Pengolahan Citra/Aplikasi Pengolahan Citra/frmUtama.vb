@@ -530,8 +530,24 @@ Public Class frmUtama
     End Sub
 
     Private Sub RonaSpesialToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RonaSpesialToolStripMenuItem.Click
-
+        If namafile.Equals("") Then
+            MessageBox.Show("Pilih Gambar terlebih dahulu", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        Else
+            Dim bmp As New Bitmap(PictureBox1.Image)
+            For y As Integer = 0 To bmp.Height - 1
+                For x As Integer = 0 To bmp.Width - 1
+                    Dim pixel As Color = bmp.GetPixel(x, y)
+                    Dim r As Integer = pixel.R
+                    Dim g As Integer = pixel.G
+                    Dim b As Integer = pixel.B
+                    bmp.SetPixel(x, y, Color.FromArgb(g, b, r))
+                Next
+            Next
+            PictureBox1.Image = bmp
+        End If
     End Sub
+
+
 
     Private Sub HistogramToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles HistogramToolStripMenuItem1.Click
 
