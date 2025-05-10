@@ -550,7 +550,14 @@ Public Class frmUtama
 
 
     Private Sub HistogramToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles HistogramToolStripMenuItem1.Click
+        If namafile.Equals("") Then
+            MessageBox.Show("Pilih Gambar terlebih dahulu", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
 
+        Else
+
+            frmHistogramBalok.ShowDialog()
+
+        End If
     End Sub
 
     Private Sub AdjustColorBalance()

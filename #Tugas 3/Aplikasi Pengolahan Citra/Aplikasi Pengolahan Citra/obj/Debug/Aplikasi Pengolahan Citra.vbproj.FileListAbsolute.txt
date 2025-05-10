@@ -56,3 +56,4 @@ F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\#Tugas 3\Aplikasi Pengolahan Citra
 F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\#Tugas 3\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\obj\Debug\Aplikasi Pengolahan Citra.exe
 F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\#Tugas 3\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\obj\Debug\Aplikasi Pengolahan Citra.xml
 F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\#Tugas 3\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\obj\Debug\Aplikasi Pengolahan Citra.pdb
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\#Tugas 3\Aplikasi Pengolahan Citra\Aplikasi Pengolahan Citra\obj\Debug\Aplikasi_Pengolahan_Citra.frmHistogramBalok.resources
