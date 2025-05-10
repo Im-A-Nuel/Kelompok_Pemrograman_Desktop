@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmHistogramBalok.Designer.vb">
+      <DependentUpon>frmHistogramBalok.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHistogramBalok.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmUtama.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmHistogramBalok.resx">
+      <DependentUpon>frmHistogramBalok.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmUtama.resx">
       <DependentUpon>frmUtama.vb</DependentUpon>
     </EmbeddedResource>
