@@ -1,7 +1,7 @@
 ﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class frmUtama
-
+    Private gambarAseli As Bitmap
     Dim namafile As String = ""
 
     Private Sub BukaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BukaToolStripMenuItem.Click
@@ -21,36 +21,20 @@ Public Class frmUtama
             PictureBox1.Image = img
             namafile = openFileDialog1.FileName
 
+            tbRed.Minimum = -128
+            tbRed.Maximum = 128
+            tbRed.Value = 0
 
-            ' Set TrackBar values based on the average RGB of the image
-            Dim bmp As New Bitmap(PictureBox1.Image)
-            Dim totalR, totalG, totalB, pixelCount As Integer
-            totalR = 0
-            totalG = 0
-            totalB = 0
-            pixelCount = bmp.Width * bmp.Height
+            tbGreen.Minimum = -128
+            tbGreen.Maximum = 128
+            tbGreen.Value = 0
 
-            For y As Integer = 0 To bmp.Height - 1
-                For x As Integer = 0 To bmp.Width - 1
-                    Dim pixel As Color = bmp.GetPixel(x, y)
-                    totalR += pixel.R
-                    totalG += pixel.G
-                    totalB += pixel.B
-                Next
-            Next
-
-            ' Calculate average RGB values
-            Dim avgR As Integer = totalR \ pixelCount
-            Dim avgG As Integer = totalG \ pixelCount
-            Dim avgB As Integer = totalB \ pixelCount
-
-            ' Set TrackBar values to the average RGB values
-            tbRed.Value = Math.Max(tbRed.Minimum, Math.Min(tbRed.Maximum, avgR - 128))
-            tbGreen.Value = Math.Max(tbGreen.Minimum, Math.Min(tbGreen.Maximum, avgG - 128))
-            tbBlue.Value = Math.Max(tbBlue.Minimum, Math.Min(tbBlue.Maximum, avgB - 128))
-
+            tbBlue.Minimum = -128
+            tbBlue.Maximum = 128
+            tbBlue.Value = 0
         End If
     End Sub
+
 
 
     Private Sub SimpanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SimpanToolStripMenuItem.Click
@@ -345,12 +329,6 @@ Public Class frmUtama
 
         Else
 
-            '' Menggunakan library
-            'Dim bmp = New Bitmap(PictureBox1.Image)
-            'bmp.RotateFlip(RotateFlipType.RotateNoneFlipX)
-            'PictureBox1.Image = bmp
-
-            '' Secara manual tanpa build in & image
             Dim original As Bitmap = CType(PictureBox1.Image, Bitmap)
             Dim lebar As Integer = original.Width
             Dim tinggi As Integer = original.Height
@@ -565,22 +543,38 @@ Public Class frmUtama
             Return
         End If
 
+        Dim original As New Bitmap(namafile)
         Dim bmp As New Bitmap(PictureBox1.Image)
+
         Dim redOffset As Integer = tbRed.Value
         Dim greenOffset As Integer = tbGreen.Value
         Dim blueOffset As Integer = tbBlue.Value
 
         For y As Integer = 0 To bmp.Height - 1
             For x As Integer = 0 To bmp.Width - 1
-                Dim pixel As Color = bmp.GetPixel(x, y)
-                Dim r As Integer = pixel.R + redOffset
-                Dim g As Integer = pixel.G + greenOffset
-                Dim b As Integer = pixel.B + blueOffset
+                Dim originalPixel As Color = original.GetPixel(x, y)
+                Dim r As Integer = originalPixel.R
+                Dim g As Integer = originalPixel.G
+                Dim b As Integer = originalPixel.B
 
-                ' Clamp values to valid range (0-255)
-                r = Math.Max(0, Math.Min(255, r))
-                g = Math.Max(0, Math.Min(255, g))
-                b = Math.Max(0, Math.Min(255, b))
+
+                If redOffset > 0 Then
+                    r = Math.Min(255, r + redOffset)
+                ElseIf redOffset < 0 Then
+                    r = Math.Max(0, r + redOffset)
+                End If
+
+                If greenOffset > 0 Then
+                    g = Math.Min(255, g + greenOffset)
+                ElseIf greenOffset < 0 Then
+                    g = Math.Max(0, g + greenOffset)
+                End If
+
+                If blueOffset > 0 Then
+                    b = Math.Min(255, b + blueOffset)
+                ElseIf blueOffset < 0 Then
+                    b = Math.Max(0, b + blueOffset)
+                End If
 
                 bmp.SetPixel(x, y, Color.FromArgb(r, g, b))
             Next
@@ -599,11 +593,6 @@ Public Class frmUtama
 
     Private Sub tbBlue_Scroll(sender As Object, e As EventArgs) Handles tbBlue.Scroll
         AdjustColorBalance()
-    End Sub
-
-
-    Private Sub frmUtama_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 End Class
 
