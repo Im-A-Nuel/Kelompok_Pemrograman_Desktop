@@ -10,11 +10,48 @@ Public Class frmUtama
         openFileDialog1.Filter = "Bitmap files (*.bmp)|*.bmp|JPG files (*.jpg)|*.jpg"
         openFileDialog1.FilterIndex = 2
         openFileDialog1.RestoreDirectory = True
+
         If openFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-            PictureBox1.Image = Image.FromFile(openFileDialog1.FileName)
+            Dim img = Image.FromFile(openFileDialog1.FileName)
+            If img Is Nothing Then
+                MessageBox.Show("Gambar tidak valid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return
+            End If
+
+            PictureBox1.Image = img
             namafile = openFileDialog1.FileName
+
+
+            ' Set TrackBar values based on the average RGB of the image
+            Dim bmp As New Bitmap(PictureBox1.Image)
+            Dim totalR, totalG, totalB, pixelCount As Integer
+            totalR = 0
+            totalG = 0
+            totalB = 0
+            pixelCount = bmp.Width * bmp.Height
+
+            For y As Integer = 0 To bmp.Height - 1
+                For x As Integer = 0 To bmp.Width - 1
+                    Dim pixel As Color = bmp.GetPixel(x, y)
+                    totalR += pixel.R
+                    totalG += pixel.G
+                    totalB += pixel.B
+                Next
+            Next
+
+            ' Calculate average RGB values
+            Dim avgR As Integer = totalR \ pixelCount
+            Dim avgG As Integer = totalG \ pixelCount
+            Dim avgB As Integer = totalB \ pixelCount
+
+            ' Set TrackBar values to the average RGB values
+            tbRed.Value = Math.Max(tbRed.Minimum, Math.Min(tbRed.Maximum, avgR - 128))
+            tbGreen.Value = Math.Max(tbGreen.Minimum, Math.Min(tbGreen.Maximum, avgG - 128))
+            tbBlue.Value = Math.Max(tbBlue.Minimum, Math.Min(tbBlue.Maximum, avgB - 128))
+
         End If
     End Sub
+
 
     Private Sub SimpanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SimpanToolStripMenuItem.Click
         Dim saveFileDialog1 As New SaveFileDialog()
@@ -519,6 +556,53 @@ Public Class frmUtama
     End Sub
 
     Private Sub HistogramToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles HistogramToolStripMenuItem1.Click
+
+    End Sub
+
+    Private Sub AdjustColorBalance()
+        If namafile.Equals("") Then
+            MessageBox.Show("Pilih Gambar terlebih dahulu", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
+        Dim bmp As New Bitmap(PictureBox1.Image)
+        Dim redOffset As Integer = tbRed.Value
+        Dim greenOffset As Integer = tbGreen.Value
+        Dim blueOffset As Integer = tbBlue.Value
+
+        For y As Integer = 0 To bmp.Height - 1
+            For x As Integer = 0 To bmp.Width - 1
+                Dim pixel As Color = bmp.GetPixel(x, y)
+                Dim r As Integer = pixel.R + redOffset
+                Dim g As Integer = pixel.G + greenOffset
+                Dim b As Integer = pixel.B + blueOffset
+
+                ' Clamp values to valid range (0-255)
+                r = Math.Max(0, Math.Min(255, r))
+                g = Math.Max(0, Math.Min(255, g))
+                b = Math.Max(0, Math.Min(255, b))
+
+                bmp.SetPixel(x, y, Color.FromArgb(r, g, b))
+            Next
+        Next
+
+        PictureBox1.Image = bmp
+    End Sub
+
+    Private Sub tbRed_Scroll(sender As Object, e As EventArgs) Handles tbRed.Scroll
+        AdjustColorBalance()
+    End Sub
+
+    Private Sub tbGreen_Scroll(sender As Object, e As EventArgs) Handles tbGreen.Scroll
+        AdjustColorBalance()
+    End Sub
+
+    Private Sub tbBlue_Scroll(sender As Object, e As EventArgs) Handles tbBlue.Scroll
+        AdjustColorBalance()
+    End Sub
+
+
+    Private Sub frmUtama_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class
