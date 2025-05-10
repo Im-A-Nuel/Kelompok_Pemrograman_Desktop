@@ -70,9 +70,10 @@ Partial Class frmUtama
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 31)
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 25)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(723, 417)
+        Me.PictureBox1.Size = New System.Drawing.Size(542, 339)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -87,7 +88,8 @@ Partial Class frmUtama
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.HistogramToolStripMenuItem, Me.EfekToolStripMenuItem, Me.Tugas3ToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(723, 28)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(542, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -95,233 +97,239 @@ Partial Class frmUtama
         '
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BukaToolStripMenuItem, Me.SimpanToolStripMenuItem, Me.PropertiToolStripMenuItem, Me.KeluarToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(46, 24)
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
         '
         'BukaToolStripMenuItem
         '
         Me.BukaToolStripMenuItem.Name = "BukaToolStripMenuItem"
-        Me.BukaToolStripMenuItem.Size = New System.Drawing.Size(145, 26)
+        Me.BukaToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.BukaToolStripMenuItem.Text = "Buka"
         '
         'SimpanToolStripMenuItem
         '
         Me.SimpanToolStripMenuItem.Name = "SimpanToolStripMenuItem"
-        Me.SimpanToolStripMenuItem.Size = New System.Drawing.Size(145, 26)
+        Me.SimpanToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.SimpanToolStripMenuItem.Text = "Simpan"
         '
         'PropertiToolStripMenuItem
         '
         Me.PropertiToolStripMenuItem.Name = "PropertiToolStripMenuItem"
-        Me.PropertiToolStripMenuItem.Size = New System.Drawing.Size(145, 26)
+        Me.PropertiToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.PropertiToolStripMenuItem.Text = "Properti"
         '
         'KeluarToolStripMenuItem
         '
         Me.KeluarToolStripMenuItem.Name = "KeluarToolStripMenuItem"
-        Me.KeluarToolStripMenuItem.Size = New System.Drawing.Size(145, 26)
+        Me.KeluarToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.KeluarToolStripMenuItem.Text = "Keluar"
         '
         'HistogramToolStripMenuItem
         '
         Me.HistogramToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GreyscaleToolStripMenuItem, Me.CerahkanToolStripMenuItem, Me.GelapkanToolStripMenuItem, Me.TambahKontrasToolStripMenuItem, Me.KurangiKontrasToolStripMenuItem, Me.ResetToolStripMenuItem, Me.TampilkanHistgramToolStripMenuItem})
         Me.HistogramToolStripMenuItem.Name = "HistogramToolStripMenuItem"
-        Me.HistogramToolStripMenuItem.Size = New System.Drawing.Size(93, 24)
+        Me.HistogramToolStripMenuItem.Size = New System.Drawing.Size(75, 20)
         Me.HistogramToolStripMenuItem.Text = "Histogram"
         '
         'GreyscaleToolStripMenuItem
         '
         Me.GreyscaleToolStripMenuItem.Name = "GreyscaleToolStripMenuItem"
-        Me.GreyscaleToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
+        Me.GreyscaleToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
         Me.GreyscaleToolStripMenuItem.Text = "Greyscale"
         '
         'CerahkanToolStripMenuItem
         '
         Me.CerahkanToolStripMenuItem.Name = "CerahkanToolStripMenuItem"
-        Me.CerahkanToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
+        Me.CerahkanToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
         Me.CerahkanToolStripMenuItem.Text = "Cerahkan"
         '
         'GelapkanToolStripMenuItem
         '
         Me.GelapkanToolStripMenuItem.Name = "GelapkanToolStripMenuItem"
-        Me.GelapkanToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
+        Me.GelapkanToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
         Me.GelapkanToolStripMenuItem.Text = "Gelapkan"
         '
         'TambahKontrasToolStripMenuItem
         '
         Me.TambahKontrasToolStripMenuItem.Name = "TambahKontrasToolStripMenuItem"
-        Me.TambahKontrasToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
+        Me.TambahKontrasToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
         Me.TambahKontrasToolStripMenuItem.Text = "Tambah Kontras"
         '
         'KurangiKontrasToolStripMenuItem
         '
         Me.KurangiKontrasToolStripMenuItem.Name = "KurangiKontrasToolStripMenuItem"
-        Me.KurangiKontrasToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
+        Me.KurangiKontrasToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
         Me.KurangiKontrasToolStripMenuItem.Text = "Kurangi Kontras"
         '
         'ResetToolStripMenuItem
         '
         Me.ResetToolStripMenuItem.Name = "ResetToolStripMenuItem"
-        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
+        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
         Me.ResetToolStripMenuItem.Text = "Reset"
         '
         'TampilkanHistgramToolStripMenuItem
         '
         Me.TampilkanHistgramToolStripMenuItem.Name = "TampilkanHistgramToolStripMenuItem"
-        Me.TampilkanHistgramToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
+        Me.TampilkanHistgramToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
         Me.TampilkanHistgramToolStripMenuItem.Text = "Tampilkan Histogram"
         '
         'EfekToolStripMenuItem
         '
         Me.EfekToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TajamkanToolStripMenuItem, Me.KaburkanToolStripMenuItem, Me.PutarToolStripMenuItem, Me.FlipHorzontalToolStripMenuItem, Me.FlipVertikalToolStripMenuItem, Me.UjiKernel3x3ToolStripMenuItem})
         Me.EfekToolStripMenuItem.Name = "EfekToolStripMenuItem"
-        Me.EfekToolStripMenuItem.Size = New System.Drawing.Size(67, 24)
+        Me.EfekToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
         Me.EfekToolStripMenuItem.Text = "Effects"
         '
         'TajamkanToolStripMenuItem
         '
         Me.TajamkanToolStripMenuItem.Name = "TajamkanToolStripMenuItem"
-        Me.TajamkanToolStripMenuItem.Size = New System.Drawing.Size(197, 26)
+        Me.TajamkanToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
         Me.TajamkanToolStripMenuItem.Text = "Tajamkan"
         '
         'KaburkanToolStripMenuItem
         '
         Me.KaburkanToolStripMenuItem.Name = "KaburkanToolStripMenuItem"
-        Me.KaburkanToolStripMenuItem.Size = New System.Drawing.Size(197, 26)
+        Me.KaburkanToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
         Me.KaburkanToolStripMenuItem.Text = "Kaburkan"
         '
         'PutarToolStripMenuItem
         '
         Me.PutarToolStripMenuItem.Name = "PutarToolStripMenuItem"
-        Me.PutarToolStripMenuItem.Size = New System.Drawing.Size(197, 26)
+        Me.PutarToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
         Me.PutarToolStripMenuItem.Text = "Putar 90 derajat"
         '
         'FlipHorzontalToolStripMenuItem
         '
         Me.FlipHorzontalToolStripMenuItem.Name = "FlipHorzontalToolStripMenuItem"
-        Me.FlipHorzontalToolStripMenuItem.Size = New System.Drawing.Size(197, 26)
+        Me.FlipHorzontalToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
         Me.FlipHorzontalToolStripMenuItem.Text = "Flip Horizontal"
         '
         'FlipVertikalToolStripMenuItem
         '
         Me.FlipVertikalToolStripMenuItem.Name = "FlipVertikalToolStripMenuItem"
-        Me.FlipVertikalToolStripMenuItem.Size = New System.Drawing.Size(197, 26)
+        Me.FlipVertikalToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
         Me.FlipVertikalToolStripMenuItem.Text = "Flip Vertikal"
         '
         'UjiKernel3x3ToolStripMenuItem
         '
         Me.UjiKernel3x3ToolStripMenuItem.Name = "UjiKernel3x3ToolStripMenuItem"
-        Me.UjiKernel3x3ToolStripMenuItem.Size = New System.Drawing.Size(197, 26)
+        Me.UjiKernel3x3ToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
         Me.UjiKernel3x3ToolStripMenuItem.Text = "Gaussian Blur"
         '
         'Tugas3ToolStripMenuItem
         '
         Me.Tugas3ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BorderToolStripMenuItem, Me.WatermarkToolStripMenuItem, Me.InversiWarnaToolStripMenuItem, Me.RonaMerahToolStripMenuItem, Me.RonaHijauToolStripMenuItem, Me.RonaBiruToolStripMenuItem, Me.RonaSpesialToolStripMenuItem, Me.HistogramToolStripMenuItem1})
         Me.Tugas3ToolStripMenuItem.Name = "Tugas3ToolStripMenuItem"
-        Me.Tugas3ToolStripMenuItem.Size = New System.Drawing.Size(74, 24)
+        Me.Tugas3ToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
         Me.Tugas3ToolStripMenuItem.Text = "Tugas 3"
         '
         'BorderToolStripMenuItem
         '
         Me.BorderToolStripMenuItem.Name = "BorderToolStripMenuItem"
-        Me.BorderToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.BorderToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.BorderToolStripMenuItem.Text = "Border"
         '
         'WatermarkToolStripMenuItem
         '
         Me.WatermarkToolStripMenuItem.Name = "WatermarkToolStripMenuItem"
-        Me.WatermarkToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.WatermarkToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.WatermarkToolStripMenuItem.Text = "Watermark"
         '
         'InversiWarnaToolStripMenuItem
         '
         Me.InversiWarnaToolStripMenuItem.Name = "InversiWarnaToolStripMenuItem"
-        Me.InversiWarnaToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.InversiWarnaToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.InversiWarnaToolStripMenuItem.Text = "Inversi Warna"
         '
         'RonaMerahToolStripMenuItem
         '
         Me.RonaMerahToolStripMenuItem.Name = "RonaMerahToolStripMenuItem"
-        Me.RonaMerahToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.RonaMerahToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.RonaMerahToolStripMenuItem.Text = "Rona Merah"
         '
         'RonaHijauToolStripMenuItem
         '
         Me.RonaHijauToolStripMenuItem.Name = "RonaHijauToolStripMenuItem"
-        Me.RonaHijauToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.RonaHijauToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.RonaHijauToolStripMenuItem.Text = "Rona Hijau"
         '
         'RonaBiruToolStripMenuItem
         '
         Me.RonaBiruToolStripMenuItem.Name = "RonaBiruToolStripMenuItem"
-        Me.RonaBiruToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.RonaBiruToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.RonaBiruToolStripMenuItem.Text = "Rona Biru"
         '
         'RonaSpesialToolStripMenuItem
         '
         Me.RonaSpesialToolStripMenuItem.Name = "RonaSpesialToolStripMenuItem"
-        Me.RonaSpesialToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.RonaSpesialToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.RonaSpesialToolStripMenuItem.Text = "Rona Spesial"
         '
         'HistogramToolStripMenuItem1
         '
         Me.HistogramToolStripMenuItem1.Name = "HistogramToolStripMenuItem1"
-        Me.HistogramToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.HistogramToolStripMenuItem1.Size = New System.Drawing.Size(165, 22)
         Me.HistogramToolStripMenuItem1.Text = "Histogram  Balok"
         '
         'tbRed
         '
-        Me.tbRed.Location = New System.Drawing.Point(38, 478)
+        Me.tbRed.Location = New System.Drawing.Point(28, 388)
+        Me.tbRed.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.tbRed.Name = "tbRed"
-        Me.tbRed.Size = New System.Drawing.Size(153, 56)
+        Me.tbRed.Size = New System.Drawing.Size(115, 45)
         Me.tbRed.TabIndex = 2
         '
         'tbGreen
         '
-        Me.tbGreen.Location = New System.Drawing.Point(277, 478)
+        Me.tbGreen.Location = New System.Drawing.Point(208, 388)
+        Me.tbGreen.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.tbGreen.Name = "tbGreen"
-        Me.tbGreen.Size = New System.Drawing.Size(153, 56)
+        Me.tbGreen.Size = New System.Drawing.Size(115, 45)
         Me.tbGreen.TabIndex = 3
         '
         'tbBlue
         '
-        Me.tbBlue.Location = New System.Drawing.Point(530, 478)
+        Me.tbBlue.Location = New System.Drawing.Point(398, 388)
+        Me.tbBlue.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.tbBlue.Name = "tbBlue"
-        Me.tbBlue.Size = New System.Drawing.Size(153, 56)
+        Me.tbBlue.Size = New System.Drawing.Size(115, 45)
         Me.tbBlue.TabIndex = 4
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(94, 518)
+        Me.Label1.Location = New System.Drawing.Point(70, 421)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(33, 16)
+        Me.Label1.Size = New System.Drawing.Size(27, 13)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Red"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(330, 518)
+        Me.Label2.Location = New System.Drawing.Point(248, 421)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(44, 16)
+        Me.Label2.Size = New System.Drawing.Size(36, 13)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Green"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(591, 518)
+        Me.Label3.Location = New System.Drawing.Point(443, 421)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(34, 16)
+        Me.Label3.Size = New System.Drawing.Size(28, 13)
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "Blue"
         '
         'frmUtama
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(723, 558)
+        Me.ClientSize = New System.Drawing.Size(542, 453)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -331,6 +339,7 @@ Partial Class frmUtama
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "frmUtama"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Pengolahan Citra"

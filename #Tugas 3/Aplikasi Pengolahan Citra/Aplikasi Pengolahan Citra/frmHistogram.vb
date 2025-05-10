@@ -7,44 +7,44 @@
         Dim r, g, b, max As Integer
         Dim hR, hG, hB As Integer
         Dim bmp = New Bitmap(frmUtama.PictureBox1.Image)
-        Dim frekR(256), frekG(256), frekB(256) As Integer
-        For i As Integer = 0 To 255
-            frekR(i) = 0
-            frekG(i) = 0
-            frekB(i) = 0
-        Next
+        Dim frekR(255), frekG(255), frekB(255) As Integer
 
-
-        For bar As Integer = 1 To frmUtama.PictureBox1.Image.Height - 2
-            For kol As Integer = 1 To frmUtama.PictureBox1.Image.Width - 2
+        ' Hitung frekuensi setiap intensitas warna
+        For bar As Integer = 0 To bmp.Height - 1
+            For kol As Integer = 0 To bmp.Width - 1
                 r = bmp.GetPixel(kol, bar).R
                 g = bmp.GetPixel(kol, bar).G
                 b = bmp.GetPixel(kol, bar).B
-                frekR(r) = frekR(r) + 1
-                frekG(g) = frekG(g) + 1
-                frekB(b) = frekB(b) + 1
+                frekR(r) += 1
+                frekG(g) += 1
+                frekB(b) += 1
             Next
         Next
 
-        Dim histo = New Bitmap(256, 200)
-        max = 0
+        ' Tentukan nilai maksimum frekuensi
+        max = frekR.Max()
+        max = Math.Max(max, frekG.Max())
+        max = Math.Max(max, frekB.Max())
+
+        ' Gambar histogram sebagai blok
+        Dim histoWidth As Integer = 256
+        Dim histoHeight As Integer = 200
+        Dim histo = New Bitmap(histoWidth, histoHeight)
+        Dim gHisto As Graphics = Graphics.FromImage(histo)
+        gHisto.Clear(Color.White)
+
         For i As Integer = 0 To 255
-            If frekR(i) > max Then max = frekR(i)
-            If frekG(i) > max Then max = frekG(i)
-            If frekB(i) > max Then max = frekB(i)
-        Next
-        For i As Integer = 0 To 255
-            hR = Math.Round(frekR(i) / max * 199)
-            hG = Math.Round(frekG(i) / max * 199)
-            hB = Math.Round(frekB(i) / max * 199)
-            If hR > 199 Then hR = 199
-            If hG > 199 Then hG = 199
-            If hB > 199 Then hB = 199
-            histo.SetPixel(i, 199 - hR, Color.Red)
-            histo.SetPixel(i, 199 - hG, Color.Green)
-            histo.SetPixel(i, 199 - hB, Color.Blue)
+            hR = CInt(frekR(i) / max * histoHeight)
+            hG = CInt(frekG(i) / max * histoHeight)
+            hB = CInt(frekB(i) / max * histoHeight)
+
+            ' Gambar blok histogram dengan tinggi proporsional
+            If hR > 0 Then gHisto.FillRectangle(Brushes.Red, i, histoHeight - hR, 1, hR)
+            If hG > 0 Then gHisto.FillRectangle(Brushes.Green, i, histoHeight - hG, 1, hG)
+            If hB > 0 Then gHisto.FillRectangle(Brushes.Blue, i, histoHeight - hB, 1, hB)
         Next
 
         PictureBox1.Image = histo
     End Sub
+
 End Class
