@@ -22,42 +22,53 @@ Partial Class frmHistogramBalok
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.btnTutup = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnTutup
         '
-        Me.btnTutup.Location = New System.Drawing.Point(357, 255)
+        Me.btnTutup.Location = New System.Drawing.Point(678, 412)
         Me.btnTutup.Name = "btnTutup"
-        Me.btnTutup.Size = New System.Drawing.Size(75, 23)
+        Me.btnTutup.Size = New System.Drawing.Size(88, 33)
         Me.btnTutup.TabIndex = 3
         Me.btnTutup.Text = "Tutup"
         Me.btnTutup.UseVisualStyleBackColor = True
         '
-        'PictureBox1
+        'Chart1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(64, 39)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(368, 210)
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend1)
+        Me.Chart1.Location = New System.Drawing.Point(12, 12)
+        Me.Chart1.Name = "Chart1"
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        Me.Chart1.Series.Add(Series1)
+        Me.Chart1.Size = New System.Drawing.Size(772, 380)
+        Me.Chart1.TabIndex = 4
+        Me.Chart1.Text = "Chart1"
         '
         'frmHistogramBalok
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(496, 317)
+        Me.ClientSize = New System.Drawing.Size(795, 460)
+        Me.Controls.Add(Me.Chart1)
         Me.Controls.Add(Me.btnTutup)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Name = "frmHistogramBalok"
         Me.Text = "frmHistogramBalok"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents btnTutup As Button
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Chart1 As DataVisualization.Charting.Chart
 End Class

@@ -1,8 +1,10 @@
 ﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class frmUtama
-    Private gambarAseli As Bitmap
+    Private originalImage As Bitmap
     Dim namafile As String = ""
+    Private isInitializing As Boolean = True
+
 
     Private Sub BukaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BukaToolStripMenuItem.Click
         Dim openFileDialog1 As New OpenFileDialog()
@@ -11,7 +13,7 @@ Public Class frmUtama
         openFileDialog1.FilterIndex = 2
         openFileDialog1.RestoreDirectory = True
 
-        If openFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+        If openFileDialog1.ShowDialog() = DialogResult.OK Then
             Dim img = Image.FromFile(openFileDialog1.FileName)
             If img Is Nothing Then
                 MessageBox.Show("Gambar tidak valid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -21,19 +23,11 @@ Public Class frmUtama
             PictureBox1.Image = img
             namafile = openFileDialog1.FileName
 
-            tbRed.Minimum = -128
-            tbRed.Maximum = 128
-            tbRed.Value = 0
-
-            tbGreen.Minimum = -128
-            tbGreen.Maximum = 128
-            tbGreen.Value = 0
-
-            tbBlue.Minimum = -128
-            tbBlue.Maximum = 128
-            tbBlue.Value = 0
+            ' Simpan gambar asli ke originalImage
+            originalImage = New Bitmap(img)
         End If
     End Sub
+
 
 
 
@@ -204,8 +198,8 @@ Public Class frmUtama
         Else
             Dim r, g, b As Integer
             Dim bmp = New Bitmap(namafile)
-            For bar As Integer = 0 To PictureBox1.Image.Height - 1
-                For kol As Integer = 0 To PictureBox1.Image.Width - 1
+            For bar As Integer = 0 To Math.Min(PictureBox1.Image.Height, bmp.Height) - 1
+                For kol As Integer = 0 To bmp.Width - 1
                     r = bmp.GetPixel(kol, bar).R
                     g = bmp.GetPixel(kol, bar).G
                     b = bmp.GetPixel(kol, bar).B
@@ -404,26 +398,33 @@ Public Class frmUtama
     Private Sub BorderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BorderToolStripMenuItem.Click
         If namafile.Equals("") Then
             MessageBox.Show("Pilih Gambar terlebih dahulu", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
 
-        Else
+        Dim opsi As New OpsiBorder()
+        If opsi.ShowDialog() = DialogResult.OK Then
+            Dim warna As Color = opsi.WarnaBorder
+            Dim ketebalan As Integer = opsi.KetebalanBorder
 
-            Dim opsi As New OpsiBorder()
-            If opsi.ShowDialog() = DialogResult.OK Then
-                Dim warna As Color = opsi.WarnaBorder
-                Dim ketebalan As Integer = opsi.KetebalanBorder
+            Dim original As Bitmap = CType(PictureBox1.Image, Bitmap)
 
-                Dim original As Bitmap = CType(PictureBox1.Image, Bitmap)
-                Dim bmp As New Bitmap(original.Width + 2 * ketebalan, original.Height + 2 * ketebalan)
+            ketebalan = Math.Min(ketebalan, Math.Min(original.Width, original.Height) \ 2)
 
-                Using g As Graphics = Graphics.FromImage(bmp)
-                    g.Clear(warna)
-                    g.DrawImage(original, ketebalan, ketebalan)
-                End Using
-                PictureBox1.Image = bmp
-            End If
+            Dim newWidth As Integer = original.Width + ketebalan * 2
+            Dim newHeight As Integer = original.Height + ketebalan * 2
+            Dim bmp As New Bitmap(newWidth, newHeight)
 
+            Using g As Graphics = Graphics.FromImage(bmp)
+                g.Clear(warna)
+
+                Dim destRect As New Rectangle(ketebalan, ketebalan, original.Width, original.Height)
+                g.DrawImage(original, destRect)
+            End Using
+
+            PictureBox1.Image = bmp
         End If
     End Sub
+
 
     Private Sub WatermarkToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WatermarkToolStripMenuItem.Click
 
@@ -554,50 +555,32 @@ Public Class frmUtama
             MessageBox.Show("Pilih Gambar terlebih dahulu", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
 
         Else
-
-            frmHistogramBalok.ShowDialog()
+            Dim frmHist As New frmHistogramBalok()
+            frmHist.Gambar = CType(PictureBox1.Image, Bitmap)
+            frmHist.ShowDialog()
 
         End If
     End Sub
 
     Private Sub AdjustColorBalance()
-        If namafile.Equals("") Then
-            MessageBox.Show("Pilih Gambar terlebih dahulu", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        If PictureBox1.Image Is Nothing OrElse originalImage Is Nothing Then
+            MessageBox.Show("Pilih gambar terlebih dahulu!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
         End If
 
-        Dim original As New Bitmap(namafile)
-        Dim bmp As New Bitmap(PictureBox1.Image)
+        Dim bmp As New Bitmap(originalImage)
 
-        Dim redOffset As Integer = tbRed.Value
-        Dim greenOffset As Integer = tbGreen.Value
-        Dim blueOffset As Integer = tbBlue.Value
+        Dim redOffset As Integer = tbRed.Value - tbRed.Maximum
+        Dim greenOffset As Integer = tbGreen.Value - tbGreen.Maximum
+        Dim blueOffset As Integer = tbBlue.Value - tbBlue.Maximum
 
         For y As Integer = 0 To bmp.Height - 1
             For x As Integer = 0 To bmp.Width - 1
-                Dim originalPixel As Color = original.GetPixel(x, y)
-                Dim r As Integer = originalPixel.R
-                Dim g As Integer = originalPixel.G
-                Dim b As Integer = originalPixel.B
+                Dim pixel As Color = originalImage.GetPixel(x, y)
 
-
-                If redOffset > 0 Then
-                    r = Math.Min(255, r + redOffset)
-                ElseIf redOffset < 0 Then
-                    r = Math.Max(0, r + redOffset)
-                End If
-
-                If greenOffset > 0 Then
-                    g = Math.Min(255, g + greenOffset)
-                ElseIf greenOffset < 0 Then
-                    g = Math.Max(0, g + greenOffset)
-                End If
-
-                If blueOffset > 0 Then
-                    b = Math.Min(255, b + blueOffset)
-                ElseIf blueOffset < 0 Then
-                    b = Math.Max(0, b + blueOffset)
-                End If
+                Dim r As Integer = Math.Min(255, Math.Max(0, pixel.R + redOffset))
+                Dim g As Integer = Math.Min(255, Math.Max(0, pixel.G + greenOffset))
+                Dim b As Integer = Math.Min(255, Math.Max(0, pixel.B + blueOffset))
 
                 bmp.SetPixel(x, y, Color.FromArgb(r, g, b))
             Next
@@ -606,16 +589,36 @@ Public Class frmUtama
         PictureBox1.Image = bmp
     End Sub
 
-    Private Sub tbRed_Scroll(sender As Object, e As EventArgs) Handles tbRed.Scroll
-        AdjustColorBalance()
+
+
+    Private Sub tbRed_ValueChanged(sender As Object, e As EventArgs) Handles tbRed.ValueChanged
+        If Not isInitializing Then AdjustColorBalance()
     End Sub
 
-    Private Sub tbGreen_Scroll(sender As Object, e As EventArgs) Handles tbGreen.Scroll
-        AdjustColorBalance()
+    Private Sub tbGreen_ValueChanged(sender As Object, e As EventArgs) Handles tbGreen.ValueChanged
+        If Not isInitializing Then AdjustColorBalance()
     End Sub
 
-    Private Sub tbBlue_Scroll(sender As Object, e As EventArgs) Handles tbBlue.Scroll
-        AdjustColorBalance()
+    Private Sub tbBlue_ValueChanged(sender As Object, e As EventArgs) Handles tbBlue.ValueChanged
+        If Not isInitializing Then AdjustColorBalance()
+    End Sub
+
+
+    Private Sub frmUtama_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        isInitializing = True
+        tbRed.Minimum = 0
+        tbRed.Maximum = 512
+        tbRed.Value = 512
+
+        tbGreen.Minimum = 0
+        tbGreen.Maximum = 512
+        tbGreen.Value = 512
+
+        tbBlue.Minimum = 0
+        tbBlue.Maximum = 512
+        tbBlue.Value = 512
+
+        isInitializing = False
     End Sub
 End Class
 

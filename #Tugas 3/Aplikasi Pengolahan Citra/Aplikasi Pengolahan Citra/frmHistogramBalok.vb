@@ -1,49 +1,52 @@
-﻿Public Class frmHistogramBalok
-    Private Sub btnTutup_Click(sender As Object, e As EventArgs) Handles btnTutup.Click
-        Me.Close()
-    End Sub
+﻿Imports System.Windows.Forms.DataVisualization.Charting
 
-    Private Sub frmHistogram_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim r, g, b, max As Integer
-        Dim hR, hG, hB As Integer
-        Dim bmp = New Bitmap(frmUtama.PictureBox1.Image)
-        Dim frekR(255), frekG(255), frekB(255) As Integer
+Public Class frmHistogramBalok
+    Public Property Gambar As Bitmap
 
-        ' Hitung frekuensi setiap intensitas warna
-        For bar As Integer = 0 To bmp.Height - 1
-            For kol As Integer = 0 To bmp.Width - 1
-                r = bmp.GetPixel(kol, bar).R
-                g = bmp.GetPixel(kol, bar).G
-                b = bmp.GetPixel(kol, bar).B
-                frekR(r) += 1
-                frekG(g) += 1
-                frekB(b) += 1
+    Private Sub frmHistogramBalok_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If Gambar Is Nothing Then
+            MessageBox.Show("Gambar tidak ditemukan.")
+            Return
+        End If
+
+        Dim histogramR(255) As Integer
+        Dim histogramG(255) As Integer
+        Dim histogramB(255) As Integer
+
+        For y As Integer = 0 To Gambar.Height - 1
+            For x As Integer = 0 To Gambar.Width - 1
+                Dim warna As Color = Gambar.GetPixel(x, y)
+                histogramR(warna.R) += 1
+                histogramG(warna.G) += 1
+                histogramB(warna.B) += 1
             Next
         Next
 
-        ' Tentukan nilai maksimum frekuensi
-        max = frekR.Max()
-        max = Math.Max(max, frekG.Max())
-        max = Math.Max(max, frekB.Max())
+        With Chart1
+            .Series.Clear()
+            .ChartAreas(0).AxisX.Interval = 5
 
-        ' Gambar histogram sebagai blok
-        Dim histoWidth As Integer = 256
-        Dim histoHeight As Integer = 200
-        Dim histo = New Bitmap(histoWidth, histoHeight)
-        Dim gHisto As Graphics = Graphics.FromImage(histo)
-        gHisto.Clear(Color.White)
+            .Series.Add("Red")
+            .Series("Red").ChartType = SeriesChartType.Column
+            .Series("Red").Color = Color.Red
 
-        For i As Integer = 0 To 255
-            hR = CInt(frekR(i) / max * histoHeight)
-            hG = CInt(frekG(i) / max * histoHeight)
-            hB = CInt(frekB(i) / max * histoHeight)
+            .Series.Add("Green")
+            .Series("Green").ChartType = SeriesChartType.Column
+            .Series("Green").Color = Color.Green
 
-            ' Gambar blok histogram dengan tinggi proporsional
-            If hR > 0 Then gHisto.FillRectangle(Brushes.Red, i, histoHeight - hR, 1, hR)
-            If hG > 0 Then gHisto.FillRectangle(Brushes.Green, i, histoHeight - hG, 1, hG)
-            If hB > 0 Then gHisto.FillRectangle(Brushes.Blue, i, histoHeight - hB, 1, hB)
+            .Series.Add("Blue")
+            .Series("Blue").ChartType = SeriesChartType.Column
+            .Series("Blue").Color = Color.Blue
+        End With
+
+        For i As Integer = 73 To 100
+            Chart1.Series("Red").Points.AddXY(i, histogramR(i))
+            Chart1.Series("Green").Points.AddXY(i, histogramG(i))
+            Chart1.Series("Blue").Points.AddXY(i, histogramB(i))
         Next
+    End Sub
 
-        PictureBox1.Image = histo
+    Private Sub btnTutup_Click(sender As Object, e As EventArgs) Handles btnTutup.Click
+        Me.Close()
     End Sub
 End Class
