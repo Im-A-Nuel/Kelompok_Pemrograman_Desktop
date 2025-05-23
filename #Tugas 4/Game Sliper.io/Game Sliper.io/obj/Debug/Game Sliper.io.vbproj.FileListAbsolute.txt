@@ -1,0 +1,13 @@
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\bin\Debug\Game Sliper.io.exe.config
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\bin\Debug\Game Sliper.io.exe
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\bin\Debug\Game Sliper.io.pdb
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\bin\Debug\Game Sliper.io.xml
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\obj\Debug\Game Sliper.io.vbproj.AssemblyReference.cache
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\obj\Debug\Game_Sliper.io.Form1.resources
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\obj\Debug\Game_Sliper.io.Resources.resources
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\obj\Debug\Game Sliper.io.vbproj.GenerateResource.cache
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\obj\Debug\Game Sliper.io.vbproj.CoreCompileInputs.cache
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\obj\Debug\Game Sliper.io.exe
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\obj\Debug\Game Sliper.io.xml
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\obj\Debug\Game Sliper.io.pdb
+F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\obj\Debug\Game_Sliper.io.Form2.resources
