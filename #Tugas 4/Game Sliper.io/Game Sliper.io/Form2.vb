@@ -1,6 +1,11 @@
 ﻿Imports System.IO
 
 Public Class Form2
+    Dim Lingkaran As Image = Image.FromFile(Application.StartupPath & "\asset\lingkaran.png")
+    Dim persegiMerah As Image = Image.FromFile(Application.StartupPath & "\asset\persegi.png")
+    Dim persegiHijau As Image = Image.FromFile(Application.StartupPath & "\asset\persegiHijau.png")
+    Dim persegiPink As Image = Image.FromFile(Application.StartupPath & "\asset\persegiPink.png")
+
     ' Game configuration
     Dim gridSize As Integer = 20
     Dim gridWidth As Integer = Me.Width / 10
@@ -61,7 +66,7 @@ Public Class Form2
         Next
 
         ' Load HighScore
-        Dim hsPath As String = Application.StartupPath & "\highscore.txt"
+        Dim hsPath As String = Application.StartupPath & "\asset\highscore.txt"
         If File.Exists(hsPath) Then
             Integer.TryParse(File.ReadAllText(hsPath), highScore)
         Else
@@ -85,6 +90,10 @@ Public Class Form2
                 StartNewGame()
                 timerGame.Start()
             End If
+
+            If e.KeyCode = Keys.Escape Then
+                Me.Close()
+            End If
             Exit Sub
         End If
 
@@ -101,28 +110,19 @@ Public Class Form2
     End Sub
 
     Private Sub GameLoop(sender As Object, e As EventArgs)
-        If isGameOver Then
+        If botSnake1.Any(Function(pt) pt = playerSnake(0)) OrElse botSnake2.Any(Function(pt) pt = playerSnake(0)) Then
+            isGameOver = True
             timerGame.Stop()
-            ' Save HighScore
-            If score > highScore Then
-                highScore = score
-                File.WriteAllText(Application.StartupPath & "\highscore.txt", highScore.ToString())
-            End If
-            Me.Invalidate()
-            Return
         End If
 
-        ' Move player snake
         MoveSnake(playerSnake, playerDir)
 
-        ' Move bots (bisa diupgrade ke AI)
         bot1Dir = GetRandomDirection(botSnake1)
         MoveSnake(botSnake1, bot1Dir)
 
         bot2Dir = GetRandomDirection(botSnake2)
         MoveSnake(botSnake2, bot2Dir)
 
-        ' Player eat food
         Dim eatIdx As Integer = foodList.FindIndex(Function(f) f = playerSnake(0))
         If eatIdx >= 0 Then
             score += 10
@@ -130,44 +130,31 @@ Public Class Form2
             foodList(eatIdx) = GetRandomEmptyCell()
         End If
 
-        ' Bot1 eat food
         eatIdx = foodList.FindIndex(Function(f) f = botSnake1(0))
         If eatIdx >= 0 Then
             botSnake1.Add(botSnake1.Last)
             foodList(eatIdx) = GetRandomEmptyCell()
         End If
 
-        ' Bot2 eat food
         eatIdx = foodList.FindIndex(Function(f) f = botSnake2(0))
         If eatIdx >= 0 Then
             botSnake2.Add(botSnake2.Last)
             foodList(eatIdx) = GetRandomEmptyCell()
         End If
 
-        ' ====== COLLISION DETECTION ======
-        ' Player to itself
         If playerSnake.Skip(1).Any(Function(pt) pt = playerSnake(0)) Then
             isGameOver = True
             timerGame.Stop()
         End If
 
-        ' Player to bots' body
-        If botSnake1.Any(Function(pt) pt = playerSnake(0)) OrElse botSnake2.Any(Function(pt) pt = playerSnake(0)) Then
-            isGameOver = True
-            timerGame.Stop()
-        End If
-
-        ' Bot1 to itself
         If botSnake1.Skip(1).Any(Function(pt) pt = botSnake1(0)) Then
             ResetBot(botSnake1, New Point(15, 5))
         End If
 
-        ' Bot2 to itself
         If botSnake2.Skip(1).Any(Function(pt) pt = botSnake2(0)) Then
             ResetBot(botSnake2, New Point(10, 15))
         End If
 
-        ' Bot1 vs Bot2
         If botSnake2.Any(Function(pt) pt = botSnake1(0)) Then
             ResetBot(botSnake1, New Point(15, 5))
         End If
@@ -175,7 +162,6 @@ Public Class Form2
             ResetBot(botSnake2, New Point(10, 15))
         End If
 
-        ' Bot ke tubuh player
         If playerSnake.Any(Function(pt) pt = botSnake1(0)) Then
             ResetBot(botSnake1, New Point(15, 5))
             score += 50
@@ -186,6 +172,17 @@ Public Class Form2
         End If
 
         Me.Invalidate()
+
+        If isGameOver Then
+            timerGame.Stop()
+            ' Save HighScore
+            If score > highScore Then
+                highScore = score
+                File.WriteAllText(Application.StartupPath & "\asset\highscore.txt", highScore.ToString())
+            End If
+            Me.Invalidate()
+            Return
+        End If
     End Sub
 
     Sub MoveSnake(ByRef snake As List(Of Point), dir As Point)
@@ -215,29 +212,42 @@ Public Class Form2
 
     Protected Overrides Sub OnPaint(e As PaintEventArgs)
         MyBase.OnPaint(e)
-        ' Draw food
+
         For Each food In foodList
-            e.Graphics.FillEllipse(Brushes.Yellow, food.X * gridSize, food.Y * gridSize, gridSize, gridSize)
+            e.Graphics.DrawImage(Lingkaran, food.X * gridSize, food.Y * gridSize, gridSize, gridSize)
         Next
-        ' Draw snakes
+
         For Each pt In playerSnake
-            e.Graphics.FillRectangle(Brushes.Green, pt.X * gridSize, pt.Y * gridSize, gridSize, gridSize)
+            e.Graphics.DrawImage(persegiHijau, pt.X * gridSize, pt.Y * gridSize, gridSize, gridSize)
         Next
+
         For Each pt In botSnake1
-            e.Graphics.FillRectangle(Brushes.Red, pt.X * gridSize, pt.Y * gridSize, gridSize, gridSize)
+            e.Graphics.DrawImage(persegiMerah, pt.X * gridSize, pt.Y * gridSize, gridSize, gridSize)
         Next
+
         For Each pt In botSnake2
-            e.Graphics.FillRectangle(Brushes.Purple, pt.X * gridSize, pt.Y * gridSize, gridSize, gridSize)
+            e.Graphics.DrawImage(persegiPink, pt.X * gridSize, pt.Y * gridSize, gridSize, gridSize)
         Next
 
         e.Graphics.DrawString("Score: " & score, New Font("Arial", 12), Brushes.White, 5, gridHeight * gridSize + 5)
         e.Graphics.DrawString("High Score: " & highScore, New Font("Arial", 12), Brushes.Yellow, 120, gridHeight * gridSize + 5)
 
         If isGameOver Then
-            Dim msg = "Game Over!" & vbCrLf & "Tekan Enter untuk restart"
-            Dim size = e.Graphics.MeasureString(msg, New Font("Arial", 22))
-            e.Graphics.DrawString(msg, New Font("Arial", 22), Brushes.White,
-                                  (Me.ClientSize.Width - size.Width) / 2, (Me.ClientSize.Height - size.Height) / 2)
+            Dim msg = "Game Over!"
+            Dim msgKeterangan = "Tekan Enter untuk restart" & vbCrLf & "Tekan Esc untuk exit"
+            Dim fontMsg As New Font("Arial", 22)
+            Dim fontKet As New Font("Arial", 15)
+            Dim sizeMsg = e.Graphics.MeasureString(msg, fontMsg)
+            Dim sizeKet = e.Graphics.MeasureString(msgKeterangan, fontKet)
+
+            Dim totalHeight As Single = sizeMsg.Height + 10 + sizeKet.Height
+            Dim startY As Single = (Me.ClientSize.Height - totalHeight) / 2
+            Dim centerX As Single = (Me.ClientSize.Width - sizeMsg.Width) / 2
+
+            e.Graphics.DrawString(msg, fontMsg, Brushes.White, centerX, startY)
+            Dim ketX As Single = (Me.ClientSize.Width - sizeKet.Width) / 2
+            e.Graphics.DrawString(msgKeterangan, fontKet, Brushes.White, ketX, startY + sizeMsg.Height + 10)
         End If
     End Sub
+
 End Class
