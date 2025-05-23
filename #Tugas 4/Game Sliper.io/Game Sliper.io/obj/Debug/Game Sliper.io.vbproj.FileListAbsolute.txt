@@ -11,3 +11,16 @@ F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sl
 F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\obj\Debug\Game Sliper.io.xml
 F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\obj\Debug\Game Sliper.io.pdb
 F:\KULIAH SEM 6\Prog Desk\Kelompok\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\obj\Debug\Game_Sliper.io.Form2.resources
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\bin\Debug\Game Sliper.io.exe.config
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\bin\Debug\Game Sliper.io.exe
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\bin\Debug\Game Sliper.io.pdb
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\bin\Debug\Game Sliper.io.xml
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\obj\Debug\Game Sliper.io.vbproj.AssemblyReference.cache
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\obj\Debug\Game_Sliper.io.Form1.resources
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\obj\Debug\Game_Sliper.io.Form2.resources
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\obj\Debug\Game_Sliper.io.Resources.resources
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\obj\Debug\Game Sliper.io.vbproj.GenerateResource.cache
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\obj\Debug\Game Sliper.io.vbproj.CoreCompileInputs.cache
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\obj\Debug\Game Sliper.io.exe
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\obj\Debug\Game Sliper.io.xml
+F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\#Tugas 4\Game Sliper.io\Game Sliper.io\obj\Debug\Game Sliper.io.pdb
