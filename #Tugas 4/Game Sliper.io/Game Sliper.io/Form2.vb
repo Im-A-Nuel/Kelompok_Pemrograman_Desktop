@@ -8,8 +8,8 @@ Public Class Form2
 
     ' Game configuration
     Dim gridSize As Integer = 20
-    Dim gridWidth As Integer = Me.Width / 10
-    Dim gridHeight As Integer = Me.Height / 10
+    Dim gridWidth As Integer = Me.Width \ 10
+    Dim gridHeight As Integer = Me.Height \ 10
 
     ' Snake data
     Dim playerSnake As New List(Of Point)
@@ -51,12 +51,6 @@ Public Class Form2
         playerSnake.Add(New Point(5, 5))
         botSnake1.Add(New Point(15, 5))
         botSnake2.Add(New Point(10, 15))
-
-        For i = 1 To 2
-            playerSnake.Add(New Point(5 - i, 5))
-            botSnake1.Add(New Point(15 - i, 5))
-            botSnake2.Add(New Point(10 - i, 15))
-        Next
 
         score = 0
         isGameOver = False
@@ -110,51 +104,58 @@ Public Class Form2
     End Sub
 
     Private Sub GameLoop(sender As Object, e As EventArgs)
-        If botSnake1.Any(Function(pt) pt = playerSnake(0)) OrElse botSnake2.Any(Function(pt) pt = playerSnake(0)) Then
+        Dim lastTailPlayer As Point = playerSnake.Last
+        Dim lastTailBot1 As Point = botSnake1.Last
+        Dim lastTailBot2 As Point = botSnake2.Last
+
+        If playerSnake(0) = botSnake1(0) OrElse playerSnake(0) = botSnake2(0) Then
             isGameOver = True
             timerGame.Stop()
         End If
 
         MoveSnake(playerSnake, playerDir)
-
-        bot1Dir = GetRandomDirection(botSnake1)
+        bot1Dir = GetRandomDirection(botSnake1, bot1Dir)
         MoveSnake(botSnake1, bot1Dir)
-
-        bot2Dir = GetRandomDirection(botSnake2)
+        bot2Dir = GetRandomDirection(botSnake2, bot2Dir)
         MoveSnake(botSnake2, bot2Dir)
 
+        ' Player makan food
         Dim eatIdx As Integer = foodList.FindIndex(Function(f) f = playerSnake(0))
         If eatIdx >= 0 Then
+            GrowSnake(playerSnake, lastTailPlayer)
             score += 10
-            playerSnake.Add(playerSnake.Last)
             foodList(eatIdx) = GetRandomEmptyCell()
         End If
 
+        ' Bot1 makan food
         eatIdx = foodList.FindIndex(Function(f) f = botSnake1(0))
         If eatIdx >= 0 Then
-            botSnake1.Add(botSnake1.Last)
+            GrowSnake(botSnake1, lastTailBot1)
             foodList(eatIdx) = GetRandomEmptyCell()
         End If
 
+        ' Bot2 makan food
         eatIdx = foodList.FindIndex(Function(f) f = botSnake2(0))
         If eatIdx >= 0 Then
-            botSnake2.Add(botSnake2.Last)
+            GrowSnake(botSnake2, lastTailBot2)
             foodList(eatIdx) = GetRandomEmptyCell()
         End If
 
+        ' Player kena dirinya sendiri
         If playerSnake.Skip(1).Any(Function(pt) pt = playerSnake(0)) Then
             isGameOver = True
             timerGame.Stop()
         End If
 
+        ' Bot kena dirinya sendiri, di-reset
         If botSnake1.Skip(1).Any(Function(pt) pt = botSnake1(0)) Then
             ResetBot(botSnake1, New Point(15, 5))
         End If
-
         If botSnake2.Skip(1).Any(Function(pt) pt = botSnake2(0)) Then
             ResetBot(botSnake2, New Point(10, 15))
         End If
 
+        ' Bot bertabrakan satu sama lain, di-reset
         If botSnake2.Any(Function(pt) pt = botSnake1(0)) Then
             ResetBot(botSnake1, New Point(15, 5))
         End If
@@ -162,11 +163,12 @@ Public Class Form2
             ResetBot(botSnake2, New Point(10, 15))
         End If
 
-        If playerSnake.Any(Function(pt) pt = botSnake1(0)) Then
+        ' Player makan badan bot (bukan kepala), bot di-reset dan player dapat skor
+        If botSnake1.Skip(1).Any(Function(pt) pt = playerSnake(0)) Then
             ResetBot(botSnake1, New Point(15, 5))
             score += 50
         End If
-        If playerSnake.Any(Function(pt) pt = botSnake2(0)) Then
+        If botSnake2.Skip(1).Any(Function(pt) pt = playerSnake(0)) Then
             ResetBot(botSnake2, New Point(10, 15))
             score += 50
         End If
@@ -192,22 +194,31 @@ Public Class Form2
         snake.RemoveAt(snake.Count - 1)
     End Sub
 
-    Function GetRandomDirection(snake As List(Of Point)) As Point
-        ' Bot random movement (bisa diganti AI)
+    Sub GrowSnake(ByRef snake As List(Of Point), tailPos As Point)
+        snake.Add(tailPos)
+    End Sub
+
+    Function GetRandomDirection(snake As List(Of Point), lastDir As Point) As Point
         Dim dirs As New List(Of Point) From {
             New Point(0, -1), New Point(0, 1), New Point(-1, 0), New Point(1, 0)
         }
-        Dim currDir As Point = New Point(snake(0).X - snake(1).X, snake(0).Y - snake(1).Y)
-        dirs = dirs.Where(Function(d) d <> New Point(-currDir.X, -currDir.Y)).ToList() ' tidak mundur
-        Return dirs(random.Next(dirs.Count))
+        Dim currDir As Point = lastDir
+
+        If snake.Count >= 2 Then
+            If Not (snake(0) = snake(1)) Then
+                currDir = New Point(snake(0).X - snake(1).X, snake(0).Y - snake(1).Y)
+            End If
+        End If
+
+        Dim filtered = dirs.Where(Function(d) d <> New Point(-currDir.X, -currDir.Y)).ToList()
+        If filtered.Count = 0 Then filtered = dirs
+
+        Return filtered(random.Next(filtered.Count))
     End Function
 
     Sub ResetBot(ByRef bot As List(Of Point), startPos As Point)
         bot.Clear()
         bot.Add(startPos)
-        For i = 1 To 2
-            bot.Add(New Point(startPos.X - i, startPos.Y))
-        Next
     End Sub
 
     Protected Overrides Sub OnPaint(e As PaintEventArgs)
