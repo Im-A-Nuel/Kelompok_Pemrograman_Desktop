@@ -35,10 +35,10 @@ Partial Class UC_Dashboard
         lblBarangKeluar = New Label()
         lblBarangMasuk = New Label()
         lblDataBarang = New Label()
-        lblDashboard = New Label()
         pbBarangKeluar = New PictureBox()
         pbBarangMasuk = New PictureBox()
         pbDataBarang = New PictureBox()
+        lblHeader = New Label()
         CType(pbLaporan, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
         CType(pbManPengguna, ComponentModel.ISupportInitialize).BeginInit()
@@ -52,7 +52,7 @@ Partial Class UC_Dashboard
         lblLaporan.AutoSize = True
         lblLaporan.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
         lblLaporan.ForeColor = Color.White
-        lblLaporan.Location = New Point(325, 365)
+        lblLaporan.Location = New Point(325, 393)
         lblLaporan.Name = "lblLaporan"
         lblLaporan.Size = New Size(63, 20)
         lblLaporan.TabIndex = 39
@@ -61,7 +61,7 @@ Partial Class UC_Dashboard
         ' pbLaporan
         ' 
         pbLaporan.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
-        pbLaporan.Location = New Point(305, 267)
+        pbLaporan.Location = New Point(305, 295)
         pbLaporan.Margin = New Padding(3, 4, 3, 4)
         pbLaporan.Name = "pbLaporan"
         pbLaporan.Size = New Size(199, 146)
@@ -135,7 +135,7 @@ Partial Class UC_Dashboard
         lblManPengguna.AutoSize = True
         lblManPengguna.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
         lblManPengguna.ForeColor = Color.White
-        lblManPengguna.Location = New Point(82, 368)
+        lblManPengguna.Location = New Point(82, 396)
         lblManPengguna.Name = "lblManPengguna"
         lblManPengguna.Size = New Size(156, 20)
         lblManPengguna.TabIndex = 31
@@ -144,7 +144,7 @@ Partial Class UC_Dashboard
         ' pbManPengguna
         ' 
         pbManPengguna.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
-        pbManPengguna.Location = New Point(66, 267)
+        pbManPengguna.Location = New Point(66, 295)
         pbManPengguna.Margin = New Padding(3, 4, 3, 4)
         pbManPengguna.Name = "pbManPengguna"
         pbManPengguna.Size = New Size(199, 146)
@@ -156,7 +156,7 @@ Partial Class UC_Dashboard
         lblBarangKeluar.AutoSize = True
         lblBarangKeluar.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
         lblBarangKeluar.ForeColor = Color.White
-        lblBarangKeluar.Location = New Point(565, 200)
+        lblBarangKeluar.Location = New Point(565, 228)
         lblBarangKeluar.Name = "lblBarangKeluar"
         lblBarangKeluar.Size = New Size(102, 20)
         lblBarangKeluar.TabIndex = 29
@@ -167,7 +167,7 @@ Partial Class UC_Dashboard
         lblBarangMasuk.AutoSize = True
         lblBarangMasuk.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
         lblBarangMasuk.ForeColor = Color.White
-        lblBarangMasuk.Location = New Point(328, 198)
+        lblBarangMasuk.Location = New Point(328, 226)
         lblBarangMasuk.Name = "lblBarangMasuk"
         lblBarangMasuk.Size = New Size(102, 20)
         lblBarangMasuk.TabIndex = 28
@@ -178,26 +178,16 @@ Partial Class UC_Dashboard
         lblDataBarang.AutoSize = True
         lblDataBarang.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
         lblDataBarang.ForeColor = Color.White
-        lblDataBarang.Location = New Point(83, 198)
+        lblDataBarang.Location = New Point(83, 226)
         lblDataBarang.Name = "lblDataBarang"
         lblDataBarang.Size = New Size(92, 20)
         lblDataBarang.TabIndex = 27
         lblDataBarang.Text = "Data Barang"
         ' 
-        ' lblDashboard
-        ' 
-        lblDashboard.AutoSize = True
-        lblDashboard.Font = New Font("Segoe UI", 18F)
-        lblDashboard.Location = New Point(64, 48)
-        lblDashboard.Name = "lblDashboard"
-        lblDashboard.Size = New Size(163, 41)
-        lblDashboard.TabIndex = 26
-        lblDashboard.Text = "Dashboard"
-        ' 
         ' pbBarangKeluar
         ' 
         pbBarangKeluar.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
-        pbBarangKeluar.Location = New Point(545, 102)
+        pbBarangKeluar.Location = New Point(545, 130)
         pbBarangKeluar.Margin = New Padding(3, 4, 3, 4)
         pbBarangKeluar.Name = "pbBarangKeluar"
         pbBarangKeluar.Size = New Size(199, 146)
@@ -207,7 +197,7 @@ Partial Class UC_Dashboard
         ' pbBarangMasuk
         ' 
         pbBarangMasuk.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
-        pbBarangMasuk.Location = New Point(305, 102)
+        pbBarangMasuk.Location = New Point(305, 130)
         pbBarangMasuk.Margin = New Padding(3, 4, 3, 4)
         pbBarangMasuk.Name = "pbBarangMasuk"
         pbBarangMasuk.Size = New Size(199, 146)
@@ -217,18 +207,32 @@ Partial Class UC_Dashboard
         ' pbDataBarang
         ' 
         pbDataBarang.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
-        pbDataBarang.Location = New Point(66, 102)
+        pbDataBarang.Location = New Point(66, 130)
         pbDataBarang.Margin = New Padding(3, 4, 3, 4)
         pbDataBarang.Name = "pbDataBarang"
         pbDataBarang.Size = New Size(199, 146)
         pbDataBarang.TabIndex = 23
         pbDataBarang.TabStop = False
         ' 
+        ' lblHeader
+        ' 
+        lblHeader.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
+        lblHeader.Font = New Font("Segoe UI", 22F, FontStyle.Bold)
+        lblHeader.ForeColor = Color.White
+        lblHeader.Location = New Point(0, 0)
+        lblHeader.Name = "lblHeader"
+        lblHeader.Padding = New Padding(18, 0, 0, 0)
+        lblHeader.Size = New Size(808, 102)
+        lblHeader.TabIndex = 40
+        lblHeader.Text = "Dashboard"
+        lblHeader.TextAlign = ContentAlignment.MiddleLeft
+        ' 
         ' UC_Dashboard
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(215), CByte(230), CByte(244))
+        Controls.Add(lblHeader)
         Controls.Add(lblLaporan)
         Controls.Add(pbLaporan)
         Controls.Add(lblLvlAkses)
@@ -242,7 +246,6 @@ Partial Class UC_Dashboard
         Controls.Add(lblBarangKeluar)
         Controls.Add(lblBarangMasuk)
         Controls.Add(lblDataBarang)
-        Controls.Add(lblDashboard)
         Controls.Add(pbBarangKeluar)
         Controls.Add(pbBarangMasuk)
         Controls.Add(pbDataBarang)
@@ -271,9 +274,9 @@ Partial Class UC_Dashboard
     Friend WithEvents lblBarangKeluar As Label
     Friend WithEvents lblBarangMasuk As Label
     Friend WithEvents lblDataBarang As Label
-    Friend WithEvents lblDashboard As Label
     Friend WithEvents pbBarangKeluar As PictureBox
     Friend WithEvents pbBarangMasuk As PictureBox
     Friend WithEvents pbDataBarang As PictureBox
+    Friend WithEvents lblHeader As Label
 
 End Class

@@ -37,7 +37,7 @@ Partial Class UC_Laporan
         Label2 = New Label()
         DateTimePicker2 = New DateTimePicker()
         DateTimePicker1 = New DateTimePicker()
-        Label1 = New Label()
+        lblHeader = New Label()
         tablePanel.SuspendLayout()
         Panel3.SuspendLayout()
         SuspendLayout()
@@ -205,24 +205,27 @@ Partial Class UC_Laporan
         DateTimePicker1.Size = New Size(253, 27)
         DateTimePicker1.TabIndex = 0
         ' 
-        ' Label1
+        ' lblHeader
         ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 18F)
-        Label1.Location = New Point(43, 49)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(225, 41)
-        Label1.TabIndex = 11
-        Label1.Text = "Laporan Barang"
+        lblHeader.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
+        lblHeader.Font = New Font("Segoe UI", 22F, FontStyle.Bold)
+        lblHeader.ForeColor = Color.White
+        lblHeader.Location = New Point(0, 0)
+        lblHeader.Name = "lblHeader"
+        lblHeader.Padding = New Padding(18, 0, 0, 0)
+        lblHeader.Size = New Size(808, 102)
+        lblHeader.TabIndex = 13
+        lblHeader.Text = "Laporan Barang"
+        lblHeader.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' UC_Laporan
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(215), CByte(230), CByte(244))
+        Controls.Add(lblHeader)
         Controls.Add(tablePanel)
         Controls.Add(Panel3)
-        Controls.Add(Label1)
         Name = "UC_Laporan"
         Size = New Size(808, 618)
         tablePanel.ResumeLayout(False)
@@ -230,7 +233,6 @@ Partial Class UC_Laporan
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
 
     Friend WithEvents tablePanel As TableLayoutPanel
@@ -247,7 +249,7 @@ Partial Class UC_Laporan
     Friend WithEvents Label2 As Label
     Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents Label1 As Label
     Friend WithEvents ButtonSavePDF As Button
+    Friend WithEvents lblHeader As Label
 
 End Class

@@ -7,7 +7,13 @@
     <Compile Update="Main.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Re_Stock.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Tambah_Barang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tambah_Barang_Keluar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="tambah_user.vb">

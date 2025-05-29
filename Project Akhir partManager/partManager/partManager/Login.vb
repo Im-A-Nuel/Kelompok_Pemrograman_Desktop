@@ -12,6 +12,9 @@ Public Class Login
             LoggedInUsername = txtUsername.Text
             LoggedInRole = role
 
+            ModAuth.CurrentUserName = txtUsername.Text
+            ModAuth.CurrentUserRole = role
+
 
             Dim mainForm As New Main()
             mainForm.Show()
@@ -35,6 +38,7 @@ Public Class Login
             Dim cmd As New MySqlCommand(query, conn)
             cmd.Parameters.AddWithValue("@user", username)
             cmd.Parameters.AddWithValue("@pass", password)
+            'cmd.Parameters.AddWithValue("@pass", HashPassword(password))
 
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
             If reader.Read() Then
@@ -49,6 +53,15 @@ Public Class Login
 
         Return role
     End Function
+
+    Private Function HashPassword(password As String) As String
+        Using sha256 As System.Security.Cryptography.SHA256 = System.Security.Cryptography.SHA256.Create()
+            Dim bytes As Byte() = System.Text.Encoding.UTF8.GetBytes(password)
+            Dim hashBytes As Byte() = sha256.ComputeHash(bytes)
+            Return BitConverter.ToString(hashBytes).Replace("-", "").ToLower()
+        End Using
+    End Function
+
 
     Private Sub SaveSessionToFile(username As String, role As String)
         Dim lines() As String = {username, role}

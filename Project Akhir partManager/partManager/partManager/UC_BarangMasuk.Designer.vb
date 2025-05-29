@@ -27,7 +27,7 @@ Partial Class UC_BarangMasuk
         DataGridView1 = New DataGridView()
         Label2 = New Label()
         TextBox1 = New TextBox()
-        Label1 = New Label()
+        lblHeader = New Label()
         Panel3.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -54,10 +54,10 @@ Partial Class UC_BarangMasuk
         ' DataGridView1
         ' 
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(-57, 55)
+        DataGridView1.Location = New Point(3, 55)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.RowHeadersWidth = 51
-        DataGridView1.Size = New Size(778, 428)
+        DataGridView1.Size = New Size(718, 428)
         DataGridView1.TabIndex = 2
         ' 
         ' Label2
@@ -77,25 +77,28 @@ Partial Class UC_BarangMasuk
         TextBox1.Size = New Size(143, 27)
         TextBox1.TabIndex = 12
         ' 
-        ' Label1
+        ' lblHeader
         ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(43, 51)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(205, 41)
-        Label1.TabIndex = 11
-        Label1.Text = "Barang Masuk"
+        lblHeader.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
+        lblHeader.Font = New Font("Segoe UI", 22F, FontStyle.Bold)
+        lblHeader.ForeColor = Color.White
+        lblHeader.Location = New Point(0, 0)
+        lblHeader.Name = "lblHeader"
+        lblHeader.Padding = New Padding(18, 0, 0, 0)
+        lblHeader.Size = New Size(808, 102)
+        lblHeader.TabIndex = 15
+        lblHeader.Text = "Barang Masuk"
+        lblHeader.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' UC_BarangMasuk
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(215), CByte(230), CByte(244))
-        Controls.Add(Panel3)
         Controls.Add(Label2)
         Controls.Add(TextBox1)
-        Controls.Add(Label1)
+        Controls.Add(lblHeader)
+        Controls.Add(Panel3)
         Name = "UC_BarangMasuk"
         Size = New Size(808, 639)
         Panel3.ResumeLayout(False)
@@ -107,8 +110,8 @@ Partial Class UC_BarangMasuk
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label1 As Label
     Friend WithEvents btnReStock As Button
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents lblHeader As Label
 
 End Class

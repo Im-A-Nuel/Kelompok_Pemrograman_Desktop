@@ -45,10 +45,70 @@ Public Class UC_ManajemenPengguna
                 End While
             End Using
         End Using
+
+        Dim minRowCount As Integer = 10
+        Dim dataRowCount As Integer = DataGridView1.Rows.Count
+
+        If dataRowCount < minRowCount Then
+            For i As Integer = 1 To (minRowCount - dataRowCount)
+                Dim idx As Integer = DataGridView1.Rows.Add()
+                With DataGridView1.Rows(idx)
+                    .Cells("No").Value = ""
+                    .Cells("Username").Value = ""
+                    .Cells("Role").Value = ""
+                    .Cells(3).Value = "" ' cell edit
+                    .Cells(4).Value = "" ' cell hapus
+                    .Tag = Nothing ' tag clear
+                End With
+            Next
+        End If
+
+
+        With DataGridView1
+            .Font = New Font("Segoe UI", 10)
+            .RowTemplate.Height = 32
+            .ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(62, 82, 142)
+            .ColumnHeadersDefaultCellStyle.ForeColor = Color.White
+            .ColumnHeadersDefaultCellStyle.Font = New Font("Segoe UI", 10, FontStyle.Bold)
+            .ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .EnableHeadersVisualStyles = False
+
+            .GridColor = Color.FromArgb(220, 220, 220)
+
+            .AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(242, 247, 255)
+            .RowsDefaultCellStyle.BackColor = Color.White
+
+
+            .CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+            .SelectionMode = DataGridViewSelectionMode.FullRowSelect
+            .DefaultCellStyle.SelectionBackColor = Color.FromArgb(224, 235, 255)
+            .DefaultCellStyle.SelectionForeColor = Color.Black
+
+            .Columns("No").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+
+            .Columns("Role").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+
+            For Each col As DataGridViewColumn In .Columns
+                If TypeOf col Is DataGridViewButtonColumn Then
+                    col.DefaultCellStyle.Font = New Font("Segoe UI", 9, FontStyle.Bold)
+                    col.DefaultCellStyle.BackColor = Color.FromArgb(230, 243, 255)
+                    col.DefaultCellStyle.ForeColor = Color.FromArgb(35, 108, 208)
+                End If
+            Next
+
+            .AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+            .ColumnHeadersHeight = 40
+            .RowHeadersVisible = False
+        End With
+
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         If e.RowIndex < 0 Then Exit Sub
+
+        If String.IsNullOrEmpty(DataGridView1.Rows(e.RowIndex).Cells("Username").Value?.ToString()) Then
+            Exit Sub
+        End If
 
         Dim username As String = DataGridView1.Rows(e.RowIndex).Cells("Username").Value.ToString()
         Dim idUser As Integer = GetIdUserByUsername(username)
@@ -83,4 +143,15 @@ Public Class UC_ManajemenPengguna
             Return If(result IsNot Nothing, CInt(result), 0)
         End Using
     End Function
+
+    Private Sub DataGridView1_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs) Handles DataGridView1.CellPainting
+        If e.RowIndex >= 0 Then
+            Dim isDummyRow As Boolean = String.IsNullOrEmpty(DataGridView1.Rows(e.RowIndex).Cells("Username").Value?.ToString())
+            If isDummyRow AndAlso (e.ColumnIndex = 3 OrElse e.ColumnIndex = 4) Then
+                e.PaintBackground(e.CellBounds, True)
+                e.Handled = True ' Jangan render tombol sama sekali
+            End If
+        End If
+    End Sub
+
 End Class

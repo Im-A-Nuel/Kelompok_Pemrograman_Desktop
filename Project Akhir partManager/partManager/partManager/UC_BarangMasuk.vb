@@ -53,17 +53,82 @@ Public Class UC_BarangMasuk
                 End While
             End Using
         End Using
+
+        Dim minRowCount As Integer = 11
+        Dim dataRowCount As Integer = DataGridView1.Rows.Count
+
+        If dataRowCount < minRowCount Then
+            For i As Integer = 1 To (minRowCount - dataRowCount)
+                Dim idx As Integer = DataGridView1.Rows.Add()
+                With DataGridView1.Rows(idx)
+                    .Cells("No").Value = ""
+                    .Cells("NamaBarang").Value = ""
+                    .Cells("Jumlah").Value = ""
+                    .Cells("Kategori").Value = ""
+                    .Cells("Tanggal").Value = ""
+                    .Cells("Supplier").Value = ""
+                    .Cells(6).Value = "" ' kolom Edit
+                    .Cells(7).Value = "" ' kolom Hapus
+                    .Tag = Nothing
+                End With
+            Next
+        End If
+
+
+
+        With DataGridView1
+            .Font = New Font("Segoe UI", 9)
+            .RowTemplate.Height = 32
+
+            .ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(62, 82, 142)
+            .ColumnHeadersDefaultCellStyle.ForeColor = Color.White
+            .ColumnHeadersDefaultCellStyle.Font = New Font("Segoe UI", 10, FontStyle.Bold)
+            .ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .EnableHeadersVisualStyles = False
+
+            .GridColor = Color.FromArgb(220, 220, 220)
+
+            .AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(242, 247, 255)
+            .RowsDefaultCellStyle.BackColor = Color.White
+
+            .CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+            .SelectionMode = DataGridViewSelectionMode.FullRowSelect
+            .DefaultCellStyle.SelectionBackColor = Color.FromArgb(224, 235, 255)
+            .DefaultCellStyle.SelectionForeColor = Color.Black
+
+            .Columns("No").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+
+            .Columns("Jumlah").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+
+            For Each col As DataGridViewColumn In .Columns
+                If TypeOf col Is DataGridViewButtonColumn Then
+                    col.DefaultCellStyle.Font = New Font("Segoe UI", 9, FontStyle.Bold)
+                    col.DefaultCellStyle.BackColor = Color.FromArgb(230, 243, 255)
+                    col.DefaultCellStyle.ForeColor = Color.FromArgb(35, 108, 208)
+                End If
+            Next
+
+            .AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+            .ColumnHeadersHeight = 40
+            .RowHeadersVisible = False
+        End With
+
+
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         If e.RowIndex >= 0 Then
+            If String.IsNullOrEmpty(DataGridView1.Rows(e.RowIndex).Cells("NamaBarang").Value?.ToString()) Then
+                Exit Sub
+            End If
+
             Dim idBarangMasuk As Integer = CInt(DataGridView1.Rows(e.RowIndex).Tag)
 
-            If e.ColumnIndex = 7 Then
+            If e.ColumnIndex = 6 Then
                 MessageBox.Show("Edit Barang Masuk ID: " & idBarangMasuk)
             End If
 
-            If e.ColumnIndex = 8 Then 
+            If e.ColumnIndex = 7 Then
                 If MessageBox.Show("Yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                     If conn.State = ConnectionState.Closed Then conn.Open()
                     Dim sql = "DELETE FROM barang_masuk WHERE id = @id"
@@ -73,6 +138,24 @@ Public Class UC_BarangMasuk
                     End Using
                     LoadDataBarangMasuk(TextBox1.Text)
                 End If
+            End If
+        End If
+
+    End Sub
+
+    Private Sub btnReStock_Click(sender As Object, e As EventArgs) Handles btnReStock.Click
+        Dim frm As New Re_Stock()
+        frm.ShowDialog()
+
+        LoadDataBarangMasuk(TextBox1.Text)
+    End Sub
+
+    Private Sub DataGridView1_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs) Handles DataGridView1.CellPainting
+        If e.RowIndex >= 0 Then
+            Dim isDummyRow As Boolean = String.IsNullOrEmpty(DataGridView1.Rows(e.RowIndex).Cells("NamaBarang").Value?.ToString())
+            If isDummyRow AndAlso (e.ColumnIndex = 6 OrElse e.ColumnIndex = 7) Then
+                e.PaintBackground(e.CellBounds, True)
+                e.Handled = True
             End If
         End If
     End Sub

@@ -20,123 +20,190 @@ Partial Class tambah_user
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Label1 = New Label()
-        btnTambah = New Button()
+        PanelHeader = New Panel()
+        lblHeader = New Label()
         txtUsername = New TextBox()
-        Label2 = New Label()
         txtPassword = New TextBox()
-        Label3 = New Label()
         txtNama = New TextBox()
         cbRole = New ComboBox()
+        btnTambah = New Button()
+        btnBatal = New Button()
+        Label1 = New Label()
+        Label2 = New Label()
+        Label3 = New Label()
         Label4 = New Label()
+        PanelHeader.SuspendLayout()
         SuspendLayout()
+        ' 
+        ' PanelHeader
+        ' 
+        PanelHeader.BackColor = Color.FromArgb(CByte(35), CByte(108), CByte(208))
+        PanelHeader.Controls.Add(lblHeader)
+        PanelHeader.Location = New Point(0, 0)
+        PanelHeader.Name = "PanelHeader"
+        PanelHeader.Size = New Size(561, 58)
+        PanelHeader.TabIndex = 100
+        ' 
+        ' lblHeader
+        ' 
+        lblHeader.BackColor = Color.FromArgb(CByte(62), CByte(82), CByte(142))
+        lblHeader.Dock = DockStyle.Fill
+        lblHeader.Font = New Font("Segoe UI", 13.75F, FontStyle.Bold)
+        lblHeader.ForeColor = Color.White
+        lblHeader.Location = New Point(0, 0)
+        lblHeader.Name = "lblHeader"
+        lblHeader.Padding = New Padding(18, 0, 0, 0)
+        lblHeader.Size = New Size(561, 58)
+        lblHeader.TabIndex = 0
+        lblHeader.Text = "Tambah User"
+        lblHeader.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' txtUsername
+        ' 
+        txtUsername.Font = New Font("Segoe UI", 9F)
+        txtUsername.Location = New Point(50, 95)
+        txtUsername.Name = "txtUsername"
+        txtUsername.Size = New Size(400, 27)
+        txtUsername.TabIndex = 1
+        ' 
+        ' txtPassword
+        ' 
+        txtPassword.Font = New Font("Segoe UI", 9F)
+        txtPassword.Location = New Point(50, 165)
+        txtPassword.Name = "txtPassword"
+        txtPassword.Size = New Size(400, 27)
+        txtPassword.TabIndex = 2
+        txtPassword.UseSystemPasswordChar = True
+        ' 
+        ' txtNama
+        ' 
+        txtNama.Font = New Font("Segoe UI", 9F)
+        txtNama.Location = New Point(50, 235)
+        txtNama.Name = "txtNama"
+        txtNama.Size = New Size(400, 27)
+        txtNama.TabIndex = 3
+        ' 
+        ' cbRole
+        ' 
+        cbRole.Font = New Font("Segoe UI", 9F)
+        cbRole.FormattingEnabled = True
+        cbRole.Items.AddRange(New Object() {"Admin", "Manajer", "Karyawan"})
+        cbRole.Location = New Point(50, 305)
+        cbRole.Name = "cbRole"
+        cbRole.Size = New Size(250, 28)
+        cbRole.TabIndex = 4
+        ' 
+        ' btnTambah
+        ' 
+        btnTambah.BackColor = Color.FromArgb(CByte(35), CByte(108), CByte(208))
+        btnTambah.FlatAppearance.BorderSize = 0
+        btnTambah.FlatStyle = FlatStyle.Flat
+        btnTambah.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        btnTambah.ForeColor = Color.White
+        btnTambah.Location = New Point(325, 370)
+        btnTambah.Name = "btnTambah"
+        btnTambah.Size = New Size(125, 38)
+        btnTambah.TabIndex = 5
+        btnTambah.Text = "Tambah"
+        btnTambah.UseVisualStyleBackColor = False
+        ' 
+        ' btnBatal
+        ' 
+        btnBatal.BackColor = Color.Silver
+        btnBatal.FlatAppearance.BorderSize = 0
+        btnBatal.FlatStyle = FlatStyle.Flat
+        btnBatal.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        btnBatal.ForeColor = Color.FromArgb(CByte(70), CByte(70), CByte(70))
+        btnBatal.Location = New Point(180, 370)
+        btnBatal.Name = "btnBatal"
+        btnBatal.Size = New Size(120, 38)
+        btnBatal.TabIndex = 5
+        btnBatal.Text = "Batal"
+        btnBatal.UseVisualStyleBackColor = False
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(44, 48)
+        Label1.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        Label1.ForeColor = Color.FromArgb(CByte(40), CByte(40), CByte(40))
+        Label1.Location = New Point(50, 70)
         Label1.Name = "Label1"
-        Label1.Size = New Size(60, 15)
-        Label1.TabIndex = 14
+        Label1.Size = New Size(80, 20)
+        Label1.TabIndex = 10
         Label1.Text = "Username"
-        ' 
-        ' btnTambah
-        ' 
-        btnTambah.Location = New Point(339, 340)
-        btnTambah.Name = "btnTambah"
-        btnTambah.Size = New Size(108, 22)
-        btnTambah.TabIndex = 13
-        btnTambah.Text = "Tambah"
-        btnTambah.UseVisualStyleBackColor = True
-        ' 
-        ' txtUsername
-        ' 
-        txtUsername.Location = New Point(44, 72)
-        txtUsername.Name = "txtUsername"
-        txtUsername.Size = New Size(305, 23)
-        txtUsername.TabIndex = 12
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(44, 112)
+        Label2.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        Label2.ForeColor = Color.FromArgb(CByte(40), CByte(40), CByte(40))
+        Label2.Location = New Point(50, 140)
         Label2.Name = "Label2"
-        Label2.Size = New Size(57, 15)
-        Label2.TabIndex = 16
+        Label2.Size = New Size(76, 20)
+        Label2.TabIndex = 11
         Label2.Text = "Password"
-        ' 
-        ' txtPassword
-        ' 
-        txtPassword.Location = New Point(44, 136)
-        txtPassword.Name = "txtPassword"
-        txtPassword.Size = New Size(305, 23)
-        txtPassword.TabIndex = 15
-        txtPassword.UseSystemPasswordChar = True
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(44, 178)
+        Label3.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        Label3.ForeColor = Color.FromArgb(CByte(40), CByte(40), CByte(40))
+        Label3.Location = New Point(50, 210)
         Label3.Name = "Label3"
-        Label3.Size = New Size(87, 15)
-        Label3.TabIndex = 18
-        Label3.Text = "Nama Lengkao"
-        ' 
-        ' txtNama
-        ' 
-        txtNama.Location = New Point(44, 202)
-        txtNama.Name = "txtNama"
-        txtNama.Size = New Size(305, 23)
-        txtNama.TabIndex = 17
-        ' 
-        ' cbRole
-        ' 
-        cbRole.FormattingEnabled = True
-        cbRole.Items.AddRange(New Object() {"Admin", "Manajer", "Karyawan"})
-        cbRole.Location = New Point(44, 263)
-        cbRole.Name = "cbRole"
-        cbRole.Size = New Size(210, 23)
-        cbRole.TabIndex = 20
+        Label3.Size = New Size(114, 20)
+        Label3.TabIndex = 12
+        Label3.Text = "Nama Lengkap"
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(44, 245)
+        Label4.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        Label4.ForeColor = Color.FromArgb(CByte(40), CByte(40), CByte(40))
+        Label4.Location = New Point(50, 280)
         Label4.Name = "Label4"
-        Label4.Size = New Size(30, 15)
-        Label4.TabIndex = 19
+        Label4.Size = New Size(40, 20)
+        Label4.TabIndex = 13
         Label4.Text = "Role"
         ' 
         ' tambah_user
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(215), CByte(230), CByte(244))
-        ClientSize = New Size(491, 410)
+        ClientSize = New Size(492, 440)
+        Controls.Add(btnBatal)
+        Controls.Add(PanelHeader)
+        Controls.Add(txtUsername)
+        Controls.Add(Label1)
+        Controls.Add(txtPassword)
+        Controls.Add(Label2)
+        Controls.Add(txtNama)
+        Controls.Add(Label3)
         Controls.Add(cbRole)
         Controls.Add(Label4)
-        Controls.Add(Label3)
-        Controls.Add(txtNama)
-        Controls.Add(Label2)
-        Controls.Add(txtPassword)
-        Controls.Add(Label1)
         Controls.Add(btnTambah)
-        Controls.Add(txtUsername)
+        MaximizeBox = False
         Name = "tambah_user"
-        Text = "tambah_user"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "Tambah User"
+        PanelHeader.ResumeLayout(False)
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents btnTambah As Button
+    Friend WithEvents PanelHeader As Panel
+    Friend WithEvents lblHeader As Label
     Friend WithEvents txtUsername As TextBox
-    Friend WithEvents Label2 As Label
     Friend WithEvents txtPassword As TextBox
-    Friend WithEvents Label3 As Label
     Friend WithEvents txtNama As TextBox
     Friend WithEvents cbRole As ComboBox
+    Friend WithEvents btnTambah As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents btnBatal As Button
+
 End Class

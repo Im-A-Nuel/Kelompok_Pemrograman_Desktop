@@ -17,6 +17,7 @@ Partial Class Main
 
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main))
         PanelKanan = New Panel()
         BackgroundWorker1 = New ComponentModel.BackgroundWorker()
         flowPanelMenu = New FlowLayoutPanel()
@@ -70,6 +71,9 @@ Partial Class Main
         btnDashboard.Size = New Size(195, 61)
         btnDashboard.TabIndex = 0
         btnDashboard.Text = "Dashboard"
+        btnDashboard.Image = New Bitmap(My.Resources.dashboard, New Size(32, 32))
+        btnDashboard.ImageAlign = ContentAlignment.MiddleRight
+        btnDashboard.TextImageRelation = TextImageRelation.ImageBeforeText
         ' 
         ' btnDataBarang
         ' 
@@ -78,6 +82,9 @@ Partial Class Main
         btnDataBarang.Size = New Size(195, 61)
         btnDataBarang.TabIndex = 1
         btnDataBarang.Text = "Data Barang"
+        btnDataBarang.Image = New Bitmap(My.Resources.box, New Size(32, 32))
+        btnDataBarang.ImageAlign = ContentAlignment.MiddleRight
+        btnDataBarang.TextImageRelation = TextImageRelation.ImageBeforeText
         ' 
         ' btnBarangMasuk
         ' 
@@ -86,6 +93,9 @@ Partial Class Main
         btnBarangMasuk.Size = New Size(195, 61)
         btnBarangMasuk.TabIndex = 2
         btnBarangMasuk.Text = "Barang Masuk"
+        btnBarangMasuk.Image = New Bitmap(My.Resources._in, New Size(24, 24))
+        btnBarangMasuk.ImageAlign = ContentAlignment.MiddleRight
+        btnBarangMasuk.TextImageRelation = TextImageRelation.ImageBeforeText
         ' 
         ' btnBarangKeluar
         ' 
@@ -94,6 +104,9 @@ Partial Class Main
         btnBarangKeluar.Size = New Size(195, 61)
         btnBarangKeluar.TabIndex = 3
         btnBarangKeluar.Text = "Barang Keluar"
+        btnBarangKeluar.Image = New Bitmap(My.Resources.out, New Size(24, 24))
+        btnBarangKeluar.ImageAlign = ContentAlignment.MiddleRight
+        btnBarangKeluar.TextImageRelation = TextImageRelation.ImageBeforeText
         ' 
         ' btnLaporan
         ' 
@@ -102,6 +115,9 @@ Partial Class Main
         btnLaporan.Size = New Size(195, 61)
         btnLaporan.TabIndex = 4
         btnLaporan.Text = "Laporan"
+        btnLaporan.Image = New Bitmap(My.Resources.report, New Size(32, 32))
+        btnLaporan.ImageAlign = ContentAlignment.MiddleRight
+        btnLaporan.TextImageRelation = TextImageRelation.ImageBeforeText
         ' 
         ' btnManajemenP
         ' 
@@ -110,6 +126,9 @@ Partial Class Main
         btnManajemenP.Size = New Size(195, 61)
         btnManajemenP.TabIndex = 5
         btnManajemenP.Text = "Manajemen Pengguna"
+        btnManajemenP.Image = New Bitmap(My.Resources.user, New Size(32, 32))
+        btnManajemenP.ImageAlign = ContentAlignment.MiddleLeft
+        btnManajemenP.TextImageRelation = TextImageRelation.ImageBeforeText
         ' 
         ' btnLogout
         ' 
@@ -118,20 +137,24 @@ Partial Class Main
         btnLogout.Size = New Size(195, 61)
         btnLogout.TabIndex = 6
         btnLogout.Text = "Logout"
+        btnLogout.Image = New Bitmap(My.Resources.logout, New Size(32, 32))
+        btnLogout.ImageAlign = ContentAlignment.MiddleRight
+        btnLogout.TextImageRelation = TextImageRelation.ImageBeforeText
         ' 
         ' PictureBox7
         ' 
-        PictureBox7.Image = My.Resources.Resources.WIN_20240905_07_43_27_Pro
-        PictureBox7.Location = New Point(28, 22)
+        PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), Image)
+        PictureBox7.Location = New Point(67, 22)
         PictureBox7.Margin = New Padding(3, 4, 3, 4)
         PictureBox7.Name = "PictureBox7"
-        PictureBox7.Size = New Size(148, 73)
+        PictureBox7.Size = New Size(72, 73)
+        PictureBox7.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox7.TabIndex = 6
         PictureBox7.TabStop = False
         ' 
         ' lblUser
         ' 
-        lblUser.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblUser.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblUser.Location = New Point(3, 99)
         lblUser.Name = "lblUser"
         lblUser.Size = New Size(201, 31)
@@ -154,7 +177,7 @@ Partial Class Main
         ' 
         ' Main
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(215), CByte(230), CByte(244))
         ClientSize = New Size(1012, 639)
