@@ -1,29 +1,30 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class Login
+
+    Private isLoginSuccess As Boolean = False
+
     Private Sub btnMasuk_Click(sender As Object, e As EventArgs) Handles btnMasuk.Click
         Dim role As String = Login(txtUsername.Text, txtPassword.Text)
 
         If role = "admin" OrElse role = "karyawan" OrElse role = "manajer" Then
-            MessageBox.Show("Login sebagai " & role)
-
+            ' Set variable session
             SaveSessionToFile(txtUsername.Text, role)
-
             LoggedInUsername = txtUsername.Text
             LoggedInRole = role
-
             ModAuth.CurrentUserName = txtUsername.Text
             ModAuth.CurrentUserRole = role
 
-
-            Dim mainForm As New Main()
-            mainForm.Show()
-
-
             Me.Hide()
+            Dim mainForm As New Main()
+            mainForm.ShowDialog()
+            Me.Show()
         Else
             MessageBox.Show("Username atau password salah!", "Login Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
+
+
+
     End Sub
 
     Public Function Login(username As String, password As String) As String
@@ -78,19 +79,17 @@ Public Class Login
 
         If System.IO.File.Exists("session.txt") Then
             Dim lines() As String = System.IO.File.ReadAllLines("session.txt")
-            If lines.Length = 2 Then
-                LoggedInUsername = lines(0)
+            LoggedInUsername = lines(0)
                 LoggedInRole = lines(1)
 
                 Dim mainForm As New Main()
-                mainForm.Show()
-
-                Main.IsLoggedIn = True
-
-                Me.Hide()
-                Me.Opacity = 0
-            End If
+            Me.Hide()
+            mainForm.ShowDialog()
+            'Me.Show()                   
+            Exit Sub
         End If
+
+
     End Sub
 
 
@@ -102,12 +101,16 @@ Public Class Login
 
 
     Private Sub Login_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        Dim result As DialogResult = MessageBox.Show("Apakah Anda yakin ingin keluar?", "Konfirmasi Keluar", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-
-        If result = DialogResult.Yes Then
-        Else
-            e.Cancel = True
+        If isLoginSuccess Then
+            ' Biarkan close tanpa konfirmasi jika login berhasil
+            Return
         End If
+
+        'Dim result As DialogResult = MessageBox.Show("Apakah Anda yakin ingin keluar aplikasi?", "Konfirmasi Keluar", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        'If result <> DialogResult.Yes Then
+        '    e.Cancel = True
+        'End If
     End Sub
+
 
 End Class

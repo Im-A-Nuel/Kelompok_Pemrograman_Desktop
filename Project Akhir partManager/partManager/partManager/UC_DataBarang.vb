@@ -156,8 +156,13 @@ Public Class UC_DataBarang
         End If
 
         If e.ColumnIndex = 4 Then
+            Dim idBarang As Integer = GetIdBarangByNama(namaBarang)
+            If AdaTransaksiBarang(idBarang) Then
+                MessageBox.Show("Barang tidak bisa dihapus karena sudah digunakan di transaksi Barang Masuk/Keluar.", "Tidak Bisa Hapus", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Exit Sub
+            End If
+
             If MessageBox.Show("Yakin ingin menghapus barang ini?", "Konfirmasi", MessageBoxButtons.YesNo) = DialogResult.Yes Then
-                Dim idBarang As Integer = GetIdBarangByNama(namaBarang)
                 If conn.State = ConnectionState.Closed Then conn.Open()
                 Dim sql = "DELETE FROM tblbarang WHERE id = @id"
                 Using cmd As New MySqlCommand(sql, conn)
@@ -167,6 +172,7 @@ Public Class UC_DataBarang
                 LoadDataBarang(txtSearch.Text)
             End If
         End If
+
     End Sub
 
 
@@ -190,5 +196,20 @@ Public Class UC_DataBarang
             End If
         End If
     End Sub
+
+    Private Function AdaTransaksiBarang(idBarang As Integer) As Boolean
+        Dim sql As String = "SELECT COUNT(*) FROM barang_masuk WHERE id_barang=@id UNION ALL SELECT COUNT(*) FROM barang_keluar WHERE id_barang=@id"
+        Dim total As Integer = 0
+        Using cmd As New MySqlCommand(sql, conn)
+            cmd.Parameters.AddWithValue("@id", idBarang)
+            Using reader = cmd.ExecuteReader()
+                While reader.Read()
+                    If reader(0) > 0 Then Return True
+                End While
+            End Using
+        End Using
+        Return False
+    End Function
+
 
 End Class

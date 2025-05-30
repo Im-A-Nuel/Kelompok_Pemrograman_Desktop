@@ -12,6 +12,7 @@ Public Class Tambah_Barang
             LoadDataBarang()
             Me.Text = "Edit Barang"
             btnTambahBarang.Text = "Update Barang"
+            lblHeader.Text = "Edit Data Barang"
         Else
             btnTambahBarang.Text = "Tambah Barang"
         End If

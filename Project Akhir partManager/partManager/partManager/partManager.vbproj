@@ -4,9 +4,14 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
     <StartupObject>partManager.My.MyApplication</StartupObject>
-    <UseWindowsForms>true</UseWindowsForms>
+    <UseWindowsForms>True</UseWindowsForms>
     <MyType>WindowsForms</MyType>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ApplicationEvents.vb" />
+    <Compile Remove="Program.vb" />
+  </ItemGroup>
 
   <ItemGroup>
     <Import Include="System.Data" />
@@ -22,6 +27,10 @@
     <Reference Include="MySql.Data">
       <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector NET 9.1\MySql.Data.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <SplashScreen Include="Program.vb" />
   </ItemGroup>
 
   <ItemGroup>

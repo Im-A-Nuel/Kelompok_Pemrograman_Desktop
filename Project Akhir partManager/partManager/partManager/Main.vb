@@ -53,13 +53,11 @@
         If result = DialogResult.Yes Then
             If System.IO.File.Exists("session.txt") Then
                 System.IO.File.Delete("session.txt")
+                Main.IsLoggedIn = False
+
+                Application.Restart()
             End If
 
-            Main.IsLoggedIn = False
-
-            Dim loginForm As New Login()
-            loginForm.Show()
-            Me.Close()
         End If
     End Sub
 
@@ -115,14 +113,14 @@
         TampilkanUserControl(New UC_ManajemenPengguna(), btnManajemenP)
     End Sub
 
-    'Private Sub Main_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-    '    Dim result As DialogResult = MessageBox.Show("Apakah Anda yakin ingin keluar?", "Konfirmasi Keluar", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+    Private Sub Main_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        Dim result As DialogResult = MessageBox.Show("Apakah Anda yakin ingin keluar?", "Konfirmasi Keluar", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
-    '    If result = DialogResult.Yes Then
-    '        Application.Exit()
-    '    Else
-    '        e.Cancel = True
-    '    End If
-    'End Sub
+        If result = DialogResult.Yes Then
+            Application.Exit()
+        Else
+            e.Cancel = True
+        End If
+    End Sub
 
 End Class

@@ -114,7 +114,11 @@ Public Class UC_ManajemenPengguna
         Dim idUser As Integer = GetIdUserByUsername(username)
 
         If e.ColumnIndex = 3 Then
-            MessageBox.Show("Edit Pengguna ID: " & idUser)
+            Dim frm As New tambah_user()
+            frm.Mode = "edit"
+            frm.UserID = idUser
+            frm.RefreshCallback = Sub() LoadDataPengguna(TextBox1.Text)
+            frm.ShowDialog()
 
         ElseIf e.ColumnIndex = 4 Then
             If MessageBox.Show("Yakin ingin menghapus user ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
@@ -149,7 +153,7 @@ Public Class UC_ManajemenPengguna
             Dim isDummyRow As Boolean = String.IsNullOrEmpty(DataGridView1.Rows(e.RowIndex).Cells("Username").Value?.ToString())
             If isDummyRow AndAlso (e.ColumnIndex = 3 OrElse e.ColumnIndex = 4) Then
                 e.PaintBackground(e.CellBounds, True)
-                e.Handled = True ' Jangan render tombol sama sekali
+                e.Handled = True ' Jangan render tombol sama 
             End If
         End If
     End Sub

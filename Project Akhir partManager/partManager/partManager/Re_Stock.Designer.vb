@@ -63,7 +63,7 @@ Partial Class Re_Stock
         ' 
         ' cbBarang
         ' 
-        cbBarang.Font = New Font("Segoe UI", 9.0F)
+        cbBarang.Font = New Font("Segoe UI", 9F)
         cbBarang.FormattingEnabled = True
         cbBarang.Location = New Point(170, 80)
         cbBarang.Name = "cbBarang"
@@ -72,7 +72,7 @@ Partial Class Re_Stock
         ' 
         ' nudJumlah
         ' 
-        nudJumlah.Font = New Font("Segoe UI", 9.0F)
+        nudJumlah.Font = New Font("Segoe UI", 9F)
         nudJumlah.Location = New Point(170, 130)
         nudJumlah.Name = "nudJumlah"
         nudJumlah.Size = New Size(150, 27)
@@ -80,7 +80,7 @@ Partial Class Re_Stock
         ' 
         ' dtpTanggal
         ' 
-        dtpTanggal.Font = New Font("Segoe UI", 9.0F)
+        dtpTanggal.Font = New Font("Segoe UI", 9F)
         dtpTanggal.Location = New Point(170, 180)
         dtpTanggal.Name = "dtpTanggal"
         dtpTanggal.Size = New Size(220, 27)
@@ -88,7 +88,7 @@ Partial Class Re_Stock
         ' 
         ' txtSupplier
         ' 
-        txtSupplier.Font = New Font("Segoe UI", 9.0F)
+        txtSupplier.Font = New Font("Segoe UI", 9F)
         txtSupplier.Location = New Point(170, 230)
         txtSupplier.Name = "txtSupplier"
         txtSupplier.Size = New Size(320, 27)
@@ -99,7 +99,7 @@ Partial Class Re_Stock
         btnSimpan.BackColor = Color.FromArgb(CByte(35), CByte(108), CByte(208))
         btnSimpan.FlatAppearance.BorderSize = 0
         btnSimpan.FlatStyle = FlatStyle.Flat
-        btnSimpan.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
+        btnSimpan.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
         btnSimpan.ForeColor = Color.White
         btnSimpan.Location = New Point(355, 295)
         btnSimpan.Name = "btnSimpan"
@@ -113,7 +113,7 @@ Partial Class Re_Stock
         btnBatal.BackColor = Color.Silver
         btnBatal.FlatAppearance.BorderSize = 0
         btnBatal.FlatStyle = FlatStyle.Flat
-        btnBatal.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
+        btnBatal.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
         btnBatal.ForeColor = Color.FromArgb(CByte(70), CByte(70), CByte(70))
         btnBatal.Location = New Point(195, 295)
         btnBatal.Name = "btnBatal"
@@ -125,7 +125,7 @@ Partial Class Re_Stock
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
+        Label1.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Label1.ForeColor = Color.FromArgb(CByte(40), CByte(40), CByte(40))
         Label1.Location = New Point(55, 83)
         Label1.Name = "Label1"
@@ -136,7 +136,7 @@ Partial Class Re_Stock
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
+        Label2.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Label2.ForeColor = Color.FromArgb(CByte(40), CByte(40), CByte(40))
         Label2.Location = New Point(55, 133)
         Label2.Name = "Label2"
@@ -147,7 +147,7 @@ Partial Class Re_Stock
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
+        Label3.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Label3.ForeColor = Color.FromArgb(CByte(40), CByte(40), CByte(40))
         Label3.Location = New Point(55, 183)
         Label3.Name = "Label3"
@@ -158,7 +158,7 @@ Partial Class Re_Stock
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
+        Label4.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Label4.ForeColor = Color.FromArgb(CByte(40), CByte(40), CByte(40))
         Label4.Location = New Point(55, 233)
         Label4.Name = "Label4"
@@ -168,7 +168,7 @@ Partial Class Re_Stock
         ' 
         ' Re_Stock
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(215), CByte(230), CByte(244))
         ClientSize = New Size(586, 380)

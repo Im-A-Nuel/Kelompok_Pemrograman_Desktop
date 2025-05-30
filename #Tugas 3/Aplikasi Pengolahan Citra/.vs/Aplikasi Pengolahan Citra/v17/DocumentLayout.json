@@ -3,6 +3,13 @@
   "WorkspaceRootPath": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 3\\Aplikasi Pengolahan Citra\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|Aplikasi Pengolahan Citra||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DC3479C-0740-43F3-9B8F-FCAADE422A14}|Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\#tugas 3\\aplikasi pengolahan citra\\aplikasi pengolahan citra\\module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{5DC3479C-0740-43F3-9B8F-FCAADE422A14}|Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra.vbproj|solutionrelative:aplikasi pengolahan citra\\module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5DC3479C-0740-43F3-9B8F-FCAADE422A14}|Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\#tugas 3\\aplikasi pengolahan citra\\aplikasi pengolahan citra\\frmhistogrambalok.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{5DC3479C-0740-43F3-9B8F-FCAADE422A14}|Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra.vbproj|solutionrelative:aplikasi pengolahan citra\\frmhistogrambalok.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
@@ -13,6 +20,9 @@
     {
       "AbsoluteMoniker": "D:0:0:{5DC3479C-0740-43F3-9B8F-FCAADE422A14}|Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra.vbproj|F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 3\\Aplikasi Pengolahan Citra\\aplikasi pengolahan citra\\frmutama.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{5DC3479C-0740-43F3-9B8F-FCAADE422A14}|Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra.vbproj|solutionrelative:aplikasi pengolahan citra\\frmutama.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DC3479C-0740-43F3-9B8F-FCAADE422A14}|Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\#tugas 3\\aplikasi pengolahan citra\\aplikasi pengolahan citra\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|8998e48e-b89a-4034-b66e-353d8c1fdc2e"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,15 +32,48 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Module1.vb",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 3\\Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra\\Module1.vb",
+              "RelativeDocumentMoniker": "Aplikasi Pengolahan Citra\\Module1.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 3\\Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra\\Module1.vb",
+              "RelativeToolTip": "Aplikasi Pengolahan Citra\\Module1.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-05-30T07:56:05.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Aplikasi Pengolahan Citra",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 3\\Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra.vbproj",
+              "RelativeDocumentMoniker": "Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra.vbproj",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 3\\Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra.vbproj*",
+              "RelativeToolTip": "Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra.vbproj*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-30T07:55:42.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "frmHistogramBalok.vb [Design]",
               "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 3\\Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra\\frmHistogramBalok.vb",
               "RelativeDocumentMoniker": "Aplikasi Pengolahan Citra\\frmHistogramBalok.vb",
@@ -42,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "frmHistogramBalok.vb",
               "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 3\\Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra\\frmHistogramBalok.vb",
               "RelativeDocumentMoniker": "Aplikasi Pengolahan Citra\\frmHistogramBalok.vb",
@@ -55,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "frmUtama.vb [Design]",
               "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\#Tugas 3\\Aplikasi Pengolahan Citra\\Aplikasi Pengolahan Citra\\frmUtama.vb",
               "RelativeDocumentMoniker": "Aplikasi Pengolahan Citra\\frmUtama.vb",

@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+Imports MySql.Data.MySqlClient
 
 Public Class UC_BarangMasuk
 
@@ -122,10 +123,16 @@ Public Class UC_BarangMasuk
                 Exit Sub
             End If
 
-            Dim idBarangMasuk As Integer = CInt(DataGridView1.Rows(e.RowIndex).Tag)
+            Dim barangMasukNama As String = DataGridView1.Rows(e.RowIndex).Cells("NamaBarang").Value.ToString()
+            Dim idBarangMasuk As Integer = GetIdBarangMasukByNamaBarang(barangMasukNama)
+
 
             If e.ColumnIndex = 6 Then
-                MessageBox.Show("Edit Barang Masuk ID: " & idBarangMasuk)
+                Dim frm As New Re_Stock()
+                frm.Mode = "Edit"
+                frm.BarangMasukID = idBarangMasuk
+                frm.ShowDialog()
+                LoadDataBarangMasuk(TextBox1.Text)
             End If
 
             If e.ColumnIndex = 7 Then
@@ -142,6 +149,17 @@ Public Class UC_BarangMasuk
         End If
 
     End Sub
+
+    Private Function GetIdBarangMasukByNamaBarang(barangMasukNama As String) As Integer
+
+        Dim sql = "SELECT bm.id FROM barang_masuk bm INNER JOIN tblbarang b ON bm.id_barang = b.id WHERE b.nama_barang = @barangMasukNama LIMIT 1"
+        Using cmd As New MySqlCommand(sql, conn)
+            cmd.Parameters.AddWithValue("@barangMasukNama", barangMasukNama)
+            Dim result = cmd.ExecuteScalar()
+            Return If(result IsNot Nothing, CInt(result), 0)
+        End Using
+        Throw New NotImplementedException()
+    End Function
 
     Private Sub btnReStock_Click(sender As Object, e As EventArgs) Handles btnReStock.Click
         Dim frm As New Re_Stock()
