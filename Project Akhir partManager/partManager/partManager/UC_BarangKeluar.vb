@@ -57,6 +57,7 @@ Public Class UC_BarangKeluar
                 End While
             End Using
         End Using
+        conn.Close()
 
         Dim minRowCount As Integer = 11
         Dim dataRowCount As Integer = DataGridView1.Rows.Count
@@ -122,7 +123,7 @@ Public Class UC_BarangKeluar
         Dim barangKeluar As String = DataGridView1.Rows(e.RowIndex).Cells("NamaBarang").Value.ToString()
         Dim idBarangKeluar As Integer = GetIdBarangKeluarByNamaBarang(barangKeluar)
 
-        If e.ColumnIndex = 5 Then ' Kolom Edit
+        If e.ColumnIndex = 5 Then
             Dim frm As New Tambah_Barang_Keluar()
             frm.IsEditMode = True
             frm.EditID = idBarangKeluar

@@ -26,12 +26,16 @@ Public Class Tambah_Barang_Keluar
             If conn.State = ConnectionState.Closed Then conn.Open()
             Using reader = cmd.ExecuteReader()
                 If reader.Read() Then
-                    cbBarang.SelectedValue = reader("id_barang")
-                    nudJumlah.Value = reader("jumlah")
-                    dtpTanggal.Value = Convert.ToDateTime(reader("tanggal"))
-
+                    Dim idBarang = CInt(reader("id_barang"))
+                    Dim jumlah = CInt(reader("jumlah"))
+                    Dim tanggal = Convert.ToDateTime(reader("tanggal"))
                     Dim ket As String = reader("keterangan").ToString()
-                    ' Deteksi apakah keterangan mengandung "Penjualan" dan No.Transaksi
+                    reader.Close()
+
+                    cbBarang.SelectedValue = idBarang
+                    nudJumlah.Value = jumlah
+                    dtpTanggal.Value = tanggal
+
                     If ket.StartsWith("Penjualan") Then
                         cbJenisKeluar.SelectedItem = "Penjualan"
                         Dim match = System.Text.RegularExpressions.Regex.Match(ket, "No\.Transaksi:\s*(.*?)\s*(\||$)")
@@ -42,7 +46,6 @@ Public Class Tambah_Barang_Keluar
                         cbJenisKeluar.SelectedItem = GetJenisDariKeterangan(ket)
                     End If
 
-                    ' Sisanya masuk ke txtKeterangan
                     Dim potonganKeterangan = ket.Split("|"c).Select(Function(x) x.Trim()).ToList()
                     If potonganKeterangan.Count > 1 Then
                         txtKeterangan.Text = String.Join(" | ", potonganKeterangan.Skip(1).Where(Function(x) Not x.StartsWith("No.Transaksi")))
@@ -50,6 +53,7 @@ Public Class Tambah_Barang_Keluar
                 End If
             End Using
         End Using
+
     End Sub
 
     Private Function GetJenisDariKeterangan(ket As String) As String
@@ -99,7 +103,6 @@ Public Class Tambah_Barang_Keluar
 
 
     Private Function GetStokBarang(idBarang As Integer) As Integer
-        ' Hitung stok = semua masuk - semua keluar untuk barang tsb
         Dim sqlMasuk As String = "SELECT IFNULL(SUM(jumlah),0) FROM barang_masuk WHERE id_barang=@id"
         Dim sqlKeluar As String = "SELECT IFNULL(SUM(jumlah),0) FROM barang_keluar WHERE id_barang=@id"
         Dim masuk As Integer = 0, keluar As Integer = 0
@@ -116,7 +119,6 @@ Public Class Tambah_Barang_Keluar
     End Function
 
     Private Sub cbJenisKeluar_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbJenisKeluar.SelectedIndexChanged
-        ' Hanya aktif jika Penjualan
         If cbJenisKeluar.SelectedItem.ToString() = "Penjualan" Then
             txtTransaksi.Enabled = True
         Else
@@ -126,7 +128,6 @@ Public Class Tambah_Barang_Keluar
     End Sub
 
     Private Sub btnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
-        ' Validasi data
         If cbBarang.SelectedIndex < 0 Then
             MessageBox.Show("Pilih barang!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
@@ -137,7 +138,7 @@ Public Class Tambah_Barang_Keluar
             Return
         End If
 
-        If nudJumlah.Value > stokBarangTerpilih Then
+        If nudJumlah.Value > stokBarangTerpilih AndAlso Not IsEditMode Then
             MessageBox.Show("Stok tidak cukup!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
         End If
@@ -147,45 +148,60 @@ Public Class Tambah_Barang_Keluar
             Return
         End If
 
-        ' Simpan data ke database
         Try
             If conn.State = ConnectionState.Closed Then conn.Open()
+            Dim keteranganGabungan As String = cbJenisKeluar.SelectedItem.ToString()
+            If cbJenisKeluar.SelectedItem.ToString() = "Penjualan" AndAlso Not String.IsNullOrWhiteSpace(txtTransaksi.Text) Then
+                keteranganGabungan &= " | No.Transaksi: " & txtTransaksi.Text
+            End If
+            If Not String.IsNullOrWhiteSpace(txtKeterangan.Text) Then
+                keteranganGabungan &= " | " & txtKeterangan.Text
+            End If
 
-            Dim sql As String = "INSERT INTO barang_keluar (id_barang, jumlah, tanggal, keterangan, supplier, user_input) VALUES (@id_barang, @jumlah, @tanggal, @keterangan, @supplier, @user_input)"
-            Using cmd As New MySqlCommand(sql, conn)
-                cmd.Parameters.AddWithValue("@id_barang", idBarangTerpilih)
-                cmd.Parameters.AddWithValue("@jumlah", nudJumlah.Value)
-                cmd.Parameters.AddWithValue("@tanggal", dtpTanggal.Value.ToString("yyyy-MM-dd"))
-                ' Keterangan gabungan
-                Dim keteranganGabungan As String = cbJenisKeluar.SelectedItem.ToString()
-                If cbJenisKeluar.SelectedItem.ToString() = "Penjualan" AndAlso Not String.IsNullOrWhiteSpace(txtTransaksi.Text) Then
-                    keteranganGabungan &= " | No.Transaksi: " & txtTransaksi.Text
-                End If
-                If Not String.IsNullOrWhiteSpace(txtKeterangan.Text) Then
-                    keteranganGabungan &= " | " & txtKeterangan.Text
-                End If
-                cmd.Parameters.AddWithValue("@keterangan", keteranganGabungan)
-                cmd.Parameters.AddWithValue("@supplier", "")
-                cmd.Parameters.AddWithValue("@user_input", ModAuth.CurrentUserName)
-                cmd.ExecuteNonQuery()
-            End Using
+            If IsEditMode Then
+                Dim sqlUpdate As String = "UPDATE barang_keluar SET id_barang=@id_barang, jumlah=@jumlah, tanggal=@tanggal, keterangan=@keterangan, supplier=@supplier, user_input=@user_input WHERE id=@id"
+                Using cmd As New MySqlCommand(sqlUpdate, conn)
+                    cmd.Parameters.AddWithValue("@id_barang", idBarangTerpilih)
+                    cmd.Parameters.AddWithValue("@jumlah", nudJumlah.Value)
+                    cmd.Parameters.AddWithValue("@tanggal", dtpTanggal.Value.ToString("yyyy-MM-dd"))
+                    cmd.Parameters.AddWithValue("@keterangan", keteranganGabungan)
+                    cmd.Parameters.AddWithValue("@supplier", "")
+                    cmd.Parameters.AddWithValue("@user_input", ModAuth.CurrentUserName)
+                    cmd.Parameters.AddWithValue("@id", EditID)
+                    cmd.ExecuteNonQuery()
+                End Using
 
-            ' Insert ke riwayat_stok
-            Dim sql2 As String = "INSERT INTO riwayat_stok (id_barang, aksi, jumlah, tanggal, user_input) VALUES (@id_barang, 'keluar', @jumlah, @tanggal, @user_input)"
-            Using cmd2 As New MySqlCommand(sql2, conn)
-                cmd2.Parameters.AddWithValue("@id_barang", idBarangTerpilih)
-                cmd2.Parameters.AddWithValue("@jumlah", nudJumlah.Value)
-                cmd2.Parameters.AddWithValue("@tanggal", dtpTanggal.Value.ToString("yyyy-MM-dd"))
-                cmd2.Parameters.AddWithValue("@user_input", ModAuth.CurrentUserName)
-                cmd2.ExecuteNonQuery()
-            End Using
+                MessageBox.Show("Data barang keluar berhasil diperbarui.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Else
+                Dim sqlInsert As String = "INSERT INTO barang_keluar (id_barang, jumlah, tanggal, keterangan, supplier, user_input) VALUES (@id_barang, @jumlah, @tanggal, @keterangan, @supplier, @user_input)"
+                Using cmd As New MySqlCommand(sqlInsert, conn)
+                    cmd.Parameters.AddWithValue("@id_barang", idBarangTerpilih)
+                    cmd.Parameters.AddWithValue("@jumlah", nudJumlah.Value)
+                    cmd.Parameters.AddWithValue("@tanggal", dtpTanggal.Value.ToString("yyyy-MM-dd"))
+                    cmd.Parameters.AddWithValue("@keterangan", keteranganGabungan)
+                    cmd.Parameters.AddWithValue("@supplier", "")
+                    cmd.Parameters.AddWithValue("@user_input", ModAuth.CurrentUserName)
+                    cmd.ExecuteNonQuery()
+                End Using
 
-            MessageBox.Show("Data barang keluar berhasil disimpan.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Dim sqlRiwayat As String = "INSERT INTO riwayat_stok (id_barang, aksi, jumlah, tanggal, user_input) VALUES (@id_barang, 'keluar', @jumlah, @tanggal, @user_input)"
+                Using cmd2 As New MySqlCommand(sqlRiwayat, conn)
+                    cmd2.Parameters.AddWithValue("@id_barang", idBarangTerpilih)
+                    cmd2.Parameters.AddWithValue("@jumlah", nudJumlah.Value)
+                    cmd2.Parameters.AddWithValue("@tanggal", dtpTanggal.Value.ToString("yyyy-MM-dd"))
+                    cmd2.Parameters.AddWithValue("@user_input", ModAuth.CurrentUserName)
+                    cmd2.ExecuteNonQuery()
+                End Using
+
+                MessageBox.Show("Data barang keluar berhasil disimpan.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+
             Me.Close()
         Catch ex As Exception
             MessageBox.Show("Gagal simpan data: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+
 
     Private Sub btnBatal_Click(sender As Object, e As EventArgs) Handles btnBatal.Click
         Me.Close()
