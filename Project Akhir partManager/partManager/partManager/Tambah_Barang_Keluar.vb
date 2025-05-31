@@ -4,14 +4,62 @@ Public Class Tambah_Barang_Keluar
 
     Dim stokBarangTerpilih As Integer = 0
     Dim idBarangTerpilih As Integer = 0
+    Public Property IsEditMode As Boolean = False
+    Public Property EditID As Integer = 0
+
 
     Private Sub Tambah_Barang_Keluar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadBarang()
+        If IsEditMode Then
+            LoadDataEdit()
+        End If
         cbJenisKeluar.Items.AddRange(New Object() {"Penjualan", "Pemakaian", "Transfer", "Rusak", "Lain-lain"})
         cbJenisKeluar.SelectedIndex = 0
         dtpTanggal.Value = Date.Today
         txtTransaksi.Enabled = (cbJenisKeluar.SelectedItem.ToString() = "Penjualan")
     End Sub
+
+    Private Sub LoadDataEdit()
+        Dim sql As String = "SELECT bk.*, b.nama_barang FROM barang_keluar bk JOIN tblbarang b ON bk.id_barang = b.id WHERE bk.id = @id"
+        Using cmd As New MySqlCommand(sql, conn)
+            cmd.Parameters.AddWithValue("@id", EditID)
+            If conn.State = ConnectionState.Closed Then conn.Open()
+            Using reader = cmd.ExecuteReader()
+                If reader.Read() Then
+                    cbBarang.SelectedValue = reader("id_barang")
+                    nudJumlah.Value = reader("jumlah")
+                    dtpTanggal.Value = Convert.ToDateTime(reader("tanggal"))
+
+                    Dim ket As String = reader("keterangan").ToString()
+                    ' Deteksi apakah keterangan mengandung "Penjualan" dan No.Transaksi
+                    If ket.StartsWith("Penjualan") Then
+                        cbJenisKeluar.SelectedItem = "Penjualan"
+                        Dim match = System.Text.RegularExpressions.Regex.Match(ket, "No\.Transaksi:\s*(.*?)\s*(\||$)")
+                        If match.Success Then
+                            txtTransaksi.Text = match.Groups(1).Value.Trim()
+                        End If
+                    Else
+                        cbJenisKeluar.SelectedItem = GetJenisDariKeterangan(ket)
+                    End If
+
+                    ' Sisanya masuk ke txtKeterangan
+                    Dim potonganKeterangan = ket.Split("|"c).Select(Function(x) x.Trim()).ToList()
+                    If potonganKeterangan.Count > 1 Then
+                        txtKeterangan.Text = String.Join(" | ", potonganKeterangan.Skip(1).Where(Function(x) Not x.StartsWith("No.Transaksi")))
+                    End If
+                End If
+            End Using
+        End Using
+    End Sub
+
+    Private Function GetJenisDariKeterangan(ket As String) As String
+        Dim jenisList = {"Pemakaian", "Transfer", "Rusak", "Lain-lain"}
+        For Each jenis In jenisList
+            If ket.StartsWith(jenis) Then Return jenis
+        Next
+        Return "Lain-lain"
+    End Function
+
 
     Private Sub LoadBarang()
         Dim sql As String = "SELECT id, nama_barang FROM tblbarang"

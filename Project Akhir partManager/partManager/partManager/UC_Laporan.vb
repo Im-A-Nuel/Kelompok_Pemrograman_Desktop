@@ -22,23 +22,12 @@ Public Class UC_Laporan
     End Sub
 
     Private Sub LoadData(Optional startDate As Date = Nothing, Optional endDate As Date = Nothing)
-        tablePanel.Controls.Clear()
-        tablePanel.RowStyles.Clear()
-        tablePanel.RowCount = 0
+        dataGridViewRiwayat.Rows.Clear()
+        dataGridViewRiwayat.Columns.Clear()
 
         Dim headers() As String = {"No", "Nama Barang", "Aksi", "Jumlah", "Tanggal", "User"}
-        tablePanel.ColumnCount = headers.Length
-        tablePanel.RowCount = 1
-        tablePanel.RowStyles.Add(New RowStyle(SizeType.Absolute, 40))
-
-        For i As Integer = 0 To headers.Length - 1
-            Dim lblHeader As New Label With {
-                .Text = headers(i),
-                .Font = New Font("Times New Roman", 10, FontStyle.Bold),
-                .AutoSize = True,
-                .Anchor = AnchorStyles.Left
-            }
-            tablePanel.Controls.Add(lblHeader, i, 0)
+        For Each header As String In headers
+            dataGridViewRiwayat.Columns.Add(header, header)
         Next
 
         Dim connectionString As String = "Server=127.0.0.1;Database=partmanager;Uid=root;Pwd="
@@ -59,30 +48,16 @@ Public Class UC_Laporan
                 Try
                     connection.Open()
                     Using reader As MySqlDataReader = command.ExecuteReader()
-                        Dim rowIndex As Integer = 1
                         Dim no As Integer = 1
-
                         While reader.Read()
-                            tablePanel.RowCount += 1
-                            tablePanel.RowStyles.Add(New RowStyle(SizeType.Absolute, 35))
-
-                            Dim rowValues() As String = {
+                            dataGridViewRiwayat.Rows.Add({
                                 no.ToString(),
                                 reader("nama_barang").ToString(),
                                 reader("aksi").ToString(),
                                 reader("jumlah").ToString(),
                                 CDate(reader("tanggal")).ToString("dd-MM-yyyy"),
                                 reader("user_input").ToString()
-                            }
-
-                            For colIndex As Integer = 0 To rowValues.Length - 1
-                                tablePanel.Controls.Add(New Label With {
-                                    .Text = rowValues(colIndex),
-                                    .AutoSize = True
-                                }, colIndex, rowIndex)
-                            Next
-
-                            rowIndex += 1
+                            })
                             no += 1
                         End While
                     End Using
@@ -112,10 +87,8 @@ Public Class UC_Laporan
                 Dim xMargin As Double = 40
                 Dim rowHeight As Double = 20
 
-
                 gfx.DrawString("Laporan Riwayat Stok", New XFont("Times New Roman", 14, XFontStyleEx.Bold), XBrushes.Black, New XRect(0, yPos, page.Width, 30), XStringFormats.TopCenter)
                 yPos += 30
-
 
                 Dim periodeText As String
                 If isFiltered Then
@@ -130,26 +103,25 @@ Public Class UC_Laporan
                 gfx.DrawString(periodeText, fontRegular, XBrushes.Black, New XRect(0, yPos, page.Width, 20), XStringFormats.TopCenter)
                 yPos += 30
 
-                Dim colCount As Integer = tablePanel.ColumnCount
+                Dim colCount As Integer = dataGridViewRiwayat.ColumnCount
                 Dim colWidth As Double = (page.Width - 2 * xMargin) / colCount
 
+                ' Header
                 For col As Integer = 0 To colCount - 1
-                    Dim ctrl = tablePanel.GetControlFromPosition(col, 0)
-                    If ctrl IsNot Nothing AndAlso TypeOf ctrl Is Label Then
-                        Dim headerText As String = CType(ctrl, Label).Text
-                        gfx.DrawString(headerText, fontBold, XBrushes.Black, New XRect(xMargin + (col * colWidth), yPos, colWidth, rowHeight), XStringFormats.TopLeft)
-                    End If
+                    Dim headerText As String = dataGridViewRiwayat.Columns(col).HeaderText
+                    gfx.DrawString(headerText, fontBold, XBrushes.Black, New XRect(xMargin + (col * colWidth), yPos, colWidth, rowHeight), XStringFormats.TopLeft)
                 Next
                 yPos += rowHeight
 
-                For row As Integer = 1 To tablePanel.RowCount - 1
+                ' Rows
+                For Each row As DataGridViewRow In dataGridViewRiwayat.Rows
+                    If row.IsNewRow Then Continue For
+
                     For col As Integer = 0 To colCount - 1
-                        Dim ctrl = tablePanel.GetControlFromPosition(col, row)
-                        Dim text As String = If(ctrl IsNot Nothing AndAlso TypeOf ctrl Is Label, CType(ctrl, Label).Text, "-")
+                        Dim text As String = row.Cells(col).Value?.ToString()
                         gfx.DrawString(text, fontRegular, XBrushes.Black, New XRect(xMargin + (col * colWidth), yPos, colWidth, rowHeight), XStringFormats.TopLeft)
                     Next
                     yPos += rowHeight
-
 
                     If yPos + rowHeight > page.Height.Point - 40 Then
                         page = doc.AddPage()

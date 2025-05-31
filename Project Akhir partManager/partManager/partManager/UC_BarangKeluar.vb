@@ -119,12 +119,16 @@ Public Class UC_BarangKeluar
         If String.IsNullOrEmpty(DataGridView1.Rows(e.RowIndex).Cells("NamaBarang").Value?.ToString()) Then
             Exit Sub
         End If
+        Dim barangKeluar As String = DataGridView1.Rows(e.RowIndex).Cells("NamaBarang").Value.ToString()
+        Dim idBarangKeluar As Integer = GetIdBarangKeluarByNamaBarang(barangKeluar)
 
-        Dim idBarangKeluar As Integer = CInt(DataGridView1.Rows(e.RowIndex).Tag)
-
-        If e.ColumnIndex = 6 Then
-            MessageBox.Show("Edit Barang Keluar ID: " & idBarangKeluar)
-        ElseIf e.ColumnIndex = 7 Then
+        If e.ColumnIndex = 5 Then ' Kolom Edit
+            Dim frm As New Tambah_Barang_Keluar()
+            frm.IsEditMode = True
+            frm.EditID = idBarangKeluar
+            frm.ShowDialog()
+            LoadDataBarangKeluar(TextBox1.Text)
+        ElseIf e.ColumnIndex = 6 Then
             If MessageBox.Show("Yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                 If conn.State = ConnectionState.Closed Then conn.Open()
                 Dim sql = "DELETE FROM barang_keluar WHERE id = @id"
@@ -136,6 +140,21 @@ Public Class UC_BarangKeluar
             End If
         End If
     End Sub
+
+    Private Function GetIdBarangKeluarByNamaBarang(namaBarang As String) As Integer
+        Dim sql As String = "SELECT barang_keluar.id FROM barang_keluar " &
+                        "INNER JOIN tblbarang ON barang_keluar.id_barang = tblbarang.id " &
+                        "WHERE tblbarang.nama_barang = @namaBarang LIMIT 1"
+
+        If conn.State = ConnectionState.Closed Then conn.Open()
+
+        Using cmd As New MySqlCommand(sql, conn)
+            cmd.Parameters.AddWithValue("@namaBarang", namaBarang)
+            Dim result = cmd.ExecuteScalar()
+            Return If(result IsNot Nothing, CInt(result), 0)
+        End Using
+    End Function
+
 
 
     Private Sub DataGridView1_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs) Handles DataGridView1.CellPainting
