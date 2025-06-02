@@ -26,9 +26,10 @@ Partial Class laporan_graphic
         ' 
         ' laporan_graphic
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(665, 345)
+        ClientSize = New Size(760, 460)
+        Margin = New Padding(3, 4, 3, 4)
         Name = "laporan_graphic"
         Text = "laporan_graphic"
         ResumeLayout(False)

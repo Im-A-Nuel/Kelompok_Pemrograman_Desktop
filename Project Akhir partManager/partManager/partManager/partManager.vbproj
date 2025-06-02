@@ -6,6 +6,7 @@
     <StartupObject>partManager.My.MyApplication</StartupObject>
     <UseWindowsForms>True</UseWindowsForms>
     <MyType>WindowsForms</MyType>
+    <ImportedNamespaces>System.Data=False,System.Drawing=False,System.Windows.Forms=False,System.Windows.Forms.DataVisualization.Charting=False,Microsoft.VisualBasic=True,System=True,System.Collections=True,System.Collections.Generic=True,System.Diagnostics=True,System.Linq=True,System.Xml.Linq=True,System.Threading.Tasks=True,partManager=True</ImportedNamespaces>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,10 +18,13 @@
     <Import Include="System.Data" />
     <Import Include="System.Drawing" />
     <Import Include="System.Windows.Forms" />
+    <Import Include="System.Windows.Forms.DataVisualization.Charting" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="HIC.System.Windows.Forms.DataVisualization" Version="1.0.1" />
     <PackageReference Include="PDFsharp-MigraDoc" Version="6.1.1" />
+    <PackageReference Include="System.Windows.Forms.DataVisualization" Version="1.0.0-prerelease.20110.1" />
   </ItemGroup>
 
   <ItemGroup>
