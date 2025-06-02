@@ -13,6 +13,7 @@ Public Class UC_DataBarang
         DataGridView1.Columns.Add("No", "No")
         DataGridView1.Columns.Add("nama_barang", "Nama Barang")
         DataGridView1.Columns.Add("kategori", "Kategori")
+        DataGridView1.Columns.Add("stok", "Stok")
 
         Dim editButton As New DataGridViewButtonColumn()
         editButton.HeaderText = "Edit"
@@ -28,8 +29,25 @@ Public Class UC_DataBarang
 
         If conn.State = ConnectionState.Closed Then conn.Open()
 
-        ' Perbaikan di sini: pakai parameter untuk search keyword
-        Dim sql = "SELECT * FROM tblbarang WHERE nama_barang LIKE @keyword OR kategori LIKE @keyword"
+        Dim sql As String = "
+SELECT 
+    b.id,
+    b.nama_barang,
+    b.kategori,
+    IFNULL(m.total_masuk, 0) - IFNULL(k.total_keluar, 0) AS sisa_stok
+FROM tblbarang b
+LEFT JOIN (
+    SELECT id_barang, SUM(jumlah) AS total_masuk
+    FROM barang_masuk
+    GROUP BY id_barang
+) m ON b.id = m.id_barang
+LEFT JOIN (
+    SELECT id_barang, SUM(jumlah) AS total_keluar
+    FROM barang_keluar
+    GROUP BY id_barang
+) k ON b.id = k.id_barang
+WHERE b.nama_barang LIKE @keyword OR b.kategori LIKE @keyword"
+
         Using cmd As New MySqlCommand(sql, conn)
             cmd.Parameters.AddWithValue("@keyword", "%" & keyword & "%")
 
@@ -39,29 +57,13 @@ Public Class UC_DataBarang
                     DataGridView1.Rows.Add(
                    no,
                    reader("nama_barang").ToString(),
-                   reader("kategori").ToString()
+                   reader("kategori").ToString(),
+                   reader("sisa_stok").ToString()
                 )
                     no += 1
                 End While
             End Using
         End Using
-
-        Dim minRowCount As Integer = 11
-        Dim dataRowCount As Integer = DataGridView1.Rows.Count
-
-        If dataRowCount < minRowCount Then
-            For i As Integer = 1 To (minRowCount - dataRowCount)
-                Dim idx As Integer = DataGridView1.Rows.Add()
-                With DataGridView1.Rows(idx)
-                    .Cells("No").Value = ""
-                    .Cells("nama_barang").Value = ""
-                    .Cells("kategori").Value = ""
-                    .Cells(3).Value = ""
-                    .Cells(4).Value = ""
-                    .Tag = Nothing
-                End With
-            Next
-        End If
 
         With DataGridView1
             .Font = New Font("Segoe UI", 9)
@@ -147,7 +149,7 @@ Public Class UC_DataBarang
         Dim row As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
         Dim namaBarang As String = row.Cells("nama_barang").Value.ToString()
 
-        If e.ColumnIndex = 3 Then
+        If e.ColumnIndex = 4 Then
             Dim idBarang As Integer = GetIdBarangByNama(namaBarang)
             Dim frm As New Tambah_Barang()
             frm.Mode = "Edit"
@@ -156,7 +158,7 @@ Public Class UC_DataBarang
             frm.ShowDialog()
         End If
 
-        If e.ColumnIndex = 4 Then
+        If e.ColumnIndex = 5 Then
             Dim idBarang As Integer = GetIdBarangByNama(namaBarang)
             If AdaTransaksiBarang(idBarang) Then
                 MessageBox.Show("Barang tidak bisa dihapus karena sudah digunakan di transaksi Barang Masuk/Keluar.", "Tidak Bisa Hapus", MessageBoxButtons.OK, MessageBoxIcon.Warning)

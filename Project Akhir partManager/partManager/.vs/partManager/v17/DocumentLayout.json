@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1D521336-B948-4F05-B013-6BB00B2403D3}|partManager\\partManager.vbproj|f:\\progdeskwhack\\kelompok_pemrograman_desktop\\project akhir partmanager\\partmanager\\partmanager\\uc_databarang.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{1D521336-B948-4F05-B013-6BB00B2403D3}|partManager\\partManager.vbproj|solutionrelative:partmanager\\uc_databarang.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D521336-B948-4F05-B013-6BB00B2403D3}|partManager\\partManager.vbproj|f:\\progdeskwhack\\kelompok_pemrograman_desktop\\project akhir partmanager\\partmanager\\partmanager\\uc_dashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{1D521336-B948-4F05-B013-6BB00B2403D3}|partManager\\partManager.vbproj|solutionrelative:partmanager\\uc_dashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1D521336-B948-4F05-B013-6BB00B2403D3}|partManager\\partManager.vbproj|f:\\progdeskwhack\\kelompok_pemrograman_desktop\\project akhir partmanager\\partmanager\\partmanager\\tambah_barang_keluar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{1D521336-B948-4F05-B013-6BB00B2403D3}|partManager\\partManager.vbproj|solutionrelative:partmanager\\tambah_barang_keluar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
@@ -31,10 +39,6 @@
       "RelativeMoniker": "D:0:0:{1D521336-B948-4F05-B013-6BB00B2403D3}|partManager\\partManager.vbproj|solutionrelative:partmanager\\uc_databarang.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D521336-B948-4F05-B013-6BB00B2403D3}|partManager\\partManager.vbproj|f:\\progdeskwhack\\kelompok_pemrograman_desktop\\project akhir partmanager\\partmanager\\partmanager\\uc_databarang.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{1D521336-B948-4F05-B013-6BB00B2403D3}|partManager\\partManager.vbproj|solutionrelative:partmanager\\uc_databarang.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1D521336-B948-4F05-B013-6BB00B2403D3}|partManager\\partManager.vbproj|f:\\progdeskwhack\\kelompok_pemrograman_desktop\\project akhir partmanager\\partmanager\\partmanager\\uc_barangmasuk.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{1D521336-B948-4F05-B013-6BB00B2403D3}|partManager\\partManager.vbproj|solutionrelative:partmanager\\uc_barangmasuk.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
@@ -61,10 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1D521336-B948-4F05-B013-6BB00B2403D3}|partManager\\partManager.vbproj|f:\\progdeskwhack\\kelompok_pemrograman_desktop\\project akhir partmanager\\partmanager\\partmanager\\uc_dashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{1D521336-B948-4F05-B013-6BB00B2403D3}|partManager\\partManager.vbproj|solutionrelative:partmanager\\uc_dashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1D521336-B948-4F05-B013-6BB00B2403D3}|partManager\\partManager.vbproj|f:\\progdeskwhack\\kelompok_pemrograman_desktop\\project akhir partmanager\\partmanager\\partmanager\\uc_dashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{1D521336-B948-4F05-B013-6BB00B2403D3}|partManager\\partManager.vbproj|solutionrelative:partmanager\\uc_dashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1D521336-B948-4F05-B013-6BB00B2403D3}|partManager\\partManager.vbproj|f:\\progdeskwhack\\kelompok_pemrograman_desktop\\project akhir partmanager\\partmanager\\partmanager\\laporan_graphic.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
@@ -141,11 +141,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Login.vb",
               "DocumentMoniker": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\Login.vb",
               "RelativeDocumentMoniker": "partManager\\Login.vb",
@@ -154,21 +154,7 @@
               "ViewState": "AgIAABMAAAAAAAAAAAAQwA4AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-04-21T14:46:46.371Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ModAuth.vb",
-              "DocumentMoniker": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\ModAuth.vb",
-              "RelativeDocumentMoniker": "partManager\\ModAuth.vb",
-              "ToolTip": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\ModAuth.vb",
-              "RelativeToolTip": "partManager\\ModAuth.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-06-02T12:07:07.293Z",
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -196,19 +182,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Tambah_Barang_Keluar.vb [Design]",
-              "DocumentMoniker": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\Tambah_Barang_Keluar.vb",
-              "RelativeDocumentMoniker": "partManager\\Tambah_Barang_Keluar.vb",
-              "ToolTip": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\Tambah_Barang_Keluar.vb [Design]",
-              "RelativeToolTip": "partManager\\Tambah_Barang_Keluar.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-05-31T04:59:52.517Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "session.vb",
               "DocumentMoniker": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\session.vb",
               "RelativeDocumentMoniker": "partManager\\session.vb",
@@ -216,12 +190,11 @@
               "RelativeToolTip": "partManager\\session.vb",
               "ViewState": "AgIAAAIAAAAAAAAAAAAAwAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-05-29T09:15:52.804Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-29T09:15:52.804Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Tambah_Barang_Keluar.vb",
               "DocumentMoniker": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\Tambah_Barang_Keluar.vb",
               "RelativeDocumentMoniker": "partManager\\Tambah_Barang_Keluar.vb",
@@ -234,7 +207,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
+              "Title": "UC_DataBarang.vb",
+              "DocumentMoniker": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\UC_DataBarang.vb",
+              "RelativeDocumentMoniker": "partManager\\UC_DataBarang.vb",
+              "ToolTip": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\UC_DataBarang.vb",
+              "RelativeToolTip": "partManager\\UC_DataBarang.vb",
+              "ViewState": "AgIAADAAAAAAAAAAAAAcwEEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-05-29T10:23:50.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UC_Dashboard.vb",
+              "DocumentMoniker": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\UC_Dashboard.vb",
+              "RelativeDocumentMoniker": "partManager\\UC_Dashboard.vb",
+              "ToolTip": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\UC_Dashboard.vb",
+              "RelativeToolTip": "partManager\\UC_Dashboard.vb",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAkwFwAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T06:23:32.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Tambah_Barang_Keluar.vb [Design]",
+              "DocumentMoniker": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\Tambah_Barang_Keluar.vb",
+              "RelativeDocumentMoniker": "partManager\\Tambah_Barang_Keluar.vb",
+              "ToolTip": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\Tambah_Barang_Keluar.vb [Design]",
+              "RelativeToolTip": "partManager\\Tambah_Barang_Keluar.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-05-31T04:59:52.517Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ModAuth.vb",
+              "DocumentMoniker": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\ModAuth.vb",
+              "RelativeDocumentMoniker": "partManager\\ModAuth.vb",
+              "ToolTip": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\ModAuth.vb",
+              "RelativeToolTip": "partManager\\ModAuth.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T12:07:07.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "UC_DataBarang.vb [Design]",
               "DocumentMoniker": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\UC_DataBarang.vb",
               "RelativeDocumentMoniker": "partManager\\UC_DataBarang.vb",
@@ -246,20 +269,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UC_DataBarang.vb",
-              "DocumentMoniker": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\UC_DataBarang.vb",
-              "RelativeDocumentMoniker": "partManager\\UC_DataBarang.vb",
-              "ToolTip": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\UC_DataBarang.vb",
-              "RelativeToolTip": "partManager\\UC_DataBarang.vb",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAYwLMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-05-29T10:23:50.028Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Login.vb [Design]",
               "DocumentMoniker": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\Login.vb",
               "RelativeDocumentMoniker": "partManager\\Login.vb",
@@ -271,7 +281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "UC_BarangMasuk.vb",
               "DocumentMoniker": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\UC_BarangMasuk.vb",
               "RelativeDocumentMoniker": "partManager\\UC_BarangMasuk.vb",
@@ -279,12 +289,11 @@
               "RelativeToolTip": "partManager\\UC_BarangMasuk.vb",
               "ViewState": "AgIAACkAAAAAAAAAAAAgwI0AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-05-29T08:51:27.079Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-29T08:51:27.079Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "UC_BarangKeluar.vb [Design]",
               "DocumentMoniker": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\UC_BarangKeluar.vb",
               "RelativeDocumentMoniker": "partManager\\UC_BarangKeluar.vb",
@@ -296,7 +305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "UC_BarangKeluar.vb",
               "DocumentMoniker": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\UC_BarangKeluar.vb",
               "RelativeDocumentMoniker": "partManager\\UC_BarangKeluar.vb",
@@ -304,12 +313,11 @@
               "RelativeToolTip": "partManager\\UC_BarangKeluar.vb",
               "ViewState": "AgIAAHgAAAAAAAAAAAAuwHgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-05-31T05:01:03.73Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-31T05:01:03.73Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Re_Stock.vb",
               "DocumentMoniker": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\Re_Stock.vb",
               "RelativeDocumentMoniker": "partManager\\Re_Stock.vb",
@@ -317,12 +325,11 @@
               "RelativeToolTip": "partManager\\Re_Stock.vb",
               "ViewState": "AgIAACkAAAAAAAAAAAAIwEsAAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-05-30T04:57:33.307Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-30T04:57:33.307Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Re_Stock.vb [Design]",
               "DocumentMoniker": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\Re_Stock.vb",
               "RelativeDocumentMoniker": "partManager\\Re_Stock.vb",
@@ -334,7 +341,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "UC_BarangMasuk.vb [Design]",
               "DocumentMoniker": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\UC_BarangMasuk.vb",
               "RelativeDocumentMoniker": "partManager\\UC_BarangMasuk.vb",
@@ -346,7 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "UC_Dashboard.vb [Design]",
               "DocumentMoniker": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\UC_Dashboard.vb",
               "RelativeDocumentMoniker": "partManager\\UC_Dashboard.vb",
@@ -366,18 +373,6 @@
               "RelativeToolTip": "partManager\\partManager.vbproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003380|",
               "WhenOpened": "2025-06-02T06:10:22.002Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UC_Dashboard.vb",
-              "DocumentMoniker": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\UC_Dashboard.vb",
-              "RelativeDocumentMoniker": "partManager\\UC_Dashboard.vb",
-              "ToolTip": "F:\\ProgdeskWhack\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager\\partManager\\partManager\\UC_Dashboard.vb",
-              "RelativeToolTip": "partManager\\UC_Dashboard.vb",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAkwBoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-06-02T06:23:32.575Z"
             },
             {
               "$type": "Document",
