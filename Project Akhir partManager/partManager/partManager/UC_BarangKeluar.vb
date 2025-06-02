@@ -19,7 +19,7 @@ Public Class UC_BarangKeluar
         DataGridView1.Columns.Add("Jumlah", "Jumlah")
         DataGridView1.Columns.Add("Kategori", "Kategori")
         DataGridView1.Columns.Add("Tanggal", "Tanggal")
-        'DataGridView1.Columns.Add("Supplier", "Supplier")
+        DataGridView1.Columns.Add("Aksi", "Aksi") ' Tambahkan kolom aksi
 
         Dim colEdit As New DataGridViewButtonColumn()
         colEdit.HeaderText = "Edit"
@@ -35,7 +35,7 @@ Public Class UC_BarangKeluar
 
         If conn.State = ConnectionState.Closed Then conn.Open()
         Dim sql As String =
-            "SELECT bk.id, b.nama_barang, bk.jumlah, b.kategori, bk.tanggal
+            "SELECT bk.id, b.nama_barang, bk.jumlah, b.kategori, bk.tanggal, bk.aksi
              FROM barang_keluar bk 
              JOIN tblbarang b ON bk.id_barang = b.id 
              WHERE b.nama_barang LIKE @key OR b.kategori LIKE @key OR bk.tanggal LIKE @key"
@@ -45,16 +45,18 @@ Public Class UC_BarangKeluar
             Using reader = cmd.ExecuteReader()
                 Dim no = 1
                 While reader.Read()
-                    DataGridView1.Rows.Add(
+                    Dim rowIndex = DataGridView1.Rows.Add(
                         no,
                         reader("nama_barang").ToString(),
                         reader("jumlah").ToString(),
                         reader("kategori").ToString(),
-                        CDate(reader("tanggal")).ToString("dd-MM-yyyy")
+                        CDate(reader("tanggal")).ToString("dd-MM-yyyy"),
+                        reader("aksi").ToString()
                     )
-                    DataGridView1.Rows(DataGridView1.Rows.Count - 1).Tag = reader("id")
+                    DataGridView1.Rows(rowIndex).Tag = reader("id")
                     no += 1
                 End While
+
             End Using
         End Using
         conn.Close()
@@ -70,8 +72,9 @@ Public Class UC_BarangKeluar
                     .Cells("Jumlah").Value = ""
                     .Cells("Kategori").Value = ""
                     .Cells("Tanggal").Value = ""
-                    .Cells(5).Value = ""
+                    .Cells("Aksi").Value = ""
                     .Cells(6).Value = ""
+                    .Cells(7).Value = ""
                     .Tag = Nothing
                 End With
             Next
@@ -99,6 +102,7 @@ Public Class UC_BarangKeluar
 
             .Columns("No").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("Jumlah").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+            .Columns("Aksi").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
             For Each col As DataGridViewColumn In .Columns
                 If TypeOf col Is DataGridViewButtonColumn Then
@@ -115,21 +119,35 @@ Public Class UC_BarangKeluar
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        If e.RowIndex < 0 Then Exit Sub
+        If e.RowIndex < 0 Then Exit Sub ' Pastikan bukan header
 
+        ' Cek apakah baris tersebut punya data (NamaBarang tidak kosong)
         If String.IsNullOrEmpty(DataGridView1.Rows(e.RowIndex).Cells("NamaBarang").Value?.ToString()) Then
             Exit Sub
         End If
-        Dim barangKeluar As String = DataGridView1.Rows(e.RowIndex).Cells("NamaBarang").Value.ToString()
-        Dim idBarangKeluar As Integer = GetIdBarangKeluarByNamaBarang(barangKeluar)
 
-        If e.ColumnIndex = 5 Then
+        ' Ambil ID dari Tag baris
+        Dim idBarangKeluar As Integer = 0
+        If DataGridView1.Rows(e.RowIndex).Tag IsNot Nothing Then
+            idBarangKeluar = Convert.ToInt32(DataGridView1.Rows(e.RowIndex).Tag)
+        End If
+
+        If idBarangKeluar = 0 Then
+            MessageBox.Show("ID data tidak ditemukan.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
+
+        ' Cek tombol yang diklik berdasarkan kolom
+        If e.ColumnIndex = 6 Then ' Kolom Edit
             Dim frm As New Tambah_Barang_Keluar()
             frm.IsEditMode = True
             frm.EditID = idBarangKeluar
             frm.ShowDialog()
+
+            ' Reload data setelah edit
             LoadDataBarangKeluar(TextBox1.Text)
-        ElseIf e.ColumnIndex = 6 Then
+
+        ElseIf e.ColumnIndex = 7 Then ' Kolom Hapus
             If MessageBox.Show("Yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                 If conn.State = ConnectionState.Closed Then conn.Open()
                 Dim sql = "DELETE FROM barang_keluar WHERE id = @id"
@@ -137,31 +155,34 @@ Public Class UC_BarangKeluar
                     cmd.Parameters.AddWithValue("@id", idBarangKeluar)
                     cmd.ExecuteNonQuery()
                 End Using
+                conn.Close()
+
+                ' Reload data setelah hapus
                 LoadDataBarangKeluar(TextBox1.Text)
             End If
         End If
     End Sub
 
+
     Private Function GetIdBarangKeluarByNamaBarang(namaBarang As String) As Integer
         Dim sql As String = "SELECT barang_keluar.id FROM barang_keluar " &
-                        "INNER JOIN tblbarang ON barang_keluar.id_barang = tblbarang.id " &
-                        "WHERE tblbarang.nama_barang = @namaBarang LIMIT 1"
+                            "INNER JOIN tblbarang ON barang_keluar.id_barang = tblbarang.id " &
+                            "WHERE tblbarang.nama_barang = @namaBarang LIMIT 1"
 
         If conn.State = ConnectionState.Closed Then conn.Open()
 
         Using cmd As New MySqlCommand(sql, conn)
             cmd.Parameters.AddWithValue("@namaBarang", namaBarang)
             Dim result = cmd.ExecuteScalar()
+            conn.Close()
             Return If(result IsNot Nothing, CInt(result), 0)
         End Using
     End Function
 
-
-
     Private Sub DataGridView1_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs) Handles DataGridView1.CellPainting
         If e.RowIndex >= 0 Then
             Dim isDummyRow As Boolean = String.IsNullOrEmpty(DataGridView1.Rows(e.RowIndex).Cells("NamaBarang").Value?.ToString())
-            If isDummyRow AndAlso (e.ColumnIndex = 5 OrElse e.ColumnIndex = 6) Then
+            If isDummyRow AndAlso (e.ColumnIndex = 6 OrElse e.ColumnIndex = 7) Then
                 e.PaintBackground(e.CellBounds, True)
                 e.Handled = True
             End If
@@ -171,8 +192,7 @@ Public Class UC_BarangKeluar
     Private Sub btnAddBarangKeluar_Click(sender As Object, e As EventArgs) Handles btnAddBarangKeluar.Click
         Dim frm As New Tambah_Barang_Keluar()
         frm.ShowDialog()
-
         LoadDataBarangKeluar(TextBox1.Text)
-
     End Sub
+
 End Class

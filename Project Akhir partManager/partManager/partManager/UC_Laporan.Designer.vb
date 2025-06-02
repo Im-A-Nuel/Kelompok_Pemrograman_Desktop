@@ -32,6 +32,7 @@ Partial Class UC_Laporan
         lblHeader = New Label()
         Panel1 = New Panel()
         DataGridViewRiwayat = New DataGridView()
+        btnGrafik = New Button()
         Panel3.SuspendLayout()
         Panel1.SuspendLayout()
         CType(DataGridViewRiwayat, ComponentModel.ISupportInitialize).BeginInit()
@@ -39,6 +40,7 @@ Partial Class UC_Laporan
         ' 
         ' Panel3
         ' 
+        Panel3.Controls.Add(btnGrafik)
         Panel3.Controls.Add(ButtonSavePDF)
         Panel3.Controls.Add(btnCari)
         Panel3.Controls.Add(Label3)
@@ -135,6 +137,15 @@ Partial Class UC_Laporan
         DataGridViewRiwayat.Size = New Size(651, 165)
         DataGridViewRiwayat.TabIndex = 0
         ' 
+        ' btnGrafik
+        ' 
+        btnGrafik.Location = New Point(100, 151)
+        btnGrafik.Name = "btnGrafik"
+        btnGrafik.Size = New Size(75, 23)
+        btnGrafik.TabIndex = 7
+        btnGrafik.Text = "Button1"
+        btnGrafik.UseVisualStyleBackColor = True
+        ' 
         ' UC_Laporan
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -162,5 +173,6 @@ Partial Class UC_Laporan
     Friend WithEvents lblHeader As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents DataGridViewRiwayat As DataGridView
+    Friend WithEvents btnGrafik As Button
 
 End Class

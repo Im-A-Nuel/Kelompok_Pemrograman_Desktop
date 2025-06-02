@@ -139,4 +139,7 @@ Public Class UC_Laporan
         End If
     End Sub
 
+    Private Sub btnGrafik_Click(sender As Object, e As EventArgs) Handles btnGrafik.Click
+
+    End Sub
 End Class
