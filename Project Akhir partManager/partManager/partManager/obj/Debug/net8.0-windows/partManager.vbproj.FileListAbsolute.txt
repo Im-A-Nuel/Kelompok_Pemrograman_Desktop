@@ -157,3 +157,4 @@ D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir part
 F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.Re_Stock.resources
 F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.Tambah_Barang_Keluar.resources
 F:\ProgdeskWhack\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.tambah_user.resources
+D:\kuliah\semester 6\progDesktop\Kelompok_Pemrograman_Desktop\Project Akhir partManager\partManager\partManager\obj\Debug\net8.0-windows\partManager.laporan_graphic.resources
