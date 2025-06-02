@@ -1,0 +1,584 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\project akhir partmanager .net\\partmanagernet\\partmanagernet\\laporan_grafik.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\laporan_grafik.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\project akhir partmanager .net\\partmanagernet\\partmanagernet\\laporan_grafik.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\laporan_grafik.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\project akhir partmanager .net\\partmanagernet\\partmanagernet\\uc_databarang.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\uc_databarang.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\uc_databarang.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\uc_databarang.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\project akhir partmanager .net\\partmanagernet\\partmanagernet\\laporan_grafik.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\laporan_grafik.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\project akhir partmanager .net\\partmanagernet\\partmanagernet\\tambah_barang_keluar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\tambah_barang_keluar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\project akhir partmanager .net\\partmanagernet\\partmanagernet\\tambah_barang_keluar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\tambah_barang_keluar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\project akhir partmanager .net\\partmanagernet\\partmanagernet\\tambah_barang_keluar.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\tambah_barang_keluar.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\uc_barangkeluar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\uc_barangkeluar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\project akhir partmanager .net\\partmanagernet\\partmanagernet\\uc_laporan.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\uc_laporan.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\project akhir partmanager .net\\partmanagernet\\partmanagernet\\uc_laporan.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\uc_laporan.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\uc_dashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\uc_dashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\uc_manajemenpengguna.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\uc_manajemenpengguna.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\uc_manajemenpengguna.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\uc_manajemenpengguna.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\main.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\main.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\project akhir partmanager .net\\partmanagernet\\partmanagernet\\tambah_barang.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\tambah_barang.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\uc_barangmasuk.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\uc_barangmasuk.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\uc_laporan.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\uc_laporan.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\project akhir partmanager .net\\partmanagernet\\partmanagernet\\main.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\main.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\project akhir partmanager .net\\partmanagernet\\partmanagernet\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\project akhir partmanager .net\\partmanagernet\\partmanagernet\\tambah_user.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\tambah_user.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\project akhir partmanager .net\\partmanagernet\\partmanagernet\\tambah_user.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\tambah_user.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\project akhir partmanager .net\\partmanagernet\\partmanagernet\\tambah_user.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\tambah_user.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\project akhir partmanager .net\\partmanagernet\\partmanagernet\\re_stock.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\re_stock.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\project akhir partmanager .net\\partmanagernet\\partmanagernet\\re_stock.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\re_stock.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\project akhir partmanager .net\\partmanagernet\\partmanagernet\\re_stock.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\re_stock.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\project akhir partmanager .net\\partmanagernet\\partmanagernet\\tambah_barang.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\tambah_barang.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|f:\\kuliah sem 6\\prog desk\\kelompok\\kelompok_pemrograman_desktop\\project akhir partmanager .net\\partmanagernet\\partmanagernet\\tambah_barang.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\tambah_barang.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\uc_barangkeluar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\uc_barangkeluar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\moduledatabase.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\moduledatabase.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\main.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\main.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{F9B2B173-36E8-421A-B314-520CD499ECC8}|partmanagernet\\partmanagernet.vbproj|solutionrelative:partmanagernet\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Laporan_Grafik.vb",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Laporan_Grafik.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\Laporan_Grafik.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Laporan_Grafik.vb",
+              "RelativeToolTip": "partmanagernet\\Laporan_Grafik.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T15:32:55.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UC_DataBarang.vb [Design]",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\UC_DataBarang.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\UC_DataBarang.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\UC_DataBarang.vb [Design]",
+              "RelativeToolTip": "partmanagernet\\UC_DataBarang.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T13:54:21.307Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UC_DataBarang.vb",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\UC_DataBarang.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\UC_DataBarang.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\UC_DataBarang.vb",
+              "RelativeToolTip": "partmanagernet\\UC_DataBarang.vb",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwC8AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T15:07:45.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Laporan_Grafik.vb [Design]",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Laporan_Grafik.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\Laporan_Grafik.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Laporan_Grafik.vb [Design]",
+              "RelativeToolTip": "partmanagernet\\Laporan_Grafik.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T15:31:52.5Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Tambah_Barang_Keluar.vb",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Tambah_Barang_Keluar.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\Tambah_Barang_Keluar.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Tambah_Barang_Keluar.vb",
+              "RelativeToolTip": "partmanagernet\\Tambah_Barang_Keluar.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T15:40:41.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Laporan_Grafik.Designer.vb",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Laporan_Grafik.Designer.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\Laporan_Grafik.Designer.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Laporan_Grafik.Designer.vb",
+              "RelativeToolTip": "partmanagernet\\Laporan_Grafik.Designer.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T15:33:09.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Tambah_Barang_Keluar.Designer.vb",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Tambah_Barang_Keluar.Designer.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\Tambah_Barang_Keluar.Designer.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Tambah_Barang_Keluar.Designer.vb",
+              "RelativeToolTip": "partmanagernet\\Tambah_Barang_Keluar.Designer.vb",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAMwGcAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T14:50:55.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UC_BarangKeluar.vb [Design]",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\UC_BarangKeluar.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\UC_BarangKeluar.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\UC_BarangKeluar.vb [Design]",
+              "RelativeToolTip": "partmanagernet\\UC_BarangKeluar.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T13:49:08.636Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Tambah_Barang_Keluar.vb [Design]",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Tambah_Barang_Keluar.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\Tambah_Barang_Keluar.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Tambah_Barang_Keluar.vb [Design]",
+              "RelativeToolTip": "partmanagernet\\Tambah_Barang_Keluar.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T14:50:15.608Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UC_Dashboard.vb [Design]",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\UC_Dashboard.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\UC_Dashboard.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\UC_Dashboard.vb [Design]",
+              "RelativeToolTip": "partmanagernet\\UC_Dashboard.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T13:53:28.546Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UC_Laporan.vb",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\UC_Laporan.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\UC_Laporan.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\UC_Laporan.vb",
+              "RelativeToolTip": "partmanagernet\\UC_Laporan.vb",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAMwK0AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T13:57:05.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UC_Laporan.vb [Design]",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\UC_Laporan.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\UC_Laporan.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\UC_Laporan.vb [Design]",
+              "RelativeToolTip": "partmanagernet\\UC_Laporan.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T15:13:50.458Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UC_ManajemenPengguna.vb [Design]",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\UC_ManajemenPengguna.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\UC_ManajemenPengguna.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\UC_ManajemenPengguna.vb [Design]",
+              "RelativeToolTip": "partmanagernet\\UC_ManajemenPengguna.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T14:01:22.245Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UC_ManajemenPengguna.vb",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\UC_ManajemenPengguna.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\UC_ManajemenPengguna.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\UC_ManajemenPengguna.vb",
+              "RelativeToolTip": "partmanagernet\\UC_ManajemenPengguna.vb",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAAEMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T14:01:41.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Main.vb [Design]",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Main.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\Main.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Main.vb [Design]",
+              "RelativeToolTip": "partmanagernet\\Main.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T13:43:28.345Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Tambah_Barang.vb [Design]",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Tambah_Barang.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\Tambah_Barang.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Tambah_Barang.vb [Design]",
+              "RelativeToolTip": "partmanagernet\\Tambah_Barang.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T14:48:23.181Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UC_BarangMasuk.vb [Design]",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\UC_BarangMasuk.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\UC_BarangMasuk.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\UC_BarangMasuk.vb [Design]",
+              "RelativeToolTip": "partmanagernet\\UC_BarangMasuk.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T13:50:28.923Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UC_Laporan.Designer.vb",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\UC_Laporan.Designer.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\UC_Laporan.Designer.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\UC_Laporan.Designer.vb",
+              "RelativeToolTip": "partmanagernet\\UC_Laporan.Designer.vb",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAAAJAAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T13:55:24.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Login.vb",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Login.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\Login.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Login.vb",
+              "RelativeToolTip": "partmanagernet\\Login.vb",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAEwFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T13:40:23.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "tambah_user.vb [Design]",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\tambah_user.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\tambah_user.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\tambah_user.vb [Design]",
+              "RelativeToolTip": "partmanagernet\\tambah_user.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T14:50:36.543Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "tambah_user.vb",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\tambah_user.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\tambah_user.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\tambah_user.vb",
+              "RelativeToolTip": "partmanagernet\\tambah_user.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T14:52:11.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Main.vb",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Main.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\Main.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Main.vb",
+              "RelativeToolTip": "partmanagernet\\Main.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T14:53:56.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Application.Designer.vb",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\My Project\\Application.Designer.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\My Project\\Application.Designer.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\My Project\\Application.Designer.vb",
+              "RelativeToolTip": "partmanagernet\\My Project\\Application.Designer.vb",
+              "ViewState": "AgIAABgAAAAAAAAAAIAxwCIAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T14:53:10.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "tambah_user.Designer.vb",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\tambah_user.Designer.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\tambah_user.Designer.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\tambah_user.Designer.vb",
+              "RelativeToolTip": "partmanagernet\\tambah_user.Designer.vb",
+              "ViewState": "AgIAALAAAAAAAAAAAAAAANoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T14:52:02.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Re_Stock.vb",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Re_Stock.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\Re_Stock.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Re_Stock.vb",
+              "RelativeToolTip": "partmanagernet\\Re_Stock.vb",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAAAGQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T14:49:20.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Tambah_Barang.vb",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Tambah_Barang.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\Tambah_Barang.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Tambah_Barang.vb",
+              "RelativeToolTip": "partmanagernet\\Tambah_Barang.vb",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAAFoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T14:49:01.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Re_Stock.Designer.vb",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Re_Stock.Designer.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\Re_Stock.Designer.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Re_Stock.Designer.vb",
+              "RelativeToolTip": "partmanagernet\\Re_Stock.Designer.vb",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAANwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T14:48:30.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Re_Stock.vb [Design]",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Re_Stock.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\Re_Stock.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Re_Stock.vb [Design]",
+              "RelativeToolTip": "partmanagernet\\Re_Stock.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T14:48:07.298Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Tambah_Barang.Designer.vb",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Tambah_Barang.Designer.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\Tambah_Barang.Designer.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Tambah_Barang.Designer.vb",
+              "RelativeToolTip": "partmanagernet\\Tambah_Barang.Designer.vb",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAAAMIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T14:48:46.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "UC_BarangKeluar.vb",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\UC_BarangKeluar.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\UC_BarangKeluar.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\UC_BarangKeluar.vb",
+              "RelativeToolTip": "partmanagernet\\UC_BarangKeluar.vb",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAgwK8AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T13:49:50.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Main.Designer.vb",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Main.Designer.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\Main.Designer.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Main.Designer.vb",
+              "RelativeToolTip": "partmanagernet\\Main.Designer.vb",
+              "ViewState": "AgIAALUAAAAAAAAAAAAgwNIAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T13:43:37.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ModuleDatabase.vb",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\ModuleDatabase.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\ModuleDatabase.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\ModuleDatabase.vb",
+              "RelativeToolTip": "partmanagernet\\ModuleDatabase.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T13:41:29.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Login.vb [Design]",
+              "DocumentMoniker": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Login.vb",
+              "RelativeDocumentMoniker": "partmanagernet\\Login.vb",
+              "ToolTip": "F:\\KULIAH SEM 6\\Prog Desk\\Kelompok\\Kelompok_Pemrograman_Desktop\\Project Akhir partManager .NET\\partmanagernet\\partmanagernet\\Login.vb [Design]",
+              "RelativeToolTip": "partmanagernet\\Login.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-02T13:34:29.815Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
