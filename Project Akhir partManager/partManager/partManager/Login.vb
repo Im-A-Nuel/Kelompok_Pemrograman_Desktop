@@ -80,17 +80,18 @@ Public Class Login
         If System.IO.File.Exists("session.txt") Then
             Dim lines() As String = System.IO.File.ReadAllLines("session.txt")
             LoggedInUsername = lines(0)
-                LoggedInRole = lines(1)
+            LoggedInRole = lines(1)
+            ModAuth.CurrentUserName = LoggedInUsername
+            ModAuth.CurrentUserRole = LoggedInRole
 
-                Dim mainForm As New Main()
+            Dim mainForm As New Main()
             Me.Hide()
             mainForm.ShowDialog()
             'Me.Show()                   
             Exit Sub
         End If
-
-
     End Sub
+
 
 
     Private Sub txtPassword_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPassword.KeyDown

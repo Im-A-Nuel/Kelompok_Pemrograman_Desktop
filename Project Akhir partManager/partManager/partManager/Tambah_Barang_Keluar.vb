@@ -199,6 +199,7 @@ Public Class Tambah_Barang_Keluar
             End If
         End If
 
+        ' Validasi khusus Penjualan
         If cbJenisKeluar.SelectedItem.ToString() = "Penjualan" AndAlso String.IsNullOrWhiteSpace(txtTransaksi.Text) Then
             MessageBox.Show("No. Transaksi harus diisi untuk penjualan!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
@@ -208,16 +209,16 @@ Public Class Tambah_Barang_Keluar
             If conn.State = ConnectionState.Closed Then conn.Open()
 
             Dim aksi As String = cbJenisKeluar.SelectedItem.ToString()
-            Dim keteranganGabungan As String = aksi
-            If aksi = "Penjualan" AndAlso Not String.IsNullOrWhiteSpace(txtTransaksi.Text) Then
-                keteranganGabungan &= " | No.Transaksi: " & txtTransaksi.Text
-            End If
-            If Not String.IsNullOrWhiteSpace(txtKeterangan.Text) Then
-                If Not keteranganGabungan.Contains(txtKeterangan.Text) Then
-                    keteranganGabungan &= " | " & txtKeterangan.Text
-                End If
-            End If
+            Dim keteranganGabungan As String
 
+            If aksi = "Penjualan" Then
+                keteranganGabungan = "No.Transaksi: " & txtTransaksi.Text.Trim()
+                If Not String.IsNullOrWhiteSpace(txtKeterangan.Text) Then
+                    keteranganGabungan &= " | " & txtKeterangan.Text.Trim()
+                End If
+            Else
+                keteranganGabungan = txtKeterangan.Text.Trim()
+            End If
 
             If IsEditMode Then
                 Dim sqlUpdate As String = "UPDATE barang_keluar SET id_barang=@id_barang, jumlah=@jumlah, tanggal=@tanggal, keterangan=@keterangan, aksi=@aksi, supplier=@supplier, user_input=@user_input WHERE id=@id"
@@ -266,6 +267,7 @@ Public Class Tambah_Barang_Keluar
             If conn.State = ConnectionState.Open Then conn.Close()
         End Try
     End Sub
+
 
 
     Private Sub btnBatal_Click(sender As Object, e As EventArgs) Handles btnBatal.Click
