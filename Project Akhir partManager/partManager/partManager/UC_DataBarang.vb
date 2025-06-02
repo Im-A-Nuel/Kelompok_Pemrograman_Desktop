@@ -14,7 +14,6 @@ Public Class UC_DataBarang
         DataGridView1.Columns.Add("nama_barang", "Nama Barang")
         DataGridView1.Columns.Add("kategori", "Kategori")
 
-
         Dim editButton As New DataGridViewButtonColumn()
         editButton.HeaderText = "Edit"
         editButton.Text = "Edit"
@@ -28,8 +27,12 @@ Public Class UC_DataBarang
         DataGridView1.Columns.Add(hapusButton)
 
         If conn.State = ConnectionState.Closed Then conn.Open()
-        Dim sql = "SELECT * FROM tblbarang"
+
+        ' Perbaikan di sini: pakai parameter untuk search keyword
+        Dim sql = "SELECT * FROM tblbarang WHERE nama_barang LIKE @keyword OR kategori LIKE @keyword"
         Using cmd As New MySqlCommand(sql, conn)
+            cmd.Parameters.AddWithValue("@keyword", "%" & keyword & "%")
+
             Using reader = cmd.ExecuteReader()
                 Dim no = 1
                 While reader.Read()
@@ -59,7 +62,6 @@ Public Class UC_DataBarang
                 End With
             Next
         End If
-
 
         With DataGridView1
             .Font = New Font("Segoe UI", 9)
@@ -93,10 +95,10 @@ Public Class UC_DataBarang
 
 
 
+
     Private Sub EditBarang(sender As Object, e As EventArgs)
         Dim btn As Button = CType(sender, Button)
         Dim idBarang As Integer = CInt(btn.Tag)
-
         Dim frm As New Tambah_Barang()
         frm.Mode = "Edit"
         frm.BarangID = idBarang
@@ -123,11 +125,10 @@ Public Class UC_DataBarang
         LoadDataBarang(txtSearch.Text)
     End Sub
 
-    Private Sub txtSearch_KeyDown(sender As Object, e As KeyEventArgs) Handles txtSearch.KeyDown
-        If e.KeyCode = Keys.Enter Then
-            LoadDataBarang(txtSearch.Text)
-        End If
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        LoadDataBarang(txtSearch.Text)
     End Sub
+
 
     Private Sub btnAddBarang_Click(sender As Object, e As EventArgs) Handles btnAddBarang.Click
         Dim frm As New Tambah_Barang()
