@@ -40,8 +40,8 @@ Public Class Login
             Dim query As String = "SELECT role FROM tbluser WHERE username=@user AND password=@pass"
             Dim cmd As New MySqlCommand(query, conn)
             cmd.Parameters.AddWithValue("@user", username)
-            cmd.Parameters.AddWithValue("@pass", password)
-            'cmd.Parameters.AddWithValue("@pass", HashPassword(password))
+            'cmd.Parameters.AddWithValue("@pass", password)
+            cmd.Parameters.AddWithValue("@pass", HashPassword(password))
 
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
             If reader.Read() Then
